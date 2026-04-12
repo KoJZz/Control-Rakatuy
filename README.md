@@ -16,7 +16,7 @@ Repository Control Rakata
 ### Cloning to a New Machine
 To pull this repository into a new local folder:
 ```bash
-git clone [https://github.com/KoJZz/Control-Rakatuy](https://github.com/KoJZz/Control-Rakatuy)
+git clone https://github.com/KoJZz/Control-Rakatuy
 
 ```
 ### Upload konten baru
