@@ -5,11 +5,11 @@ Repository Control Rakata
 ## Struktur Folder
 
 * **.git/**: Git configuration (Do not modify)
-* **PCB/**: KiCad PCB layout files (`.kicad_pcb`).
-* **Schematic/**: KiCad schematic files (`.kicad_sch`).
+* **Hardware/**: KiCad PCB layout and schematic files. Nanti buat folder baru aja per project
+* **Firmware/**: Firmware yang dipake
 * **Docs/**: Documentation
 * **Exports/**: (Gerbers, BOM, and PDF schematics)
-* **testing/**: testing repo
+* **testing/**: ngetes repo
 
 ---
 
@@ -27,3 +27,6 @@ git commit -m "Update: [Component Name] - Added power stage layout" # commiting
 git push origin main # push ke repo
 
 ```
+
+### Video tutorial version control
+https://www.youtube.com/watch?v=YCKeqBlQyJQ
