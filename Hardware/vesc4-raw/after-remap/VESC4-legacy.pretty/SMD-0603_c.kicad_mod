@@ -1,0 +1,140 @@
+(footprint "SMD-0603_c"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 2.035 -0.012 0)
+		(layer "F.SilkS")
+		(uuid "2bd82ef1-8f9a-45d1-961e-3d2e72157744")
+		(effects
+			(font
+				(size 0.508 0.4572)
+				(thickness 0.1143)
+			)
+		)
+	)
+	(property "Value" "2.2u"
+		(at -1.651 0 90)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "a3ebec57-0046-4a14-8ff6-595debca7767")
+		(effects
+			(font
+				(size 0.508 0.4572)
+				(thickness 0.1143)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "B.Fab")
+		(hide yes)
+		(uuid "260cda1a-c418-4b90-9725-cfb35196444a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "B.Fab")
+		(hide yes)
+		(uuid "d3ee14d1-be76-4858-befd-06e9a6a49fb6")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start 1.19888 -0.635)
+		(end 1.19888 0.635)
+		(stroke
+			(width 0.11938)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "06e7209e-aa12-40ba-aa6d-3d2dfeb892cb")
+	)
+	(fp_line
+		(start 0.50038 0.65024)
+		(end 1.19888 0.65024)
+		(stroke
+			(width 0.11938)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "aa7106a3-d337-4fd7-b38a-f032be86b4b8")
+	)
+	(fp_line
+		(start 0.50038 -0.65024)
+		(end 1.19888 -0.65024)
+		(stroke
+			(width 0.11938)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "cd2d3f13-e5a5-46d0-85e6-85f64478a585")
+	)
+	(fp_line
+		(start -0.50038 0.65024)
+		(end -1.19888 0.65024)
+		(stroke
+			(width 0.11938)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "68d85552-bd22-462a-b471-b08dfc981692")
+	)
+	(fp_line
+		(start -1.19888 0.635)
+		(end -1.19888 -0.635)
+		(stroke
+			(width 0.11938)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "61a06836-73bd-4aa9-9781-54ee8c7b8681")
+	)
+	(fp_line
+		(start -1.19888 -0.65024)
+		(end -0.50038 -0.65024)
+		(stroke
+			(width 0.11938)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "70e22992-5601-40be-bd98-102023b29cf4")
+	)
+	(pad "1" smd rect
+		(at -0.762 0 180)
+		(size 0.635 1.143)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8d94ed1a-47a0-477e-b110-358147c22622")
+	)
+	(pad "2" smd rect
+		(at 0.762 0 180)
+		(size 0.635 1.143)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "6aaf4938-a247-45fe-ba81-b15e7156530c")
+	)
+	(embedded_fonts no)
+	(model "walter/smd_cap/c_0603.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

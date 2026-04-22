@@ -5,4 +5,5 @@
   (lib (name "w_smd_cap")(type "Legacy")(uri "$(KIPRJMOD)/Libraries/w_smd_cap.mod")(options "")(descr ""))
   (lib (name "JST conn")(type "KiCad")(uri "$(KIPRJMOD)/Libraries/w_conn_jst-ph.pretty")(options "")(descr ""))
   (lib (name "w_smd_diode")(type "Legacy")(uri "$(KIPRJMOD)/Libraries/w_smd_diode.mod")(options "")(descr ""))
+  (lib (name "VESC4-legacy")(type "KiCad")(uri "${KIPRJMOD}/VESC4-legacy.pretty")(options "")(descr ""))
 )

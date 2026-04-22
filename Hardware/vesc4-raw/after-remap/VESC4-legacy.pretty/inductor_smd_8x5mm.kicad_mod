@@ -1,0 +1,121 @@
+(footprint "inductor_smd_8x5mm"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Inductor SMD, d.8mm x h.5mm")
+	(property "Reference" "REF**"
+		(at 2.4 4.962 0)
+		(layer "F.SilkS")
+		(uuid "56457662-f983-486b-8008-4d35a7b4cef2")
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.3048)
+			)
+		)
+	)
+	(property "Value" "22u"
+		(at 0 5.4991 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "8f9cc9d9-a3c5-41fd-830e-a90c6b68932b")
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.3048)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "40638aa4-6f67-4dd3-a351-ff383a21d20b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "abec936a-396d-43cd-89ac-5d58a447292e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -2.30124 -3.2004)
+		(end -2.30124 3.2004)
+		(stroke
+			(width 0.381)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "eba91779-83e5-4935-9a4f-99b6737d5d5a")
+	)
+	(fp_line
+		(start 2.30124 3.2004)
+		(end 2.30124 -3.2004)
+		(stroke
+			(width 0.381)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1598d8b1-7f5e-4fb1-80cf-ab86f029efc1")
+	)
+	(fp_circle
+		(center 0 0)
+		(end -4.0005 0)
+		(stroke
+			(width 0.381)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "6429a785-6321-44c3-a2e2-f916ddabb63c")
+	)
+	(fp_circle
+		(center 0 0)
+		(end -2.99974 0)
+		(stroke
+			(width 0.381)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "0b0622ee-2e65-4056-8736-650685129869")
+	)
+	(pad "1" smd rect
+		(at -2.49936 0)
+		(size 2.9972 7.49808)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "5f3bbe2d-0890-488e-bc80-3f691c868d08")
+	)
+	(pad "2" smd rect
+		(at 2.49936 0)
+		(size 2.9972 7.49808)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a3abc005-1c4c-4437-86cb-2902b16273a9")
+	)
+	(embedded_fonts no)
+	(model "walter/smd_inductors/inductor_smd_8x5mm.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

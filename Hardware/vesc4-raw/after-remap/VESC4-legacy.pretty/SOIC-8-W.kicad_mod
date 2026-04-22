@@ -1,0 +1,196 @@
+(footprint "SOIC-8-W"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "module SMD SOIC SOJ 8 pins etroit")
+	(tags "CMS SOJ")
+	(property "Reference" "REF**"
+		(at -2.75 -3.2 90)
+		(layer "F.SilkS")
+		(uuid "6c5a4545-2264-4372-b459-dda0b72f9533")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.1524)
+			)
+		)
+	)
+	(property "Value" "SN65HVD232"
+		(at 0 1.016 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "d31c3be6-f2e0-4899-91cb-6e0885b41aa1")
+		(effects
+			(font
+				(size 0.889 0.889)
+				(thickness 0.1524)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "306242ee-e94b-4c96-a889-15fd47bee14c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3baad499-024a-47e1-996a-bdf919994581")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -2.667 -1.905)
+		(end -2.667 1.778)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a4003ab4-ae96-4585-9b48-25d7d4255e2d")
+	)
+	(fp_line
+		(start -2.667 -0.508)
+		(end -2.159 -0.508)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ebbd6129-8638-4d28-94b5-5eacaaa52dfd")
+	)
+	(fp_line
+		(start -2.667 1.778)
+		(end -2.667 1.905)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "38154479-12cb-4027-a00a-c2b9f777c8db")
+	)
+	(fp_line
+		(start -2.667 1.905)
+		(end 2.667 1.905)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "52998ddb-ebc1-4461-9532-fab87d0ddcdc")
+	)
+	(fp_line
+		(start -2.159 -0.508)
+		(end -2.159 0.508)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c96baca7-5db1-44c3-be76-68ed14f248ea")
+	)
+	(fp_line
+		(start -2.159 0.508)
+		(end -2.667 0.508)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "577702db-d740-4fa1-a1f4-3da9719249cf")
+	)
+	(fp_line
+		(start 2.667 -1.905)
+		(end -2.667 -1.905)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1378da58-5e15-4d23-82e2-fa85e785828e")
+	)
+	(fp_line
+		(start 2.667 -1.905)
+		(end 2.667 1.905)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "30d763bc-a6f8-46bc-bcf7-df5ce3108b13")
+	)
+	(pad "1" smd rect
+		(at -1.905 2.667)
+		(size 0.59944 1.39954)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "0fa975fe-b84a-49da-8531-cf33b64bb17e")
+	)
+	(pad "2" smd rect
+		(at -0.635 2.667)
+		(size 0.59944 1.39954)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a8a88844-72ad-4c41-b60d-d24391da93d7")
+	)
+	(pad "3" smd rect
+		(at 0.635 2.667)
+		(size 0.59944 1.39954)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "e8ca1453-b4f8-4b57-8bea-56cb8badc0a7")
+	)
+	(pad "4" smd rect
+		(at 1.905 2.667)
+		(size 0.59944 1.39954)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "12f58b8f-b427-4588-8671-a261da52a1b9")
+	)
+	(pad "5" smd rect
+		(at 1.905 -2.667)
+		(size 0.59944 1.39954)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "49de344b-6061-4f8d-959a-8816f7468b6a")
+	)
+	(pad "6" smd rect
+		(at 0.635 -2.667)
+		(size 0.59944 1.39954)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "1f53ff50-72a7-4a5d-af79-de211e97989b")
+	)
+	(pad "7" smd rect
+		(at -0.635 -2.667)
+		(size 0.59944 1.39954)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "27f17339-6275-43cb-b680-dadbc4583c7b")
+	)
+	(pad "8" smd rect
+		(at -1.905 -2.667)
+		(size 0.59944 1.39954)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "51da8430-9b6d-4e2c-a1cd-d80cf3dd63ec")
+	)
+	(embedded_fonts no)
+	(model "walter/smd_dil/so-8.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

@@ -1,0 +1,131 @@
+(footprint "c_tant_B"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "SMT capacitor, tantalum size B")
+	(property "Reference" "REF**"
+		(at 3.619 0.831 0)
+		(layer "F.SilkS")
+		(uuid "d34a43ac-f80b-429c-9f4e-bd85521c474d")
+		(effects
+			(font
+				(size 0.50038 0.50038)
+				(thickness 0.11938)
+			)
+		)
+	)
+	(property "Value" "100u"
+		(at 0 1.9685 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "3c8afc99-1dbe-42bc-820d-5dac0673c187")
+		(effects
+			(font
+				(size 0.50038 0.50038)
+				(thickness 0.11938)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "B.Fab")
+		(hide yes)
+		(uuid "532e1e02-b90f-4d1e-abfb-174a9d0ea2b7")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "B.Fab")
+		(hide yes)
+		(uuid "bd28cde1-62a2-4984-b90b-5c5dc6c45de1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start 1.778 1.397)
+		(end 1.778 -1.397)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "cbd05d27-718e-4955-9fd5-cc8364a3b112")
+	)
+	(fp_line
+		(start 1.778 -1.397)
+		(end -1.778 -1.397)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "14e04531-cd01-4319-93d3-5a25e43e5aa0")
+	)
+	(fp_line
+		(start 1.2065 -1.397)
+		(end 1.2065 1.397)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "929f421a-cd51-453e-8de1-a894d2133808")
+	)
+	(fp_line
+		(start -1.778 1.397)
+		(end 1.778 1.397)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3a41a1d9-b20b-4d8e-b5c8-8ae224f328af")
+	)
+	(fp_line
+		(start -1.778 -1.397)
+		(end -1.778 1.397)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f18b6b80-7cf8-4bc5-ad11-d364ac6c7a48")
+	)
+	(pad "1" smd rect
+		(at 1.524 0 180)
+		(size 1.95072 2.49936)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ae5634ee-c712-430a-b33a-d886d7e13646")
+	)
+	(pad "2" smd rect
+		(at -1.524 0 180)
+		(size 1.95072 2.49936)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c5327ca5-8b57-40d2-b192-34fc166a7048")
+	)
+	(embedded_fonts no)
+	(model "walter/smd_cap/c_tant_B.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
