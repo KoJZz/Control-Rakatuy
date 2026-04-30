@@ -1937,6 +1937,12 @@
 		(uuid "990141a7-185b-4b6d-b8ff-940f12089816")
 	)
 	(junction
+		(at 125.73 163.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9932af7f-41ac-40d5-98a1-8d44bd52d409")
+	)
+	(junction
 		(at 142.24 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1947,6 +1953,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a77ba9d8-a8d8-4fb4-9ecd-a554147251c8")
+	)
+	(junction
+		(at 173.99 163.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "aad26d70-e31a-41e6-8f7c-35b44c2379fe")
 	)
 	(junction
 		(at 238.76 148.59)
@@ -1977,6 +1989,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c5e51dc1-814f-438b-ab73-f43d98d0f95c")
+	)
+	(junction
+		(at 219.71 163.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cae76ff1-3b86-4dea-afe9-00148c9520db")
 	)
 	(junction
 		(at 173.99 49.53)
@@ -2170,6 +2188,26 @@
 	)
 	(wire
 		(pts
+			(xy 125.73 163.83) (xy 104.14 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17dc2053-d327-4a62-a428-18d98c27d886")
+	)
+	(wire
+		(pts
+			(xy 125.73 163.83) (xy 125.73 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c28fb6b-9e09-47bd-81ea-c64099d13a9b")
+	)
+	(wire
+		(pts
 			(xy 102.87 95.25) (xy 105.41 95.25)
 		)
 		(stroke
@@ -2360,7 +2398,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 163.83) (xy 238.76 163.83)
+			(xy 198.12 163.83) (xy 219.71 163.83)
 		)
 		(stroke
 			(width 0)
@@ -2770,6 +2808,16 @@
 	)
 	(wire
 		(pts
+			(xy 173.99 163.83) (xy 173.99 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e45cd0b-352e-4a80-9ddb-1b238f8231a2")
+	)
+	(wire
+		(pts
 			(xy 101.6 40.64) (xy 101.6 49.53)
 		)
 		(stroke
@@ -2867,6 +2915,16 @@
 			(type default)
 		)
 		(uuid "aef1d803-be83-4802-8515-88aa598c15e4")
+	)
+	(wire
+		(pts
+			(xy 219.71 163.83) (xy 219.71 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2307eb8-df09-4111-907b-ebdca1290a12")
 	)
 	(wire
 		(pts
@@ -2990,7 +3048,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 163.83) (xy 191.77 163.83)
+			(xy 151.13 163.83) (xy 173.99 163.83)
 		)
 		(stroke
 			(width 0)
@@ -3040,7 +3098,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 163.83) (xy 104.14 163.83)
+			(xy 144.78 163.83) (xy 125.73 163.83)
 		)
 		(stroke
 			(width 0)
@@ -3067,6 +3125,26 @@
 			(type default)
 		)
 		(uuid "f0bc3fe9-7ec4-444d-b1cd-36d0f1a132dd")
+	)
+	(wire
+		(pts
+			(xy 173.99 163.83) (xy 191.77 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0ee1a60-d33b-4158-9171-e44cb61bf259")
+	)
+	(wire
+		(pts
+			(xy 219.71 163.83) (xy 238.76 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f169f550-630a-4a22-a6d5-e9a8d6c3cfd3")
 	)
 	(wire
 		(pts
@@ -3637,6 +3715,26 @@
 			"AABA0CBWAQAAggaxCgAAEDSIVQAAgKBBrAIAAATN/wMVsg6eHZ/i8gAAAABJRU5ErkJggoc="
 		)
 	)
+	(label "Q2-s"
+		(at 128.27 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0f407b0b-4b6b-4e52-bd92-11baf323576a")
+	)
+	(label "Q4-s"
+		(at 167.64 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1040691e-4434-452c-8b32-0d16be1dfc3e")
+	)
 	(label "Q3-s_Q4-d"
 		(at 167.64 76.2 0)
 		(effects
@@ -3687,6 +3785,16 @@
 		)
 		(uuid "4a347f40-cd0f-49a3-bd7d-07a43d4ceed1")
 	)
+	(label "Q2-s"
+		(at 125.73 167.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4c16715c-6b9e-461f-9ce9-0531e8dd13e9")
+	)
 	(label "Q1-s_Q2-d"
 		(at 128.27 76.2 0)
 		(effects
@@ -3706,6 +3814,16 @@
 			(justify left bottom)
 		)
 		(uuid "60dbfbe9-d998-46d9-9d07-0998c37a8a75")
+	)
+	(label "Q4-s"
+		(at 173.99 167.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "67323269-c181-43d4-8dea-7e051f48cb63")
 	)
 	(label "Q2-g"
 		(at 104.14 143.51 180)
@@ -3736,6 +3854,16 @@
 			(justify left bottom)
 		)
 		(uuid "7215c7a4-f296-4b87-9433-f1e44378b6ee")
+	)
+	(label "Q6-s"
+		(at 208.28 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8001880d-d87a-4f19-a19b-dd719c9c0031")
 	)
 	(label "Q3-s_Q4-d"
 		(at 144.78 138.43 90)
@@ -3776,6 +3904,16 @@
 			(justify left bottom)
 		)
 		(uuid "945d2fa9-890f-4b4a-ba75-0b3b9357e147")
+	)
+	(label "Q4-s"
+		(at 219.71 167.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9dffc49b-c232-44e1-845c-384c2fda8a1f")
 	)
 	(label "Q5-s_Q6-d"
 		(at 208.28 76.2 0)
