@@ -20477,16 +20477,107 @@
 		(layer "Dwgs.User")
 		(uuid "8d440a4e-730e-4830-ba82-808d595ebaa5")
 	)
-	(gr_rect
-		(start 78.5 80)
-		(end 127 160)
+	(gr_arc
+		(start 110 139)
+		(mid 110.707107 139.292893)
+		(end 111 140)
 		(stroke
 			(width 0.15)
-			(type default)
+			(type solid)
 		)
-		(fill no)
 		(layer "Edge.Cuts")
-		(uuid "f292f12d-c438-4f9d-9254-64efb4d0a183")
+		(uuid "119b1965-7f51-47cc-8ddb-ff680aaeb4e0")
+	)
+	(gr_line
+		(start 84.5 145)
+		(end 78.5 145)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "1e9a064d-cdea-4bd3-80b2-b1e270beb228")
+	)
+	(gr_arc
+		(start 84.5 140)
+		(mid 84.792893 139.292893)
+		(end 85.5 139)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "22e1592d-a4b0-4163-a37c-493f1897dbd0")
+	)
+	(gr_line
+		(start 85.5 139)
+		(end 110 139)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "4e88e301-bb6c-4ffd-ac18-0bad48c3b482")
+	)
+	(gr_line
+		(start 84.5 140)
+		(end 84.5 145)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "b76e3aa7-7f96-4048-b789-927f51855ca2")
+	)
+	(gr_line
+		(start 78.5 145)
+		(end 78.5 80)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "caf0f7fb-fa19-4701-a52f-2ed88228ed87")
+	)
+	(gr_line
+		(start 111 145)
+		(end 117 145)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "e07ca688-58a6-4882-b22f-351b300d2897")
+	)
+	(gr_line
+		(start 117 80)
+		(end 117 145)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "edf15ece-9ae6-4891-aefa-1eba86f51524")
+	)
+	(gr_line
+		(start 117 80)
+		(end 78.5 80)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "f21bdb74-2301-41f5-ba69-eb319a27c19a")
+	)
+	(gr_line
+		(start 111 140)
+		(end 111 145)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "fd991501-3e4d-4858-9a3f-4d9a34fd0483")
 	)
 	(gr_text "Benjamin Vedder"
 		(at 110.109 127.762 90)
