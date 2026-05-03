@@ -3715,6 +3715,16 @@
 			"AABA0CBWAQAAggaxCgAAEDSIVQAAgKBBrAIAAATN/wMVsg6eHZ/i8gAAAABJRU5ErkJggoc="
 		)
 	)
+	(label "Q4-s"
+		(at 173.99 167.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "02b56863-ef15-4bdc-bdb8-d4fb3a8fa8f1")
+	)
 	(label "Q2-s"
 		(at 128.27 100.33 0)
 		(effects
@@ -3815,16 +3825,6 @@
 		)
 		(uuid "60dbfbe9-d998-46d9-9d07-0998c37a8a75")
 	)
-	(label "Q4-s"
-		(at 173.99 167.64 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "67323269-c181-43d4-8dea-7e051f48cb63")
-	)
 	(label "Q2-g"
 		(at 104.14 143.51 180)
 		(effects
@@ -3905,7 +3905,7 @@
 		)
 		(uuid "945d2fa9-890f-4b4a-ba75-0b3b9357e147")
 	)
-	(label "Q4-s"
+	(label "Q6-s"
 		(at 219.71 167.64 0)
 		(effects
 			(font
