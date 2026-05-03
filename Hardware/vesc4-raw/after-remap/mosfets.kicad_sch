@@ -4799,7 +4799,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TRANS_IPT007N06NATMA1_INF"
+		(property "Footprint" "footprints:TRANS_IPT007N06NATMA1_INF-M"
 			(at 101.6 30.48 0)
 			(effects
 				(font
@@ -4890,7 +4890,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TRANS_IPT007N06NATMA1_INF"
+		(property "Footprint" "footprints:TRANS_IPT007N06NATMA1_INF-M"
 			(at 201.93 30.48 0)
 			(effects
 				(font
@@ -4981,7 +4981,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TRANS_IPT007N06NATMA1_INF"
+		(property "Footprint" "footprints:TRANS_IPT007N06NATMA1_INF-M"
 			(at 104.14 143.51 0)
 			(effects
 				(font
@@ -5072,7 +5072,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TRANS_IPT007N06NATMA1_INF"
+		(property "Footprint" "footprints:TRANS_IPT007N06NATMA1_INF-M"
 			(at 198.12 143.51 0)
 			(effects
 				(font
@@ -5163,7 +5163,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TRANS_IPT007N06NATMA1_INF"
+		(property "Footprint" "footprints:TRANS_IPT007N06NATMA1_INF-M"
 			(at 151.13 143.51 0)
 			(effects
 				(font
@@ -5254,7 +5254,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TRANS_IPT007N06NATMA1_INF"
+		(property "Footprint" "footprints:TRANS_IPT007N06NATMA1_INF-M"
 			(at 152.4 30.48 0)
 			(effects
 				(font
