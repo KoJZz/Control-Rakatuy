@@ -7,4 +7,5 @@
   (lib (name "w_smd_diode")(type "Legacy")(uri "$(KIPRJMOD)/Libraries/w_smd_diode.mod")(options "")(descr ""))
   (lib (name "VESC4-legacy")(type "KiCad")(uri "${KIPRJMOD}/VESC4-legacy.pretty")(options "")(descr ""))
   (lib (name "footprints")(type "KiCad")(uri "C:/Users/Nicho/Documents/MENIMBA ILMU/El-Controller-RAKATA/Controller/symbols-footprints/ul_IPT007N06NATMA1/KiCADv6/footprints.pretty")(options "")(descr ""))
+  (lib (name "EasyEDA_Lib")(type "EasyEDA / JLCEDA Pro")(uri "${KIPRJMOD}/EasyEDA_Lib/EasyEDA_Lib.elibz")(options "")(descr ""))
 )

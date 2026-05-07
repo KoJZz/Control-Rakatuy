@@ -2182,6 +2182,275 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "EasyEDA_Lib:HX USB-MICR XNJ ZB"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "USB"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "EasyEDA_Lib:MICRO-USB-SMD_HX-USB-MICRO-XNJ-JB"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Connector Type:Micro-B Protocol Standard:USB 2.0 Gender:Female Mounting Type:Surface Mount, Right Angle Number of Contacts:5P Number of Ports:1 Current Rating-Power:1A Voltage Rating:30V Connect-Disconnect Life:3,000 Cycles Supplementary Features:- Center"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer Part" "HX USB-MICR XNJ ZB"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer" "hanxia(韩下)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supplier Part" "C18357557"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supplier" "LCSC"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC Part Name" "Micro-B 母 卧贴"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "HX USB-MICR XNJ ZB_1_0"
+				(rectangle
+					(start -5.08 7.62)
+					(end 5.08 -7.62)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin input line
+					(at -7.62 5.08 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "ID"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "D+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "D-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -5.08 0)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "EH"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "EH"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "EH"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 7.62 -5.08 180)
+					(length 2.54)
+					(name "EH"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "GND-RESCUE-BLDC_4_16"
 			(power)
 			(pin_names
@@ -4108,606 +4377,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "MINI-USB-SCHIELD-32005-201_2"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "X"
-				(at -2.54 11.43 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" "MINI-USB-SCHIELD-32005-201"
-				(at 9.271 -7.62 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Footprint" "con-cypressindustries-32005-201"
-				(at 0 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Field5" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "MINI-USB-SCHIELD-32005-201_2_1_0"
-				(polyline
-					(pts
-						(xy -2.54 6.35) (xy -2.54 -6.35)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 7.62) (xy 0 7.62)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -7.62) (xy 0 -7.62)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 5.08) (xy 0 -5.08)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -5.08) (xy 1.27 -6.35)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 6.35) (xy 0 5.08)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -6.35) (xy 3.81 -6.35)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 8.89) (xy 5.08 8.89)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -8.89) (xy 5.08 -8.89)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.81 6.35) (xy 1.27 6.35)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.81 -6.35) (xy 3.81 6.35)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 6.35 -7.62) (xy 6.35 7.62)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "MINI-USB-SCHIELD-32005-201_2_1_1"
-				(arc
-					(start -2.54 6.35)
-					(mid -2.168 7.248)
-					(end -1.27 7.62)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -1.27 -7.62)
-					(mid -2.168 -7.248)
-					(end -2.54 -6.35)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 1.016 8.128)
-					(mid 0.568 7.7541)
-					(end 0 7.62)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 -7.62)
-					(mid 0.568 -7.7541)
-					(end 1.016 -8.128)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 1.016 8.128)
-					(mid 1.6881 8.6889)
-					(end 2.54 8.89)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 2.54 -8.89)
-					(mid 1.6881 -8.6889)
-					(end 1.016 -8.128)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 5.08 8.89)
-					(mid 5.978 8.518)
-					(end 6.35 7.62)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 6.35 -7.62)
-					(mid 5.978 -8.518)
-					(end 5.08 -8.89)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 5.08 0)
-					(length 7.62)
-					(name "1"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 7.62)
-					(name "2"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 7.62)
-					(name "3"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 7.62)
-					(name "4"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 7.62)
-					(name "5"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-			)
-			(symbol "MINI-USB-SCHIELD-32005-201_2_2_0"
-				(polyline
-					(pts
-						(xy -2.54 0) (xy 0 0)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 -1.27) (xy -2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -1.27) (xy 0 0)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 5.08 0)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -1.27) (xy 2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 20.32) (xy 0 20.32)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 2.54) (xy 7.62 17.78)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "MINI-USB-SCHIELD-32005-201_2_2_1"
-				(arc
-					(start 5.08 20.32)
-					(mid 6.8761 19.5761)
-					(end 7.62 17.78)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 7.62 2.54)
-					(mid 6.8761 0.7439)
-					(end 5.08 0)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -2.54 -2.54 90)
-					(length 2.54)
-					(name "S1"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "M1"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 90)
-					(length 2.54)
-					(name "S2"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "M2"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -2.54 90)
-					(length 2.54)
-					(name "S3"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "M3"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 -2.54 90)
-					(length 2.54)
-					(name "S4"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "M4"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "R-RESCUE-BLDC_4_10"
 			(pin_numbers
 				(hide yes)
@@ -6436,6 +6105,12 @@
 		(uuid "7f2074c9-7184-44b6-9619-d6011324f722")
 	)
 	(junction
+		(at 19.05 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8ad336d8-70ca-4253-b912-f63285d1fd05")
+	)
+	(junction
 		(at 207.01 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6447,8 +6122,26 @@
 		(color 0 0 0 0)
 		(uuid "9a894a95-5c3b-450f-a576-ce6f44aa0c6a")
 	)
+	(junction
+		(at 19.05 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b3492118-658c-4c98-b515-16dc3ec72c8c")
+	)
+	(junction
+		(at 35.56 85.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d1bda433-e563-48d8-aaf6-0a204d81fa0c")
+	)
+	(junction
+		(at 19.05 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d5a18012-6036-4909-8895-776315639d78")
+	)
 	(no_connect
-		(at 36.83 82.55)
+		(at 34.29 82.55)
 		(uuid "47375e09-ea94-453c-ba89-63566e853f08")
 	)
 	(wire
@@ -6470,6 +6163,16 @@
 			(type default)
 		)
 		(uuid "0555d6a3-2c32-4fb3-850e-af92c497f367")
+	)
+	(wire
+		(pts
+			(xy 19.05 77.47) (xy 19.05 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "062efda5-df90-42ad-b9f4-964f13ce34db")
 	)
 	(wire
 		(pts
@@ -6520,6 +6223,16 @@
 			(type dash)
 		)
 		(uuid "16aa9eab-2615-46ba-95d3-cbc87048a59d")
+	)
+	(wire
+		(pts
+			(xy 34.29 74.93) (xy 54.61 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b31f808-447d-47e5-92a9-529642c32c80")
 	)
 	(wire
 		(pts
@@ -6590,16 +6303,6 @@
 			(type default)
 		)
 		(uuid "2960e22a-483e-4f3c-a578-f267eae32c99")
-	)
-	(wire
-		(pts
-			(xy 40.64 85.09) (xy 36.83 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "30e0e7f0-58fa-465f-b2ef-f15c177c39f5")
 	)
 	(wire
 		(pts
@@ -6693,6 +6396,16 @@
 	)
 	(wire
 		(pts
+			(xy 19.05 82.55) (xy 19.05 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4546c83e-3f4b-46d8-84f7-0a8e445f019b")
+	)
+	(wire
+		(pts
 			(xy 43.18 60.96) (xy 43.18 63.5)
 		)
 		(stroke
@@ -6720,16 +6433,6 @@
 			(type default)
 		)
 		(uuid "46b18200-a1d7-44d6-809e-a6bd9ca8d620")
-	)
-	(wire
-		(pts
-			(xy 36.83 80.01) (xy 54.61 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "480670d4-b799-4350-802b-486db37a627c")
 	)
 	(wire
 		(pts
@@ -6830,6 +6533,16 @@
 			(type default)
 		)
 		(uuid "60eea954-a564-4ea3-8d9b-64066ef3ba8d")
+	)
+	(wire
+		(pts
+			(xy 34.29 77.47) (xy 54.61 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63dfe31a-edbf-48cd-8b34-1917393d9fab")
 	)
 	(wire
 		(pts
@@ -6960,6 +6673,16 @@
 			(type default)
 		)
 		(uuid "8b78b9e0-d5eb-44c9-b971-10df8c438452")
+	)
+	(wire
+		(pts
+			(xy 19.05 80.01) (xy 19.05 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d643905-9fd3-4724-a2b1-bf5df43d0980")
 	)
 	(wire
 		(pts
@@ -7113,6 +6836,16 @@
 	)
 	(wire
 		(pts
+			(xy 35.56 85.09) (xy 40.64 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b003cc8e-b70d-40db-a520-bf83a2b1c1cc")
+	)
+	(wire
+		(pts
 			(xy 242.57 125.73) (xy 250.19 125.73)
 		)
 		(stroke
@@ -7120,6 +6853,16 @@
 			(type default)
 		)
 		(uuid "b0076e20-4649-4a13-907f-b94a9ccc52c1")
+	)
+	(wire
+		(pts
+			(xy 34.29 85.09) (xy 35.56 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3867e69-5f32-431d-9524-3b241aa0f02a")
 	)
 	(wire
 		(pts
@@ -7193,13 +6936,13 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 74.93) (xy 36.83 74.93)
+			(xy 34.29 80.01) (xy 54.61 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cb2275c1-f974-4292-96e8-847ec1f244f7")
+		(uuid "c5bc54fb-e760-47bd-9980-00ed73680e50")
 	)
 	(wire
 		(pts
@@ -7253,6 +6996,16 @@
 	)
 	(wire
 		(pts
+			(xy 35.56 90.17) (xy 35.56 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d29ecbc4-8a94-43ec-a72b-5b00837a0c29")
+	)
+	(wire
+		(pts
 			(xy 147.32 80.01) (xy 157.48 80.01)
 		)
 		(stroke
@@ -7270,16 +7023,6 @@
 			(type default)
 		)
 		(uuid "d81bbc37-1202-4d7f-b246-5e8c685c8d9f")
-	)
-	(wire
-		(pts
-			(xy 54.61 77.47) (xy 36.83 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "da5d1c7a-b34c-437e-9aea-04fd3aca2fbe")
 	)
 	(wire
 		(pts
@@ -7353,6 +7096,16 @@
 	)
 	(wire
 		(pts
+			(xy 19.05 74.93) (xy 19.05 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f61c012d-2d2f-4525-a760-770763eaf2ac")
+	)
+	(wire
+		(pts
 			(xy 171.45 146.05) (xy 177.8 146.05)
 		)
 		(stroke
@@ -7370,6 +7123,16 @@
 			(type default)
 		)
 		(uuid "f78df75e-18fa-48b8-95e2-fe7bab447e1e")
+	)
+	(wire
+		(pts
+			(xy 19.05 90.17) (xy 35.56 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8319fe1-eaa6-490e-bc33-c7a7a1d5cec1")
 	)
 	(wire
 		(pts
@@ -10766,97 +10529,6 @@
 		)
 	)
 	(symbol
-		(lib_name "MINI-USB-SCHIELD-32005-201_2")
-		(lib_id "vesc4-legacy:MINI-USB-SCHIELD-32005-201_2")
-		(at 31.75 80.01 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-0000522da102")
-		(property "Reference" "X1"
-			(at 34.29 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "MINI-USB-SHIELD-32005-201"
-			(at 44.45 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "CRF1:USB-UX60R-MB-5ST"
-			(at 31.75 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 31.75 80.01 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 31.75 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "5"
-			(uuid "a0228201-b094-4208-aacf-32e8462013a7")
-		)
-		(pin "M4"
-			(uuid "b6b324cf-bad6-4955-816a-0ff125f8d3e2")
-		)
-		(pin "M2"
-			(uuid "8791ec87-fb88-4927-9091-10e726cf0f15")
-		)
-		(pin "M1"
-			(uuid "b645d3e0-3da6-4bc2-b43d-186ebcb078c7")
-		)
-		(pin "M3"
-			(uuid "edf2466f-f7e7-4b24-9939-3b36cd1f903b")
-		)
-		(pin "1"
-			(uuid "0eb48c11-3513-43b7-af0d-dfb23430c58b")
-		)
-		(pin "2"
-			(uuid "f3e11612-cf7b-4269-aa2a-68f2da66f9b8")
-		)
-		(pin "4"
-			(uuid "a7738cb7-17db-4359-937d-c2e0c2178a9c")
-		)
-		(pin "3"
-			(uuid "5a35ebde-35f5-4b15-b6d1-92967aec65ed")
-		)
-		(instances
-			(project ""
-				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
-					(reference "X1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_name "+5V_10")
 		(lib_id "vesc4-legacy:+5V_10")
 		(at 39.37 133.35 270)
@@ -13135,6 +12807,140 @@
 			(project ""
 				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
 					(reference "P3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "EasyEDA_Lib:HX USB-MICR XNJ ZB")
+		(at 26.67 80.01 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c57d735e-c7db-4f10-ac00-a20943c1a323")
+		(property "Reference" "USB1"
+			(at 26.67 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 26.67 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "EasyEDA_Lib:MICRO-USB-SMD_HX-USB-MICRO-XNJ-JB"
+			(at 26.67 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 26.67 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Connector Type:Micro-B Protocol Standard:USB 2.0 Gender:Female Mounting Type:Surface Mount, Right Angle Number of Contacts:5P Number of Ports:1 Current Rating-Power:1A Voltage Rating:30V Connect-Disconnect Life:3,000 Cycles Supplementary Features:- Center"
+			(at 26.67 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part" "HX USB-MICR XNJ ZB"
+			(at 26.67 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "hanxia(韩下)"
+			(at 26.67 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier Part" "C18357557"
+			(at 26.67 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "LCSC"
+			(at 26.67 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part Name" "Micro-B 母 卧贴"
+			(at 26.67 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0b33f31b-3623-49fa-82a6-1423518afb5a")
+		)
+		(pin "6"
+			(uuid "f599e206-d4eb-4c1f-a411-145b938aa5c2")
+		)
+		(pin "5"
+			(uuid "c265ad3d-757c-45dd-881f-d6b8df71f487")
+		)
+		(pin "4"
+			(uuid "f02c69d6-1209-4d8f-bd2f-097178366fc0")
+		)
+		(pin "3"
+			(uuid "957cbc5a-ad81-40bb-ae8d-1341b8d1a6a4")
+		)
+		(pin "2"
+			(uuid "13821699-25ef-4531-a79e-ec5d668f976a")
+		)
+		(pin "9"
+			(uuid "38fc5053-fb36-40d2-b0c3-af1d71d7b3d5")
+		)
+		(pin "8"
+			(uuid "101ecd72-001c-40ef-9a2d-b337c9280728")
+		)
+		(pin "7"
+			(uuid "939c1c30-e852-462b-a366-01bc24868f3f")
+		)
+		(instances
+			(project ""
+				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
+					(reference "USB1")
 					(unit 1)
 				)
 			)
