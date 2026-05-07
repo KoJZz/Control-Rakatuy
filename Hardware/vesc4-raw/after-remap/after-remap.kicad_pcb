@@ -18769,154 +18769,6 @@
 	)
 	(footprint "CRF1:SMD-0603_r"
 		(layer "B.Cu")
-		(uuid "00000000-0000-0000-0000-000055d45fa5")
-		(at 80.25 129.3 180)
-		(property "Reference" "R6"
-			(at 1.635 -0.024 90)
-			(layer "B.SilkS")
-			(uuid "dfc00b33-a0c5-4409-9498-ed3aa9af5556")
-			(effects
-				(font
-					(size 0.50038 0.4572)
-					(thickness 0.1143)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Value" "0R"
-			(at -1.69926 0 90)
-			(layer "B.SilkS")
-			(hide yes)
-			(uuid "68856aab-a624-4434-bc1e-48a81ffda72a")
-			(effects
-				(font
-					(size 0.508 0.4572)
-					(thickness 0.1143)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Datasheet" ""
-			(at 0 0 0)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "c557a863-83a5-4573-979f-fe950e6992e2")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Description" ""
-			(at 0 0 0)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "2bd83ebc-c324-4470-9beb-ad96a8ad23d0")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property ki_fp_filters "R? SM0603 SM0805 R?-* SM1206")
-		(sheetname "/")
-		(sheetfile "after-remap.kicad_sch")
-		(attr smd)
-		(fp_line
-			(start 1.2065 0.6985)
-			(end 1.2065 -0.6985)
-			(stroke
-				(width 0.127)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "80a053e8-1abe-4694-b37c-28e0d6e6abbc")
-		)
-		(fp_line
-			(start 1.2065 0.6985)
-			(end 0.50038 0.6985)
-			(stroke
-				(width 0.127)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "e42742aa-4cfb-4afb-9413-613234aca001")
-		)
-		(fp_line
-			(start 1.2065 -0.6985)
-			(end 0.50038 -0.6985)
-			(stroke
-				(width 0.127)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "93e58fd5-d9a5-4277-bdd6-502ec44d17e0")
-		)
-		(fp_line
-			(start -0.50038 0.6985)
-			(end -1.2065 0.6985)
-			(stroke
-				(width 0.127)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "a2a85a2a-1f35-4504-9a48-286978d50c80")
-		)
-		(fp_line
-			(start -1.2065 0.6985)
-			(end -1.2065 -0.6985)
-			(stroke
-				(width 0.127)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "932c0f8a-aa12-4a07-a2d9-e162233c765a")
-		)
-		(fp_line
-			(start -1.2065 -0.6985)
-			(end -0.50038 -0.6985)
-			(stroke
-				(width 0.127)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "efa75033-8839-466a-ac31-4f9f5c6af057")
-		)
-		(pad "1" smd rect
-			(at -0.762 0 180)
-			(size 0.635 1.143)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(net 114 "Net-(USB1-VCC)")
-			(pintype "passive")
-			(uuid "d6ea7126-cefb-4a3e-a354-908b2030381c")
-		)
-		(pad "2" smd rect
-			(at 0.762 0 180)
-			(size 0.635 1.143)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(net 1 "+5V")
-			(pintype "passive")
-			(uuid "a3f11cff-5d74-405a-9622-c88eb9bdc693")
-		)
-		(embedded_fonts no)
-		(model "smd\\resistors\\R0603.wrl"
-			(offset
-				(xyz 0 0 0.02540000082)
-			)
-			(scale
-				(xyz 0.5 0.5 0.5)
-			)
-			(rotate
-				(xyz 0 0 0)
-			)
-		)
-	)
-	(footprint "CRF1:SMD-0603_r"
-		(layer "B.Cu")
 		(uuid "00000000-0000-0000-0000-000055d45faa")
 		(at 83.312 134.366 90)
 		(property "Reference" "R7"
@@ -26108,14 +25960,6 @@
 		(uuid "00000000-0000-0000-0000-000052332411")
 	)
 	(segment
-		(start 79.45 129.262)
-		(end 79.4 127.8)
-		(width 0.508)
-		(layer "B.Cu")
-		(net 1)
-		(uuid "00000000-0000-0000-0000-000053fd5172")
-	)
-	(segment
 		(start 83.698 116.078)
 		(end 83 116.776)
 		(width 0.635)
@@ -26170,14 +26014,6 @@
 		(layer "B.Cu")
 		(net 1)
 		(uuid "4f884caf-fbcf-4c89-81a4-9fdc98a894de")
-	)
-	(segment
-		(start 79.488 129.3)
-		(end 79.45 129.262)
-		(width 0.508)
-		(layer "B.Cu")
-		(net 1)
-		(uuid "55368cf8-85be-4227-bf9e-e4ed5ce6dac8")
 	)
 	(segment
 		(start 108.63326 133.096)
@@ -41267,14 +41103,6 @@
 		(net 96)
 		(uuid "f2916a0c-b8e7-4a87-8f93-b18a97834e91")
 	)
-	(via
-		(at 83.9 130.1)
-		(size 0.8)
-		(drill 0.5)
-		(layers "F.Cu" "B.Cu")
-		(net 114)
-		(uuid "69c06248-1897-489d-92dd-e924365b427d")
-	)
 	(segment
 		(start 81.05 129.3)
 		(end 81.012 129.3)
@@ -41284,44 +41112,12 @@
 		(uuid "00000000-0000-0000-0000-0000540141db")
 	)
 	(segment
-		(start 83.9 130.476)
-		(end 83.566 130.81)
-		(width 0.254)
-		(layer "B.Cu")
-		(net 114)
-		(uuid "00000000-0000-0000-0000-0000559b7ce5")
-	)
-	(segment
-		(start 83.566 130.81)
-		(end 81.407 130.81)
-		(width 0.254)
-		(layer "B.Cu")
-		(net 114)
-		(uuid "00000000-0000-0000-0000-0000559b7cea")
-	)
-	(segment
-		(start 81.407 130.81)
-		(end 81.012 130.415)
-		(width 0.254)
-		(layer "B.Cu")
-		(net 114)
-		(uuid "00000000-0000-0000-0000-0000559b7cec")
-	)
-	(segment
 		(start 81.012 130.415)
 		(end 81.012 129.3)
 		(width 0.254)
 		(layer "B.Cu")
 		(net 114)
 		(uuid "00000000-0000-0000-0000-0000559b7cee")
-	)
-	(segment
-		(start 83.9 130.1)
-		(end 83.9 130.476)
-		(width 0.254)
-		(layer "B.Cu")
-		(net 114)
-		(uuid "9bc505f0-d509-4f6d-aa19-8109ba3c6027")
 	)
 	(segment
 		(start 80.886036 130.523964)
