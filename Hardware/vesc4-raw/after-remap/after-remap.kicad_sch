@@ -2182,6 +2182,142 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "DIODESCH_2"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+				)
+			)
+			(property "Value" "DIODESCH"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Field5" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "D? S*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "DIODESCH_2_0_1"
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy 1.27 0) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 0.635) (xy 1.905 1.27) (xy 1.27 1.27) (xy 1.27 -1.27) (xy 0.635 -1.27) (xy 0.635 -0.635)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "DIODESCH_2_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "A"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "K"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "EasyEDA_Lib:HX USB-MICR XNJ ZB"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -5109,128 +5245,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "R-RESCUE-BLDC_4_16"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at 2.032 0 90)
-				(effects
-					(font
-						(size 1.016 1.016)
-					)
-				)
-			)
-			(property "Value" "R-RESCUE-BLDC_4"
-				(at 0.1778 0.0254 90)
-				(effects
-					(font
-						(size 1.016 1.016)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at -1.778 0 90)
-				(effects
-					(font
-						(size 0.762 0.762)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 0.762 0.762)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Field5" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "R? SM0603 SM0805 R?-* SM1206"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "R-RESCUE-BLDC_4_16_0_1"
-				(rectangle
-					(start -1.016 3.81)
-					(end 1.016 -3.81)
-					(stroke
-						(width 0.3048)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R-RESCUE-BLDC_4_16_1_1"
-				(pin passive line
-					(at 0 6.35 270)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -6.35 90)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "R-RESCUE-BLDC_4_17"
 			(pin_numbers
 				(hide yes)
@@ -6046,17 +6060,6 @@
 		)
 		(uuid "d496fc03-c612-4f22-a039-6ef840a44dfd")
 	)
-	(text "Mount 0R if used\nas USB host"
-		(exclude_from_sim no)
-		(at 54.61 73.66 0)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left bottom)
-		)
-		(uuid "e09e5670-e462-4672-9df4-a8db53f38d01")
-	)
 	(text "100R if used as\nservo output"
 		(exclude_from_sim no)
 		(at 171.45 139.7 0)
@@ -6263,6 +6266,16 @@
 			(type default)
 		)
 		(uuid "220c89df-b9ec-405a-9a81-23d396245dfe")
+	)
+	(wire
+		(pts
+			(xy 64.77 74.93) (xy 71.12 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "238fb6eb-f8ab-422c-973a-a0f538e1667d")
 	)
 	(wire
 		(pts
@@ -6573,16 +6586,6 @@
 			(type default)
 		)
 		(uuid "69f93f57-7525-4ff3-bf35-a68023cf42e2")
-	)
-	(wire
-		(pts
-			(xy 71.12 74.93) (xy 67.31 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6d07dc65-415a-4ee6-8eaa-86cb4d098d5b")
 	)
 	(wire
 		(pts
@@ -10725,74 +10728,6 @@
 		)
 	)
 	(symbol
-		(lib_name "R-RESCUE-BLDC_4_16")
-		(lib_id "vesc4-legacy:R-RESCUE-BLDC_4_16")
-		(at 60.96 74.93 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-0000522da24e")
-		(property "Reference" "R6"
-			(at 66.04 73.66 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0R"
-			(at 60.96 74.93 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "CRF1:SMD-0603_r"
-			(at 60.96 74.93 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 60.96 74.93 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 60.96 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "06e73996-0efb-4d9a-aee7-782784d99796")
-		)
-		(pin "1"
-			(uuid "adb2bc90-4154-478f-b09e-0e5be3df85fc")
-		)
-		(instances
-			(project ""
-				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
-					(reference "R6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_name "+5V_9")
 		(lib_id "vesc4-legacy:+5V_9")
 		(at 71.12 73.66 0)
@@ -10812,7 +10747,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 71.12 71.374 0)
+			(at 71.12 70.612 0)
 			(effects
 				(font
 					(size 0.762 0.762)
@@ -12820,10 +12755,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "c57d735e-c7db-4f10-ac00-a20943c1a323")
 		(property "Reference" "USB1"
-			(at 26.67 68.58 0)
+			(at 26.67 70.612 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12941,6 +12875,73 @@
 			(project ""
 				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
 					(reference "USB1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "DIODESCH_2")
+		(lib_id "vesc4-legacy:DIODESCH_2")
+		(at 59.69 74.93 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e3176ed3-365d-40d0-bbfc-ee36da662dd3")
+		(property "Reference" "D6"
+			(at 63.5 73.66 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "DIODESCH"
+			(at 59.69 72.136 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "Diodes_SMD:SMA_Handsoldering"
+			(at 59.69 74.93 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 74.93 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ead1a8bd-e084-4e01-a5f2-72d54f1fd4fe")
+		)
+		(pin "2"
+			(uuid "d24824b6-d0ea-4e99-8cac-16767b412fc0")
+		)
+		(instances
+			(project "after-remap"
+				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
+					(reference "D6")
 					(unit 1)
 				)
 			)
