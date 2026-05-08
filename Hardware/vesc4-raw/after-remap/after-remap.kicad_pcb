@@ -25159,7 +25159,7 @@
 	)
 	(gr_line
 		(start 111 145)
-		(end 117 145)
+		(end 117.8681 145)
 		(stroke
 			(width 0.15)
 			(type solid)
@@ -25168,8 +25168,8 @@
 		(uuid "e07ca688-58a6-4882-b22f-351b300d2897")
 	)
 	(gr_line
-		(start 117 80)
-		(end 117 145)
+		(start 117.8681 80)
+		(end 117.8681 145)
 		(stroke
 			(width 0.15)
 			(type solid)
@@ -25178,7 +25178,7 @@
 		(uuid "edf15ece-9ae6-4891-aefa-1eba86f51524")
 	)
 	(gr_line
-		(start 117 80)
+		(start 117.8681 80)
 		(end 76.7 80)
 		(stroke
 			(width 0.15)
