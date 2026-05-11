@@ -21776,7 +21776,7 @@
 				)
 			)
 		)
-		(property "Footprint" "w_smd_inductors:inductor_smd_8x5mm"
+		(property "Footprint" "Library:IND-SMD_L6.0-W6.0-shield"
 			(at 210.82 74.93 0)
 			(effects
 				(font
