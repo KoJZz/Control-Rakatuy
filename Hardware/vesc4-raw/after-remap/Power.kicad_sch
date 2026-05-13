@@ -24323,7 +24323,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "CRF1:SMD-1206"
+		(property "Footprint" "Library:C1206"
 			(at 149.86 152.4 0)
 			(effects
 				(font
@@ -24392,7 +24392,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "CRF1:SMD-1206"
+		(property "Footprint" "Library:C1206"
 			(at 149.86 158.75 0)
 			(effects
 				(font
@@ -24461,7 +24461,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "CRF1:SMD-1206"
+		(property "Footprint" "Library:C1206"
 			(at 149.86 165.1 0)
 			(effects
 				(font
@@ -24941,7 +24941,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "CRF1:SMD-1206"
+		(property "Footprint" "Library:C1206"
 			(at 231.14 30.48 0)
 			(effects
 				(font
@@ -25010,7 +25010,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "CRF1:SMD-1206"
+		(property "Footprint" "Library:C1206"
 			(at 231.14 25.4 0)
 			(effects
 				(font

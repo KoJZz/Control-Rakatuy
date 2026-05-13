@@ -12739,7 +12739,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Library:MICRO-USB-SMD_MICROQTJ-5P"
 			(at 24.13 80.01 0)
 			(effects
 				(font
