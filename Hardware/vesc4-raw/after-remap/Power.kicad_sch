@@ -24530,7 +24530,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "w_smd_cap:c_2220"
+		(property "Footprint" "Library:C2220_L5.6-W5.0-H3.0"
 			(at 231.14 35.56 0)
 			(effects
 				(font
@@ -24803,7 +24803,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "w_smd_cap:c_2220"
+		(property "Footprint" "Library:C2220_L5.6-W5.0-H3.0"
 			(at 270.51 36.83 0)
 			(effects
 				(font
