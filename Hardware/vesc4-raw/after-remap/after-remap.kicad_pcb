@@ -11862,7 +11862,7 @@
 		(property "Reference" "U4"
 			(at 0.0038 -3.2874 90)
 			(layer "F.SilkS")
-			(uuid "ad20816f-2f54-4a8a-bdad-45217c7f0404")
+			(uuid "12b400a6-4597-4f3c-a6c9-59c4662f7212")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11873,7 +11873,7 @@
 		(property "Value" "MICROQTJ"
 			(at 0.0038 5.3006 90)
 			(layer "F.Fab")
-			(uuid "22550c5c-3c68-4b32-8b8c-a80ddb4594e1")
+			(uuid "6a55788e-dbbc-4c3d-b1fc-9396d655f3b0")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11885,7 +11885,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "07e5bd58-49dd-47fb-bdcc-e3324f86b0cf")
+			(uuid "3ba33a23-c0b5-4c5a-b93a-16f5c05ff37a")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11897,7 +11897,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "dcc195dc-e18b-4755-a497-00d3129b2bba")
+			(uuid "5af2fb04-416a-49dc-b0f9-3a17cd849ad7")
 			(effects
 				(font
 					(size 1.27 1.27)

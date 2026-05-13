@@ -2669,7 +2669,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "CRF1:SMD-0603_c"
+		(property "Footprint" "Library:C0603"
 			(at 151.13 107.95 0)
 			(effects
 				(font
@@ -2738,7 +2738,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "CRF1:SMD-0603_c"
+		(property "Footprint" "Library:C0603"
 			(at 157.48 107.95 0)
 			(effects
 				(font
@@ -2807,7 +2807,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "CRF1:SMD-0603_c"
+		(property "Footprint" "Library:C0603"
 			(at 163.83 107.95 0)
 			(effects
 				(font
@@ -3143,7 +3143,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "CRF1:SMD-0603_c"
+		(property "Footprint" "Library:C0603"
 			(at 129.54 107.95 0)
 			(effects
 				(font
