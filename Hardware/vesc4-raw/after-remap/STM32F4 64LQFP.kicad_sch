@@ -1838,173 +1838,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "CRYSTAL_SMD_2"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "X"
-				(at 0 2.286 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "CRYSTAL_SMD"
-				(at 0.762 -2.794 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Field5" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "CRYSTAL_SMD_2_0_1"
-				(polyline
-					(pts
-						(xy -1.778 1.27) (xy -1.778 -1.27)
-					)
-					(stroke
-						(width 0.4064)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 -1.778) (xy 1.778 -1.778)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.016 1.016) (xy 1.016 1.016) (xy 1.016 -1.016) (xy -1.016 -1.016) (xy -1.016 1.016)
-					)
-					(stroke
-						(width 0.3048)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.778 1.27) (xy 1.778 -1.27)
-					)
-					(stroke
-						(width 0.4064)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "CRYSTAL_SMD_2_1_1"
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.302)
-					(name "1"
-						(effects
-							(font
-								(size 0.508 0.508)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0.635 0.635)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 90)
-					(length 0.762)
-					(name "case"
-						(effects
-							(font
-								(size 0.508 0.508)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 0.635 0.635)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 3.302)
-					(name "2"
-						(effects
-							(font
-								(size 0.508 0.508)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 0.635 0.635)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "GND-RESCUE-BLDC_4_10"
 			(power)
 			(pin_names
@@ -2774,6 +2607,246 @@
 						(effects
 							(font
 								(size 0.762 0.762)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Library:5TJ480000NYLBC"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "X?"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "5TJ480000NYLBC"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer Part" "5TJ480000NYLBC"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer" "JYJE(晶友嘉)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supplier Part" "C2149245"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supplier" "LCSC"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "5TJ480000NYLBC_0_0"
+				(rectangle
+					(start -5.08 5.08)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 -2.54) (xy -2.54 -2.54) (xy -2.54 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -3.81 -3.81)
+					(radius 0.254)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.778) (xy -1.27 1.778)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -0.508 1.778)
+					(end 0.508 -1.778)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.778) (xy 1.27 1.778)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 2.54) (xy 2.54 2.54) (xy 2.54 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
 							)
 						)
 					)
@@ -4989,6 +5062,16 @@
 		)
 		(uuid "48213bfd-cc45-4196-9279-3703e0991b55")
 	)
+	(wire
+		(pts
+			(xy 228.6 52.07) (xy 231.14 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48a77894-4d1a-47f2-8d69-bea142110074")
+	)
 	(polyline
 		(pts
 			(xy 234.95 67.31) (xy 234.95 90.17)
@@ -5321,6 +5404,16 @@
 	)
 	(wire
 		(pts
+			(xy 228.6 57.15) (xy 228.6 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9880387e-d8da-48aa-8899-9dadfddc5632")
+	)
+	(wire
+		(pts
 			(xy 196.85 146.05) (xy 203.2 146.05)
 		)
 		(stroke
@@ -5518,6 +5611,16 @@
 			(type default)
 		)
 		(uuid "cf44bda3-f104-44a3-afd8-b473dd143578")
+	)
+	(wire
+		(pts
+			(xy 213.36 53.34) (xy 213.36 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cff7b592-3aa0-4ed5-a253-239e18d89ee6")
 	)
 	(wire
 		(pts
@@ -7790,6 +7893,46 @@
 			"BAAAABQG6RMAAABQGKRPAAAAQGGQPgEAAACFQfoEAAAAFPb/AM8FPj1IIUdFAAAAAElFTkSuQmCC"
 			"AA=="
 		)
+	)
+	(label "X2-1"
+		(at 213.36 57.15 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "27101c39-d60a-42a2-b392-2c9649071aea")
+	)
+	(label "X2-1"
+		(at 191.77 52.07 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "32fffb06-605b-4e8b-8f1d-46a1b9c71864")
+	)
+	(label "X2-2"
+		(at 201.93 52.07 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "37331d34-a03c-4e41-9f9e-5452c25c7d96")
+	)
+	(label "X2-2"
+		(at 231.14 52.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d77be93b-c85c-43e9-9035-5042b00d4330")
 	)
 	(global_label "SWCLK"
 		(shape input)
@@ -10244,34 +10387,35 @@
 		)
 	)
 	(symbol
-		(lib_name "CRYSTAL_SMD_2")
-		(lib_id "vesc4-legacy:CRYSTAL_SMD_2")
-		(at 196.85 52.07 0)
+		(lib_name "GND-RESCUE-BLDC_4_9")
+		(lib_id "vesc4-legacy:GND-RESCUE-BLDC_4_9")
+		(at 213.36 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "00000000-0000-0000-0000-0000540978a3")
-		(property "Reference" "X2"
-			(at 196.85 49.784 0)
+		(uuid "10cebd80-ed7b-4609-80a4-8f72603fc1ca")
+		(property "Reference" "#PWR063"
+			(at 213.36 53.34 0)
 			(effects
 				(font
 					(size 0.762 0.762)
 				)
+				(hide yes)
 			)
 		)
-		(property "Value" "8MHz 10ppm"
-			(at 198.12 54.61 0)
+		(property "Value" "GND"
+			(at 213.36 55.118 0)
 			(effects
 				(font
 					(size 0.762 0.762)
 				)
-				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "CRF1:Crystal_5x3mm"
-			(at 196.85 52.07 0)
+		(property "Footprint" ""
+			(at 213.36 53.34 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -10280,23 +10424,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 196.85 52.07 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 196.85 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "mfg#" "ABM3B-8.0-10-1UT"
-			(at 196.85 52.07 0)
+			(at 213.36 53.34 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -10304,17 +10432,129 @@
 				(hide yes)
 			)
 		)
+		(property "Description" ""
+			(at 213.36 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "82767c83-4340-46a9-a7a7-b7652a0b7666")
-		)
-		(pin "2"
-			(uuid "c1669a3a-8820-410e-aae0-f9cb0a73ea39")
-		)
-		(pin "3"
-			(uuid "4ab257a5-cc10-4950-8b79-d4f15d2194a8")
+			(uuid "03833e85-c080-427c-827e-1e18fcf648a3")
 		)
 		(instances
 			(project "after-remap"
+				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09/00000000-0000-0000-0000-000053f7501a"
+					(reference "#PWR063")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Library:5TJ480000NYLBC")
+		(at 220.98 54.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b2013aa8-9ccf-4443-b9f7-d2ab0c79964b")
+		(property "Reference" "X2"
+			(at 220.98 48.006 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5TJ480000NYLBC"
+			(at 220.98 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Library:C2149245"
+			(at 220.98 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 220.98 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 220.98 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part" "5TJ480000NYLBC"
+			(at 220.98 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "JYJE(晶友嘉)"
+			(at 220.98 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier Part" "C2149245"
+			(at 220.98 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "LCSC"
+			(at 220.98 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "347bfe76-6579-442b-b366-e89d369eb700")
+		)
+		(pin "3"
+			(uuid "abb04e74-9751-4f36-90be-707aed214771")
+		)
+		(pin "2"
+			(uuid "98ae966a-c792-43c8-ab83-e1b146bb58cc")
+		)
+		(pin "4"
+			(uuid "ce95cbfc-d1d2-4861-84f7-dce79134ebcf")
+		)
+		(instances
+			(project ""
 				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09/00000000-0000-0000-0000-000053f7501a"
 					(reference "X2")
 					(unit 1)
@@ -10325,15 +10565,15 @@
 	(symbol
 		(lib_name "GND-RESCUE-BLDC_4_9")
 		(lib_id "vesc4-legacy:GND-RESCUE-BLDC_4_9")
-		(at 196.85 54.61 0)
+		(at 228.6 58.42 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "00000000-0000-0000-0000-000054097d19")
-		(property "Reference" "#PWR047"
-			(at 196.85 54.61 0)
+		(uuid "c171c8a1-c2c7-4f9e-9694-ab2c1955b454")
+		(property "Reference" "#PWR064"
+			(at 228.6 58.42 0)
 			(effects
 				(font
 					(size 0.762 0.762)
@@ -10342,7 +10582,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 196.85 56.388 0)
+			(at 228.6 60.198 0)
 			(effects
 				(font
 					(size 0.762 0.762)
@@ -10351,7 +10591,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 196.85 54.61 0)
+			(at 228.6 58.42 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -10360,7 +10600,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 196.85 54.61 0)
+			(at 228.6 58.42 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -10369,7 +10609,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 196.85 54.61 0)
+			(at 228.6 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10377,12 +10617,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "f5a2e38f-fde7-44c3-8d69-fb4ee8fd2d80")
+			(uuid "448fae3f-b7c8-45a7-8157-c0913717dc47")
 		)
 		(instances
 			(project "after-remap"
 				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09/00000000-0000-0000-0000-000053f7501a"
-					(reference "#PWR047")
+					(reference "#PWR064")
 					(unit 1)
 				)
 			)
