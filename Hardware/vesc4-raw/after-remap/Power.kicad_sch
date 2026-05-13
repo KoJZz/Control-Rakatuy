@@ -21845,7 +21845,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "w_smd_cap:c_tant_B"
+		(property "Footprint" "Library:CAP-SMD_L3.5-W2.8-R-RD"
 			(at 222.25 82.55 0)
 			(effects
 				(font
@@ -23323,7 +23323,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "w_smd_cap:c_tant_B"
+		(property "Footprint" "Library:CAP-SMD_L3.5-W2.8-R-RD"
 			(at 182.88 35.56 0)
 			(effects
 				(font
