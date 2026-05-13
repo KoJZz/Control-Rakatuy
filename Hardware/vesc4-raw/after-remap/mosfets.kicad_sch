@@ -3815,6 +3815,16 @@
 		)
 		(uuid "4f732bf0-9719-4320-b136-67877fe6679f")
 	)
+	(label "Q6-s"
+		(at 219.71 167.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "60649b60-1dbd-48f9-a59f-043bbc7f44e6")
+	)
 	(label "Q6-g"
 		(at 200.66 95.25 0)
 		(effects
@@ -3855,16 +3865,6 @@
 		)
 		(uuid "7215c7a4-f296-4b87-9433-f1e44378b6ee")
 	)
-	(label "Q6-s"
-		(at 208.28 100.33 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8001880d-d87a-4f19-a19b-dd719c9c0031")
-	)
 	(label "Q1-s_Q2-d"
 		(at 144.78 138.43 90)
 		(effects
@@ -3874,6 +3874,16 @@
 			(justify left bottom)
 		)
 		(uuid "80c2ebfa-ab6e-491b-9c3c-f9e88a86af96")
+	)
+	(label "Q6-s"
+		(at 208.28 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "87a5d642-c382-47d9-9bfa-02f017abbb09")
 	)
 	(label "Q3-s_Q4-d"
 		(at 173.99 53.34 0)
@@ -3904,16 +3914,6 @@
 			(justify left bottom)
 		)
 		(uuid "945d2fa9-890f-4b4a-ba75-0b3b9357e147")
-	)
-	(label "Q6-s"
-		(at 219.71 167.64 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9dffc49b-c232-44e1-845c-384c2fda8a1f")
 	)
 	(label "Q5-s_Q6-d"
 		(at 208.28 76.2 0)

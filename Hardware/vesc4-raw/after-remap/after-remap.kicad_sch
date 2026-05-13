@@ -4516,6 +4516,176 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Library:WSLP27262L000FEA"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U?"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "WSLP27262L000FEA"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer Part" "WSLP27262L000FEA"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer" "VISHAY(威世)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supplier Part" "C2076510"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supplier" "LCSC"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "WSLP27262L000FEA_0_0"
+				(rectangle
+					(start -2.54 1.27)
+					(end 2.54 -1.27)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at -5.08 1.27 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at -5.08 -1.27 0)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 5.08 1.27 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 5.08 -1.27 180)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "R-RESCUE-BLDC_4_10"
 			(pin_numbers
 				(hide yes)
@@ -5492,316 +5662,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "SHUNT_3"
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at 2.032 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SHUNT"
-				(at 0 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Field5" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "R? SM0603 SM0805 R?-* SM1206"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SHUNT_3_0_1"
-				(rectangle
-					(start -1.016 3.81)
-					(end 1.016 -3.81)
-					(stroke
-						(width 0.3048)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SHUNT_3_1_1"
-				(pin input line
-					(at -7.62 2.54 0)
-					(length 7.62)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 -2.54 0)
-					(length 7.62)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 6.35 270)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -6.35 90)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "SHUNT_4"
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at 2.032 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SHUNT"
-				(at 0 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Field5" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "R? SM0603 SM0805 R?-* SM1206"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SHUNT_4_0_1"
-				(rectangle
-					(start -1.016 3.81)
-					(end 1.016 -3.81)
-					(stroke
-						(width 0.3048)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SHUNT_4_1_1"
-				(pin input line
-					(at -7.62 2.54 0)
-					(length 7.62)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 -2.54 0)
-					(length 7.62)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 6.35 270)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -6.35 90)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "VCC_3"
 			(power)
 			(pin_names
@@ -6117,12 +5977,6 @@
 		(uuid "7f2074c9-7184-44b6-9619-d6011324f722")
 	)
 	(junction
-		(at 207.01 101.6)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9855f090-37a8-4afd-a473-48514abac6c2")
-	)
-	(junction
 		(at 177.8 146.05)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6179,6 +6033,16 @@
 			(type default)
 		)
 		(uuid "07e3589f-4375-434e-b4bc-8befb74bbf79")
+	)
+	(wire
+		(pts
+			(xy 207.01 104.14) (xy 207.01 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0de504bb-2a43-4dbe-9d3c-47d77d42b423")
 	)
 	(wire
 		(pts
@@ -6239,6 +6103,16 @@
 			(type default)
 		)
 		(uuid "1dc80b55-6055-4e1d-9b99-8d5e56a4a819")
+	)
+	(wire
+		(pts
+			(xy 214.63 128.27) (xy 214.63 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1dd17d18-0869-4d01-94b4-46f4ab427db3")
 	)
 	(wire
 		(pts
@@ -6339,6 +6213,16 @@
 			(type default)
 		)
 		(uuid "32528013-9e16-40c1-8372-c770965f4c94")
+	)
+	(wire
+		(pts
+			(xy 199.39 105.41) (xy 204.47 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34344e50-38cb-4181-9ba9-b700105d76a9")
 	)
 	(wire
 		(pts
@@ -6512,16 +6396,6 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 104.14) (xy 207.01 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5fcf2a19-1f02-4790-abb7-25c2d6d58255")
-	)
-	(wire
-		(pts
 			(xy 40.64 87.63) (xy 40.64 85.09)
 		)
 		(stroke
@@ -6602,6 +6476,16 @@
 	)
 	(wire
 		(pts
+			(xy 209.55 118.11) (xy 212.09 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7bc82b06-02c7-494b-bda6-0b1d721b8207")
+	)
+	(wire
+		(pts
 			(xy 195.58 96.52) (xy 214.63 96.52)
 		)
 		(stroke
@@ -6629,6 +6513,16 @@
 			(type default)
 		)
 		(uuid "810892c3-88c0-46cc-837e-ef7b4b5fa99c")
+	)
+	(wire
+		(pts
+			(xy 199.39 107.95) (xy 199.39 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "856bb4e6-d2f5-48b4-b1a8-a090dfb97c83")
 	)
 	(wire
 		(pts
@@ -6672,13 +6566,33 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 120.65) (xy 195.58 120.65)
+			(xy 195.58 120.65) (xy 209.55 120.65)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "8b78b9e0-d5eb-44c9-b971-10df8c438452")
+	)
+	(wire
+		(pts
+			(xy 209.55 128.27) (xy 212.09 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c5981ef-7c96-4dd9-9c98-b0de1e19ef29")
+	)
+	(wire
+		(pts
+			(xy 199.39 115.57) (xy 204.47 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d5cb064-af3b-4912-8d8f-9b7c95a68134")
 	)
 	(wire
 		(pts
@@ -6832,7 +6746,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 125.73) (xy 195.58 125.73)
+			(xy 195.58 125.73) (xy 209.55 125.73)
 		)
 		(stroke
 			(width 0)
@@ -6942,6 +6856,16 @@
 	)
 	(wire
 		(pts
+			(xy 209.55 120.65) (xy 209.55 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bee7a8b1-af10-4727-b41d-774585647bc1")
+	)
+	(wire
+		(pts
 			(xy 160.02 146.05) (xy 161.29 146.05)
 		)
 		(stroke
@@ -7042,6 +6966,26 @@
 	)
 	(wire
 		(pts
+			(xy 209.55 125.73) (xy 209.55 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dcb11570-3ef8-477b-9efc-9b310adab530")
+	)
+	(wire
+		(pts
+			(xy 199.39 113.03) (xy 199.39 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ddd46a99-01af-4191-a068-b5a6fffe2735")
+	)
+	(wire
+		(pts
 			(xy 250.19 125.73) (xy 250.19 128.27)
 		)
 		(stroke
@@ -7052,7 +6996,7 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 116.84) (xy 214.63 96.52)
+			(xy 214.63 96.52) (xy 214.63 118.11)
 		)
 		(stroke
 			(width 0)
@@ -7112,17 +7056,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 101.6) (xy 207.01 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f78df75e-18fa-48b8-95e2-fe7bab447e1e")
-	)
-	(wire
-		(pts
-			(xy 207.01 101.6) (xy 219.71 101.6)
+			(xy 195.58 101.6) (xy 219.71 101.6)
 		)
 		(stroke
 			(width 0)
@@ -10816,153 +10750,6 @@
 		)
 	)
 	(symbol
-		(lib_name "SHUNT_4")
-		(lib_id "vesc4-legacy:SHUNT_4")
-		(at 214.63 123.19 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-000053f93d66")
-		(property "Reference" "R53"
-			(at 216.662 123.19 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SHUNT"
-			(at 214.63 123.19 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "CRF1:WSLP2726"
-			(at 214.63 123.19 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 214.63 123.19 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 214.63 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "6cfa489c-eef3-4569-aba3-eaa8051745ef")
-		)
-		(pin "4"
-			(uuid "f13c7324-f8b4-410c-8c02-fdaedb56a832")
-		)
-		(pin "3"
-			(uuid "d2183b3b-7eed-4ccb-ae34-82c6277d1fce")
-		)
-		(pin "1"
-			(uuid "58167396-50d5-4eaf-854b-bdec8f55afea")
-		)
-		(instances
-			(project ""
-				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
-					(reference "R53")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "SHUNT_3")
-		(lib_id "vesc4-legacy:SHUNT_3")
-		(at 207.01 110.49 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-000053f946af")
-		(property "Reference" "R54"
-			(at 209.042 110.49 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SHUNT"
-			(at 207.01 110.49 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "CRF1:WSLP2726"
-			(at 207.01 110.49 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 207.01 110.49 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 207.01 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "4e8722b8-a117-4cbb-afa0-7d1e15fb7ebf")
-		)
-		(pin "4"
-			(uuid "c00add67-22f9-4825-91c3-c527ead44c4f")
-		)
-		(pin "3"
-			(uuid "1ea540f1-4570-4299-8666-1032e28943bb")
-		)
-		(pin "1"
-			(uuid "554b35c3-a833-44ee-b172-975fbb63d80c")
-		)
-		(instances
-			(project ""
-				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
-					(reference "R54")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_name "GND-RESCUE-BLDC_4_24")
 		(lib_id "vesc4-legacy:GND-RESCUE-BLDC_4_24")
 		(at 242.57 128.27 0)
@@ -12493,7 +12280,7 @@
 	(symbol
 		(lib_name "GND-RESCUE-BLDC_4_17")
 		(lib_id "vesc4-legacy:GND-RESCUE-BLDC_4_17")
-		(at 207.01 116.84 0)
+		(at 207.01 104.14 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12501,7 +12288,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-0000548f2529")
 		(property "Reference" "#PWR020"
-			(at 207.01 116.84 0)
+			(at 207.01 104.14 0)
 			(effects
 				(font
 					(size 0.762 0.762)
@@ -12510,7 +12297,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 207.01 118.618 0)
+			(at 207.01 102.362 0)
 			(effects
 				(font
 					(size 0.762 0.762)
@@ -12519,7 +12306,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 207.01 116.84 0)
+			(at 207.01 104.14 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -12528,7 +12315,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 207.01 116.84 0)
+			(at 207.01 104.14 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -12537,7 +12324,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 207.01 116.84 0)
+			(at 207.01 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12771,6 +12558,118 @@
 		)
 	)
 	(symbol
+		(lib_id "Library:WSLP27262L000FEA")
+		(at 213.36 123.19 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "141828c6-2183-4544-a62e-ab864da32f8d")
+		(property "Reference" "R53"
+			(at 216.154 121.412 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "WSLP27262L000FEA"
+			(at 215.9 124.4599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Library:C2076510"
+			(at 213.36 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 213.36 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 213.36 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part" "WSLP27262L000FEA"
+			(at 213.36 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "VISHAY(威世)"
+			(at 213.36 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier Part" "C2076510"
+			(at 213.36 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "LCSC"
+			(at 213.36 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e818f7bf-e198-46fb-be69-5d03549d957a")
+		)
+		(pin "4"
+			(uuid "a16e985d-5db5-4d8e-a50f-e6fb9336b1c7")
+		)
+		(pin "3"
+			(uuid "303f6bee-bcba-4aa6-9667-811806fa211f")
+		)
+		(pin "1"
+			(uuid "ee6ea69d-1008-4d3c-b680-dc91a8f60094")
+		)
+		(instances
+			(project "after-remap"
+				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
+					(reference "R53")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "EasyEDA_Lib:MICRO USB 5P贴板公头四脚贴带卡勾")
 		(at 26.67 80.01 0)
 		(unit 1)
@@ -12890,6 +12789,118 @@
 			(project ""
 				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
 					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Library:WSLP27262L000FEA")
+		(at 205.74 110.49 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9e6d5b21-c83e-4cb0-9aab-6b0c0b7e230b")
+		(property "Reference" "R54"
+			(at 208.534 108.712 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "WSLP27262L000FEA"
+			(at 208.28 111.7599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Library:C2076510"
+			(at 205.74 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 205.74 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 205.74 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part" "WSLP27262L000FEA"
+			(at 205.74 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "VISHAY(威世)"
+			(at 205.74 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier Part" "C2076510"
+			(at 205.74 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "LCSC"
+			(at 205.74 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "2fa8dbba-5245-45f4-82cd-316b84b2650b")
+		)
+		(pin "4"
+			(uuid "e083c2d1-b39b-4c2c-ac6f-5e02bc746199")
+		)
+		(pin "3"
+			(uuid "93049eda-6ef0-43b9-a436-8cb5f1c1b3d1")
+		)
+		(pin "1"
+			(uuid "0c2e16eb-df1f-4860-8fd9-d1cb89713022")
+		)
+		(instances
+			(project ""
+				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
+					(reference "R54")
 					(unit 1)
 				)
 			)
