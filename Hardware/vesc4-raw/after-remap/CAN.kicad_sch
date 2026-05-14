@@ -2547,7 +2547,7 @@
 				)
 			)
 		)
-		(property "Footprint" "CRF1:SMD-0603_r"
+		(property "Footprint" "Library:R0603"
 			(at 160.782 116.84 90)
 			(effects
 				(font

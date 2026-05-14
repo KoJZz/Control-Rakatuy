@@ -22318,7 +22318,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "CRF1:SMD-0603_c"
+		(property "Footprint" "Library:C0603"
 			(at 105.41 138.43 0)
 			(effects
 				(font
