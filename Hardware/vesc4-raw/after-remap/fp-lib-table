@@ -1,0 +1,12 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "CRF1")(type "KiCad")(uri "$(KIPRJMOD)/Libraries/crf1.pretty")(options "")(descr ""))
+  (lib (name "w_smd_inductors")(type "Legacy")(uri "$(KIPRJMOD)/Libraries/w_smd_inductors.mod")(options "")(descr ""))
+  (lib (name "w_smd_cap")(type "Legacy")(uri "$(KIPRJMOD)/Libraries/w_smd_cap.mod")(options "")(descr ""))
+  (lib (name "JST conn")(type "KiCad")(uri "$(KIPRJMOD)/Libraries/w_conn_jst-ph.pretty")(options "")(descr ""))
+  (lib (name "w_smd_diode")(type "Legacy")(uri "$(KIPRJMOD)/Libraries/w_smd_diode.mod")(options "")(descr ""))
+  (lib (name "VESC4-legacy")(type "KiCad")(uri "${KIPRJMOD}/VESC4-legacy.pretty")(options "")(descr ""))
+  (lib (name "footprints")(type "KiCad")(uri "C:/Users/Nicho/Documents/MENIMBA ILMU/El-Controller-RAKATA/Controller/symbols-footprints/ul_IPT007N06NATMA1/KiCADv6/footprints.pretty")(options "")(descr ""))
+  (lib (name "EasyEDA_Lib")(type "EasyEDA / JLCEDA Pro")(uri "${KIPRJMOD}/EasyEDA_Lib/EasyEDA_Lib.elibz")(options "")(descr ""))
+  (lib (name "3225 8M 12PF 10PPM")(type "KiCad")(uri "${KIPRJMOD}/Libraries/3225 8M 12PF 10PPM.pretty")(options "")(descr ""))
+)
