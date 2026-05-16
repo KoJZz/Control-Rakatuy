@@ -1,0 +1,140 @@
+(footprint "SMD-0603_r"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 1.778 -0.381 90)
+		(layer "F.SilkS")
+		(uuid "0a9d7e65-6d2d-45c5-b7fe-7e8e7a61cee4")
+		(effects
+			(font
+				(size 0.50038 0.4572)
+				(thickness 0.1143)
+			)
+		)
+	)
+	(property "Value" "10k"
+		(at -1.69926 0 90)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "d379eba1-924e-48e1-b688-80b7d7c009aa")
+		(effects
+			(font
+				(size 0.508 0.4572)
+				(thickness 0.1143)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "B.Fab")
+		(hide yes)
+		(uuid "afc2c9f5-6f94-4871-aa98-d1b62757d1f3")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "B.Fab")
+		(hide yes)
+		(uuid "bb746d7c-fe83-4f62-8791-185f61221a03")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start 1.2065 0.6985)
+		(end 0.50038 0.6985)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "856e6d72-c5af-4f11-b87a-aa480a904a57")
+	)
+	(fp_line
+		(start 1.2065 -0.6985)
+		(end 1.2065 0.6985)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c86b1c23-c958-4f7c-b468-5dd72f66f06b")
+	)
+	(fp_line
+		(start 1.2065 -0.6985)
+		(end 0.50038 -0.6985)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c17f2f69-290b-47eb-be69-d93f72c73824")
+	)
+	(fp_line
+		(start -0.50038 -0.6985)
+		(end -1.2065 -0.6985)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "31127830-32b0-4a3f-9cc1-0e72d1d33b2c")
+	)
+	(fp_line
+		(start -1.2065 0.6985)
+		(end -0.50038 0.6985)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0757d800-7624-447f-9cac-d02253095193")
+	)
+	(fp_line
+		(start -1.2065 -0.6985)
+		(end -1.2065 0.6985)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "40bcf7c9-432f-4f61-8872-066cab976217")
+	)
+	(pad "1" smd rect
+		(at -0.762 0 180)
+		(size 0.635 1.143)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8ab2f273-63bf-4612-9bae-d02cb68470c3")
+	)
+	(pad "2" smd rect
+		(at 0.762 0 180)
+		(size 0.635 1.143)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "d775c90c-1295-48fe-9a43-16ccaa7d5b55")
+	)
+	(embedded_fonts no)
+	(model "smd\\resistors\\R0603.wrl"
+		(offset
+			(xyz 0 0 0.02540000082)
+		)
+		(scale
+			(xyz 0.5 0.5 0.5)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

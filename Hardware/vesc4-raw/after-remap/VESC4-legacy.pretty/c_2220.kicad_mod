@@ -1,0 +1,141 @@
+(footprint "c_2220"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "SMT capacitor, 2220")
+	(property "Reference" "REF**"
+		(at -0.856 -2.99 0)
+		(layer "F.SilkS")
+		(uuid "fcec746c-cf11-4b07-aabb-333b44b297d2")
+		(effects
+			(font
+				(size 0.50038 0.50038)
+				(thickness 0.11938)
+			)
+		)
+	)
+	(property "Value" "15u, 100v"
+		(at 0 3.302 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "afaad4fc-236f-410f-bd1e-419fab2ea6aa")
+		(effects
+			(font
+				(size 0.50038 0.50038)
+				(thickness 0.11938)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "B.Fab")
+		(hide yes)
+		(uuid "e3c5503a-5e6f-404e-b869-e621bea16dc9")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "B.Fab")
+		(hide yes)
+		(uuid "2c183457-68e8-407a-9a1d-9527db9a5ac4")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start 2.794 2.54)
+		(end -2.794 2.54)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "37a25a2b-2370-49ac-a6f8-07cad29c5cf9")
+	)
+	(fp_line
+		(start 2.794 -2.54)
+		(end 2.794 2.54)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e82bcd2f-e501-4335-875e-c103f8d8a663")
+	)
+	(fp_line
+		(start 2.159 -2.54)
+		(end 2.159 2.54)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0d00e00a-d093-4483-a1e3-8b1e6d3f40e0")
+	)
+	(fp_line
+		(start -2.159 -2.54)
+		(end -2.159 2.54)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "394c5679-1ba4-4b5c-a29d-4bed55042a50")
+	)
+	(fp_line
+		(start -2.794 2.54)
+		(end -2.794 -2.54)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9d48dc77-07f8-4c70-ab74-8da2e2ad7041")
+	)
+	(fp_line
+		(start -2.794 -2.54)
+		(end 2.794 -2.54)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ecce82ea-1de1-49e3-b4e9-1f0ffc760b70")
+	)
+	(pad "1" smd rect
+		(at 2.57556 0 180)
+		(size 1.84912 5.4991)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "075542b8-4066-4302-97e9-97b6fd190343")
+	)
+	(pad "2" smd rect
+		(at -2.57556 0 180)
+		(size 1.84912 5.4991)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "9d7f5800-a2c3-423c-b58d-14babeff22cf")
+	)
+	(embedded_fonts no)
+	(model "walter/smd_cap/c_2220.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
