@@ -9726,7 +9726,7 @@
 				)
 			)
 		)
-		(property "Footprint" "CRF1:MICRO_JST_6"
+		(property "Footprint" "Library:CONN-TH_B6B-PH-K-S"
 			(at 256.54 80.01 0)
 			(effects
 				(font
