@@ -746,7 +746,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:R0603"
+		(property "Footprint" "easypretty:R0603"
 			(at 109.982 86.36 90)
 			(effects
 				(font
@@ -781,6 +781,24 @@
 			)
 		)
 		(property "JLC_3D_Size" "0.81 1.62"
+			(at 111.76 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25804"
+			(at 111.76 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
 			(at 111.76 86.36 0)
 			(effects
 				(font
@@ -830,7 +848,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:R0603"
+		(property "Footprint" "easypretty:R0603"
 			(at 109.982 104.14 90)
 			(effects
 				(font
@@ -865,6 +883,24 @@
 			)
 		)
 		(property "JLC_3D_Size" "0.81 1.62"
+			(at 111.76 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25804"
+			(at 111.76 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
 			(at 111.76 104.14 0)
 			(effects
 				(font
@@ -916,7 +952,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "CRF1:SMD-0603_c"
+		(property "Footprint" "easypretty:C0603"
 			(at 106.3752 107.95 0)
 			(effects
 				(font
@@ -939,6 +975,42 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "JLC_3DModel" "ac9b32e974bc448eab36b1293f859dcb"
+			(at 105.41 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_3D_Size" "1.6 0.8"
+			(at 105.41 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23630"
+			(at 105.41 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C1631"
+			(at 105.41 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"

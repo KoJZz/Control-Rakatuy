@@ -5965,6 +5965,12 @@
 		(uuid "4b9caf66-02b8-481c-8c53-093aa43e087f")
 	)
 	(junction
+		(at 44.45 148.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5283e7b7-6084-4d22-8a5f-8c44338bf76b")
+	)
+	(junction
 		(at 207.01 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6167,6 +6173,16 @@
 			(type default)
 		)
 		(uuid "26f587a5-0142-4c0f-be97-bd4b77eda51e")
+	)
+	(wire
+		(pts
+			(xy 40.64 162.56) (xy 44.45 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "276b7dd0-e1f7-4813-abe2-b8b27e20d62c")
 	)
 	(wire
 		(pts
@@ -6470,6 +6486,16 @@
 	)
 	(wire
 		(pts
+			(xy 44.45 148.59) (xy 44.45 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7aa0bed2-a6bf-4532-8167-d43af5dc46ab")
+	)
+	(wire
+		(pts
 			(xy 195.58 96.52) (xy 214.63 96.52)
 		)
 		(stroke
@@ -6690,7 +6716,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 148.59) (xy 36.83 148.59)
+			(xy 82.55 148.59) (xy 44.45 148.59)
 		)
 		(stroke
 			(width 0)
@@ -6817,6 +6843,16 @@
 			(type default)
 		)
 		(uuid "c6c8880d-1d13-44b1-ac6b-e717028f8aa3")
+	)
+	(wire
+		(pts
+			(xy 44.45 148.59) (xy 36.83 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8abf27d-10ef-4a34-9039-484e05d6293d")
 	)
 	(wire
 		(pts
@@ -7079,7 +7115,7 @@
 		(uuid "fde56b59-af0a-4873-9f8e-57a9ff2a6185")
 	)
 	(image
-		(at 251.46 149.225)
+		(at 252.73 138.43)
 		(uuid "31905a36-2566-4355-8576-81a021802b45")
 		(data "iVBORw0KGgoAAAANSUhEUgAAA0wAAAItCAIAAACFIG2rAAAAA3NCSVQICAjb4U/gAAAgAElEQVR4"
 			"nOydebwU1Zn3n1Ndvd2lQUAREIwLXE2IUQQnmsEgMZhtzCiCLK4x8yYENGabxAwQR5yYPSSGQSea"
@@ -9564,17 +9600,6 @@
 			)
 		)
 	)
-	(hierarchical_label "Q7_S"
-		(shape input)
-		(at 220.98 172.72 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "cfcdc189-aafb-4a1a-8df9-416af1a37951")
-	)
 	(symbol
 		(lib_name "CONN_6_2")
 		(lib_id "vesc4-legacy:CONN_6_2")
@@ -9601,7 +9626,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:CONN-TH_B6B-PH-K-S"
+		(property "Footprint" "easypretty:CONN-TH_B6B-PH-K-S"
 			(at 27.94 118.11 0)
 			(effects
 				(font
@@ -9813,7 +9838,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Library:C0603"
+		(property "Footprint" "easypretty:C0603"
 			(at 166.37 146.05 0)
 			(effects
 				(font
@@ -9837,6 +9862,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC" "C14663"
+			(at 166.37 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C1631"
+			(at 166.37 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9880,7 +9923,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:R0603"
+		(property "Footprint" "easypretty:R0603"
 			(at 167.64 140.97 0)
 			(effects
 				(font
@@ -9916,6 +9959,24 @@
 			)
 		)
 		(property "JLC_3D_Size" "0.81 1.62"
+			(at 167.64 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C4190"
+			(at 167.64 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
 			(at 167.64 140.97 0)
 			(effects
 				(font
@@ -9968,7 +10029,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Library:C0603"
+		(property "Footprint" "easypretty:C0603"
 			(at 52.07 60.96 0)
 			(effects
 				(font
@@ -9992,6 +10053,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC" "C14663"
+			(at 52.07 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C1631"
+			(at 52.07 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -10239,7 +10318,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:R0603"
+		(property "Footprint" "easypretty:R0603"
 			(at 52.07 57.15 0)
 			(effects
 				(font
@@ -10275,6 +10354,24 @@
 			)
 		)
 		(property "JLC_3D_Size" "0.81 1.62"
+			(at 52.07 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C4190"
+			(at 52.07 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
 			(at 52.07 57.15 0)
 			(effects
 				(font
@@ -10325,7 +10422,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:R0603"
+		(property "Footprint" "easypretty:R0603"
 			(at 52.07 54.61 0)
 			(effects
 				(font
@@ -10361,6 +10458,24 @@
 			)
 		)
 		(property "JLC_3D_Size" "0.81 1.62"
+			(at 52.07 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23153"
+			(at 52.07 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
 			(at 52.07 54.61 0)
 			(effects
 				(font
@@ -11266,7 +11381,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:R0603"
+		(property "Footprint" "easypretty:R0603"
 			(at 149.86 162.56 0)
 			(effects
 				(font
@@ -11302,6 +11417,24 @@
 			)
 		)
 		(property "JLC_3D_Size" "0.81 1.62"
+			(at 149.86 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C22775"
+			(at 149.86 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
 			(at 149.86 162.56 0)
 			(effects
 				(font
@@ -11351,7 +11484,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:LED0603-R-RD_WHITE"
+		(property "Footprint" "easypretty:LED0603-R-RD_WHITE"
 			(at 149.86 173.99 0)
 			(effects
 				(font
@@ -11375,6 +11508,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC" "C2904374"
+			(at 149.86 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C2290"
+			(at 149.86 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -11484,7 +11635,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:R0603"
+		(property "Footprint" "easypretty:R0603"
 			(at 157.48 162.56 0)
 			(effects
 				(font
@@ -11520,6 +11671,24 @@
 			)
 		)
 		(property "JLC_3D_Size" "0.81 1.62"
+			(at 157.48 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C22775"
+			(at 157.48 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
 			(at 157.48 162.56 0)
 			(effects
 				(font
@@ -11569,7 +11738,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:LED0603-R-RD_WHITE"
+		(property "Footprint" "easypretty:LED0603-R-RD_WHITE"
 			(at 157.48 173.99 0)
 			(effects
 				(font
@@ -11593,6 +11762,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC" "C2905797"
+			(at 157.48 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C2290"
+			(at 157.48 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -11702,7 +11889,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:LED0603-R-RD_WHITE"
+		(property "Footprint" "easypretty:LED0603-R-RD_WHITE"
 			(at 165.1 173.99 0)
 			(effects
 				(font
@@ -11726,6 +11913,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC" "C2290"
+			(at 165.1 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C2290"
+			(at 165.1 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -11769,7 +11974,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:R0603"
+		(property "Footprint" "easypretty:R0603"
 			(at 165.1 162.56 0)
 			(effects
 				(font
@@ -11805,6 +12010,24 @@
 			)
 		)
 		(property "JLC_3D_Size" "0.81 1.62"
+			(at 165.1 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C4190"
+			(at 165.1 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
 			(at 165.1 162.56 0)
 			(effects
 				(font
@@ -11985,7 +12208,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:R0603"
+		(property "Footprint" "easypretty:R0603"
 			(at 60.96 75.692 90)
 			(effects
 				(font
@@ -12020,6 +12243,24 @@
 			)
 		)
 		(property "JLC_3D_Size" "0.81 1.62"
+			(at 60.96 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23345"
+			(at 60.96 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
 			(at 60.96 77.47 0)
 			(effects
 				(font
@@ -12069,7 +12310,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:R0603"
+		(property "Footprint" "easypretty:R0603"
 			(at 60.96 78.232 90)
 			(effects
 				(font
@@ -12104,6 +12345,24 @@
 			)
 		)
 		(property "JLC_3D_Size" "0.81 1.62"
+			(at 60.96 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23345"
+			(at 60.96 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
 			(at 60.96 80.01 0)
 			(effects
 				(font
@@ -12153,7 +12412,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:CONN-TH_B4B-PH-K-S"
+		(property "Footprint" "easypretty:CONN-TH_B4B-PH-K-S"
 			(at 27.94 100.33 0)
 			(effects
 				(font
@@ -12621,7 +12880,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:CONN-TH_B7B-PH-K-S-LF-SN"
+		(property "Footprint" "easypretty:CONN-TH_B7B-PH-K-S-LF-SN"
 			(at 31.75 140.97 0)
 			(effects
 				(font
@@ -12704,7 +12963,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:C2076510"
+		(property "Footprint" "easypretty:R2726"
 			(at 213.36 123.19 0)
 			(effects
 				(font
@@ -12767,6 +13026,42 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_3DModel" "76bc509a5511445c8d320e01eb58c99c"
+			(at 213.36 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_3D_Size" "6.9 6.6"
+			(at 213.36 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2076510"
+			(at 213.36 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C2076510"
+			(at 213.36 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "e818f7bf-e198-46fb-be69-5d03549d957a")
 		)
@@ -12783,6 +13078,109 @@
 			(project "after-remap"
 				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
 					(reference "R53")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "R-RESCUE-BLDC_4_13")
+		(lib_id "vesc4-legacy:R-RESCUE-BLDC_4_13")
+		(at 44.45 156.21 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "626b4114-6e20-419f-9bc5-1d488aa7c9e6")
+		(property "Reference" "R6"
+			(at 46.99 156.21 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 44.45 156.21 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "easypretty:R0603"
+			(at 44.45 156.21 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 44.45 156.21 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 44.45 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC_3DModel" "6bd5cd867e9542ebae21caaf5d2d4c4d"
+			(at 44.45 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_3D_Size" "0.81 1.62"
+			(at 44.45 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25819"
+			(at 44.45 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
+			(at 44.45 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c07d80b0-8151-4825-a3ca-832d534a99a7")
+		)
+		(pin "2"
+			(uuid "9883d9f5-aae2-4691-a561-b1f66484626b")
+		)
+		(instances
+			(project "after-remap"
+				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -12883,7 +13281,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:MICRO-USB-SMD_MICROQTJ-5P"
+		(property "Footprint" "easypretty:MICRO-USB-SMD_MICROQTJ-5P"
 			(at 24.13 80.01 0)
 			(effects
 				(font
@@ -12938,6 +13336,24 @@
 			)
 		)
 		(property "Supplier" "LCSC"
+			(at 24.13 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C404968"
+			(at 24.13 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C404968"
 			(at 24.13 80.01 0)
 			(effects
 				(font
@@ -13010,7 +13426,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Library:C2076510"
+		(property "Footprint" "easypretty:R2726"
 			(at 203.2 110.49 0)
 			(effects
 				(font
@@ -13073,6 +13489,42 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_3DModel" "76bc509a5511445c8d320e01eb58c99c"
+			(at 203.2 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_3D_Size" "6.9 6.6"
+			(at 203.2 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2076510"
+			(at 203.2 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C2076510"
+			(at 203.2 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2fa8dbba-5245-45f4-82cd-316b84b2650b")
 		)
@@ -13089,6 +13541,71 @@
 			(project ""
 				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
 					(reference "R54")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "VCC_4")
+		(lib_id "vesc4-legacy:VCC_4")
+		(at 40.64 162.56 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d298784a-21be-40a9-8c67-6c394c7849de")
+		(property "Reference" "#PWR073"
+			(at 38.1 162.56 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 36.83 162.56 90)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 40.64 162.56 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 40.64 162.56 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 40.64 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "38f9fbd6-3dc9-4d91-bb02-78a68aa14cf7")
+		)
+		(instances
+			(project "after-remap"
+				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
+					(reference "#PWR073")
 					(unit 1)
 				)
 			)
@@ -13174,6 +13691,33 @@
 			)
 		)
 		(property "LCSC Part Name" "电压:100V 电流:1A"
+			(at 59.69 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_3DModel_Q" "cdc13862fe374d3bb7a14a8cac9d9007"
+			(at 59.69 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_3D_Size" "5.05 2.6"
+			(at 59.69 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C14238"
 			(at 59.69 74.93 0)
 			(effects
 				(font

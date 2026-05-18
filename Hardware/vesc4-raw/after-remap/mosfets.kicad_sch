@@ -2873,7 +2873,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:R0603"
+		(property "Footprint" "easypretty:R0603"
 			(at 199.39 102.87 0)
 			(effects
 				(font
@@ -2909,6 +2909,24 @@
 			)
 		)
 		(property "JLC_3D_Size" "0.81 1.62"
+			(at 199.39 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23153"
+			(at 199.39 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
 			(at 199.39 102.87 0)
 			(effects
 				(font
@@ -2958,7 +2976,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:R0603"
+		(property "Footprint" "easypretty:R0603"
 			(at 119.38 102.87 0)
 			(effects
 				(font
@@ -2994,6 +3012,24 @@
 			)
 		)
 		(property "JLC_3D_Size" "0.81 1.62"
+			(at 119.38 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23153"
+			(at 119.38 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
 			(at 119.38 102.87 0)
 			(effects
 				(font
@@ -3043,7 +3079,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:R0603"
+		(property "Footprint" "easypretty:R0603"
 			(at 111.76 95.25 0)
 			(effects
 				(font
@@ -3079,6 +3115,24 @@
 			)
 		)
 		(property "JLC_3D_Size" "0.81 1.62"
+			(at 111.76 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23164"
+			(at 111.76 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
 			(at 111.76 95.25 0)
 			(effects
 				(font
@@ -3128,7 +3182,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:R0603"
+		(property "Footprint" "easypretty:R0603"
 			(at 111.76 71.12 0)
 			(effects
 				(font
@@ -3164,6 +3218,24 @@
 			)
 		)
 		(property "JLC_3D_Size" "0.81 1.62"
+			(at 111.76 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23164"
+			(at 111.76 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
 			(at 111.76 71.12 0)
 			(effects
 				(font
@@ -3213,7 +3285,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:R0603"
+		(property "Footprint" "easypretty:R0603"
 			(at 151.13 71.12 0)
 			(effects
 				(font
@@ -3249,6 +3321,24 @@
 			)
 		)
 		(property "JLC_3D_Size" "0.81 1.62"
+			(at 151.13 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23164"
+			(at 151.13 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
 			(at 151.13 71.12 0)
 			(effects
 				(font
@@ -3298,7 +3388,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:R0603"
+		(property "Footprint" "easypretty:R0603"
 			(at 151.13 95.25 0)
 			(effects
 				(font
@@ -3334,6 +3424,24 @@
 			)
 		)
 		(property "JLC_3D_Size" "0.81 1.62"
+			(at 151.13 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23164"
+			(at 151.13 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
 			(at 151.13 95.25 0)
 			(effects
 				(font
@@ -3383,7 +3491,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:R0603"
+		(property "Footprint" "easypretty:R0603"
 			(at 191.77 95.25 0)
 			(effects
 				(font
@@ -3419,6 +3527,24 @@
 			)
 		)
 		(property "JLC_3D_Size" "0.81 1.62"
+			(at 191.77 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23164"
+			(at 191.77 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
 			(at 191.77 95.25 0)
 			(effects
 				(font
@@ -3468,7 +3594,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:R0603"
+		(property "Footprint" "easypretty:R0603"
 			(at 191.77 71.12 0)
 			(effects
 				(font
@@ -3504,6 +3630,24 @@
 			)
 		)
 		(property "JLC_3D_Size" "0.81 1.62"
+			(at 191.77 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23164"
+			(at 191.77 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
 			(at 191.77 71.12 0)
 			(effects
 				(font
@@ -3553,7 +3697,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:R0603"
+		(property "Footprint" "easypretty:R0603"
 			(at 151.13 102.87 0)
 			(effects
 				(font
@@ -3589,6 +3733,24 @@
 			)
 		)
 		(property "JLC_3D_Size" "0.81 1.62"
+			(at 151.13 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23153"
+			(at 151.13 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
 			(at 151.13 102.87 0)
 			(effects
 				(font
@@ -3640,7 +3802,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "footprints:TRANS_IPT007N06NATMA1_INF-M"
+		(property "Footprint" "easypretty:HSOF-8_IPT007N06N"
 			(at 127 68.58 0)
 			(effects
 				(font
@@ -3695,6 +3857,42 @@
 			)
 		)
 		(property "Supplier" "LCSC"
+			(at 127 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_3DModel" "d50c126f5a2e4e8bb54a6100075e72a7"
+			(at 127 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_3D_Size" "9.9 11.675"
+			(at 127 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C122552"
+			(at 127 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C122552"
 			(at 127 68.58 0)
 			(effects
 				(font
@@ -3749,7 +3947,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "footprints:TRANS_IPT007N06NATMA1_INF-M"
+		(property "Footprint" "easypretty:HSOF-8_IPT007N06N"
 			(at 207.01 68.58 0)
 			(effects
 				(font
@@ -3804,6 +4002,42 @@
 			)
 		)
 		(property "Supplier" "LCSC"
+			(at 207.01 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_3DModel" "d50c126f5a2e4e8bb54a6100075e72a7"
+			(at 207.01 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_3D_Size" "9.9 11.675"
+			(at 207.01 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C122552"
+			(at 207.01 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C122552"
 			(at 207.01 68.58 0)
 			(effects
 				(font
@@ -3858,7 +4092,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "footprints:TRANS_IPT007N06NATMA1_INF-M"
+		(property "Footprint" "easypretty:HSOF-8_IPT007N06N"
 			(at 127 92.71 0)
 			(effects
 				(font
@@ -3913,6 +4147,42 @@
 			)
 		)
 		(property "Supplier" "LCSC"
+			(at 127 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_3DModel" "d50c126f5a2e4e8bb54a6100075e72a7"
+			(at 127 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_3D_Size" "9.9 11.675"
+			(at 127 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C122552"
+			(at 127 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C122552"
 			(at 127 92.71 0)
 			(effects
 				(font
@@ -3967,7 +4237,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "footprints:TRANS_IPT007N06NATMA1_INF-M"
+		(property "Footprint" "easypretty:HSOF-8_IPT007N06N"
 			(at 207.01 92.71 0)
 			(effects
 				(font
@@ -4022,6 +4292,42 @@
 			)
 		)
 		(property "Supplier" "LCSC"
+			(at 207.01 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_3DModel" "d50c126f5a2e4e8bb54a6100075e72a7"
+			(at 207.01 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_3D_Size" "9.9 11.675"
+			(at 207.01 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C122552"
+			(at 207.01 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C122552"
 			(at 207.01 92.71 0)
 			(effects
 				(font
@@ -4076,7 +4382,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "footprints:TRANS_IPT007N06NATMA1_INF-M"
+		(property "Footprint" "easypretty:HSOF-8_IPT007N06N"
 			(at 166.37 92.71 0)
 			(effects
 				(font
@@ -4131,6 +4437,42 @@
 			)
 		)
 		(property "Supplier" "LCSC"
+			(at 166.37 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_3DModel" "d50c126f5a2e4e8bb54a6100075e72a7"
+			(at 166.37 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_3D_Size" "9.9 11.675"
+			(at 166.37 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C122552"
+			(at 166.37 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C122552"
 			(at 166.37 92.71 0)
 			(effects
 				(font
@@ -4185,7 +4527,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "footprints:TRANS_IPT007N06NATMA1_INF-M"
+		(property "Footprint" "easypretty:HSOF-8_IPT007N06N"
 			(at 166.37 68.58 0)
 			(effects
 				(font
@@ -4240,6 +4582,42 @@
 			)
 		)
 		(property "Supplier" "LCSC"
+			(at 166.37 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_3DModel" "d50c126f5a2e4e8bb54a6100075e72a7"
+			(at 166.37 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_3D_Size" "9.9 11.675"
+			(at 166.37 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C122552"
+			(at 166.37 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C122552"
 			(at 166.37 68.58 0)
 			(effects
 				(font

@@ -9,4 +9,5 @@
   (lib (name "footprints")(type "KiCad")(uri "C:/Users/Nicho/Documents/MENIMBA ILMU/El-Controller-RAKATA/Controller/symbols-footprints/ul_IPT007N06NATMA1/KiCADv6/footprints.pretty")(options "")(descr ""))
   (lib (name "EasyEDA_Lib")(type "EasyEDA / JLCEDA Pro")(uri "${KIPRJMOD}/EasyEDA_Lib/EasyEDA_Lib.elibz")(options "")(descr ""))
   (lib (name "3225 8M 12PF 10PPM")(type "KiCad")(uri "${KIPRJMOD}/Libraries/3225 8M 12PF 10PPM.pretty")(options "")(descr ""))
+  (lib (name "easypretty")(type "KiCad")(uri "${KIPRJMOD}/easyeda_libs/easyeda_parts.pretty")(options "")(descr ""))
 )

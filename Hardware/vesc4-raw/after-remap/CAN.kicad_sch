@@ -2096,6 +2096,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C46596301"
+			(at 148.59 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "1cf6089c-fca2-4218-b62a-2d6bd65e3cc0")
 		)
@@ -2286,7 +2295,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Library:C0603"
+		(property "Footprint" "easypretty:C0603"
 			(at 157.1752 90.17 0)
 			(effects
 				(font
@@ -2309,6 +2318,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC" "C23630"
+			(at 156.21 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C1631"
+			(at 156.21 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -2481,7 +2508,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:R0603"
+		(property "Footprint" "easypretty:R0603"
 			(at 122.682 102.87 90)
 			(effects
 				(font
@@ -2516,6 +2543,15 @@
 			)
 		)
 		(property "JLC_3D_Size" "0.81 1.62"
+			(at 124.46 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
 			(at 124.46 102.87 0)
 			(effects
 				(font
@@ -2565,7 +2601,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:R0603"
+		(property "Footprint" "easypretty:R0603"
 			(at 160.782 116.84 90)
 			(effects
 				(font
@@ -2588,6 +2624,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC" "C25804"
+			(at 162.56 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
+			(at 162.56 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
