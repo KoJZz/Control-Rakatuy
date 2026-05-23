@@ -807,6 +807,15 @@
 				(hide yes)
 			)
 		)
+		(property "mfg#" ""
+			(at 111.76 86.36 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fcfdaec6-caf7-4cab-9e40-c34d434b42b0")
 		)
@@ -902,6 +911,15 @@
 		)
 		(property "LCSC Part" "C23164"
 			(at 111.76 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "mfg#" ""
+			(at 111.76 104.14 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1005,6 +1023,15 @@
 			)
 		)
 		(property "LCSC Part" "C1631"
+			(at 105.41 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "mfg#" ""
 			(at 105.41 104.14 0)
 			(effects
 				(font
