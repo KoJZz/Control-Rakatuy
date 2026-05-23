@@ -11510,7 +11510,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2904374"
+		(property "LCSC" "C125099"
 			(at 149.86 173.99 0)
 			(effects
 				(font
@@ -11764,7 +11764,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2905797"
+		(property "LCSC" "C125098"
 			(at 157.48 173.99 0)
 			(effects
 				(font
@@ -13044,7 +13044,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2076510"
+		(property "LCSC" "C500635"
 			(at 213.36 123.19 0)
 			(effects
 				(font
@@ -13153,7 +13153,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25819"
+		(property "LCSC" "C25804"
 			(at 44.45 156.21 0)
 			(effects
 				(font
@@ -13507,7 +13507,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2076510"
+		(property "LCSC" "C500635"
 			(at 203.2 110.49 0)
 			(effects
 				(font
@@ -13636,7 +13636,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EasyEDA_Lib:SMA_L4.2-W2.6-LS5.1-RD"
+		(property "Footprint" "easypretty:SOD-123_L2.8-W1.8-LS3.7-RD"
 			(at 59.69 74.93 0)
 			(effects
 				(font
@@ -13645,7 +13645,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20190416/C379823_9D66F8781E151C8A4940396CFA0EFE63.pdf"
+		(property "Datasheet" ""
 			(at 59.69 74.93 0)
 			(effects
 				(font
@@ -13654,7 +13654,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Forward Voltage (Vf@If):850mV@1A Reverse Voltage (Vr):100V Average Rectified Current (Io):1A"
+		(property "Description" ""
 			(at 59.69 74.93 0)
 			(effects
 				(font
@@ -13717,7 +13717,16 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C14238"
+		(property "LCSC" "C98663"
+			(at 59.69 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C98663"
 			(at 59.69 74.93 0)
 			(effects
 				(font
