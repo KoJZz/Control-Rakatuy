@@ -56,6 +56,11 @@
           "gap": 0.0,
           "via_gap": 0.0,
           "width": 0.0
+        },
+        {
+          "gap": 0.2032,
+          "via_gap": 0.0,
+          "width": 0.2938
         }
       ],
       "drc_exclusions": [],
@@ -137,7 +142,7 @@
         "min_text_height": 0.8,
         "min_text_thickness": 0.153,
         "min_through_hole_diameter": 0.5,
-        "min_track_width": 0.2032,
+        "min_track_width": 0.254,
         "min_via_annular_width": 0.25,
         "min_via_diameter": 0.8,
         "solder_mask_to_copper_clearance": 0.005,
@@ -234,6 +239,10 @@
         },
         {
           "diameter": 0.8,
+          "drill": 0.5
+        },
+        {
+          "diameter": 0.889,
           "drill": 0.5
         },
         {

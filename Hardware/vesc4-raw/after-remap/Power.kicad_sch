@@ -10562,6 +10562,16 @@
 	)
 	(wire
 		(pts
+			(xy 162.56 138.43) (xy 176.53 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17cab37c-2cdf-46f0-adf4-33f43729f331")
+	)
+	(wire
+		(pts
 			(xy 251.46 97.79) (xy 252.73 97.79)
 		)
 		(stroke
@@ -12549,16 +12559,6 @@
 			(type default)
 		)
 		(uuid "dca86c19-883e-4c40-91d7-c0f6359823b5")
-	)
-	(wire
-		(pts
-			(xy 176.53 138.43) (xy 162.56 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dcba089d-53fe-45a5-b838-0a729502cc99")
 	)
 	(wire
 		(pts
@@ -20398,6 +20398,46 @@
 			"HDmy4kcGAMhqq5aXl82OAQAAIDehxxgAAMAoyLIAAABGQZYFAAAwCrIsAACAUZBlAQAAjIIsCwAA"
 			"YBRkWQAAAKP8f72baabBZ/DqAAAAAElFTkSuQmCCAA=="
 		)
+	)
+	(label "S1+"
+		(at 170.18 129.54 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "06600979-3f1f-4e6f-8ebb-f05416e98a1f")
+	)
+	(label "S2-"
+		(at 166.37 130.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5daf6d35-5256-4b4b-b4ee-552c0b2967bd")
+	)
+	(label "S1-"
+		(at 170.18 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "644c3f6c-65b8-42e8-a1c4-8a197d1b4b7c")
+	)
+	(label "S2+"
+		(at 168.91 138.43 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "86199327-77a2-444a-8e39-bd9fcb5affbc")
 	)
 	(global_label "V_SUPPLY"
 		(shape input)

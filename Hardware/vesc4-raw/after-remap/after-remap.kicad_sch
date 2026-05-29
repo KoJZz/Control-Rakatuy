@@ -132,6 +132,126 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "+5V_5"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Field5" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+5V_5_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_5_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(hide yes)
+					(name "+5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "+5V_6"
 			(power)
 			(pin_names
@@ -6143,12 +6263,6 @@
 		(uuid "19491450-f27a-4115-9edb-394960999882")
 	)
 	(junction
-		(at 204.47 101.6)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "204a1468-6a05-4c91-b884-9adc3a56ddb3")
-	)
-	(junction
 		(at 59.69 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6159,6 +6273,24 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5283e7b7-6084-4d22-8a5f-8c44338bf76b")
+	)
+	(junction
+		(at 257.81 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6dc48d0d-6a3e-4466-be9c-e1555a4bfb58")
+	)
+	(junction
+		(at 208.28 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7461c055-fb5e-4c15-af32-5a142225f9a5")
+	)
+	(junction
+		(at 257.81 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "76199765-9c50-4b89-9827-822135cc2ce5")
 	)
 	(junction
 		(at 160.02 140.97)
@@ -6183,6 +6315,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9a894a95-5c3b-450f-a576-ce6f44aa0c6a")
+	)
+	(junction
+		(at 257.81 72.39)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e7ff7785-6016-4a3d-a565-0b26a8d7f257")
 	)
 	(junction
 		(at 215.9 101.6)
@@ -6376,6 +6514,16 @@
 	)
 	(wire
 		(pts
+			(xy 208.28 96.52) (xy 219.71 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "315bf03a-b7c9-4ea0-abd1-4d09cd39504e")
+	)
+	(wire
+		(pts
 			(xy 147.32 149.86) (xy 149.86 149.86)
 		)
 		(stroke
@@ -6426,7 +6574,7 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 101.6) (xy 215.9 101.6)
+			(xy 195.58 101.6) (xy 215.9 101.6)
 		)
 		(stroke
 			(width 0)
@@ -6456,6 +6604,16 @@
 	)
 	(wire
 		(pts
+			(xy 255.27 68.58) (xy 257.81 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e3bbed3-c538-4dd6-97e2-94a56f07d787")
+	)
+	(wire
+		(pts
 			(xy 59.69 54.61) (xy 59.69 57.15)
 		)
 		(stroke
@@ -6473,6 +6631,16 @@
 			(type default)
 		)
 		(uuid "3ee0431b-072c-4c4a-987c-590281c44824")
+	)
+	(wire
+		(pts
+			(xy 255.27 92.71) (xy 257.81 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f8c4990-ff24-4c84-b1d8-2e51d34426b7")
 	)
 	(wire
 		(pts
@@ -6536,7 +6704,7 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 115.57) (xy 204.47 115.57)
+			(xy 204.47 115.57) (xy 208.28 115.57)
 		)
 		(stroke
 			(width 0)
@@ -6643,6 +6811,16 @@
 			(type default)
 		)
 		(uuid "69f93f57-7525-4ff3-bf35-a68023cf42e2")
+	)
+	(wire
+		(pts
+			(xy 208.28 115.57) (xy 208.28 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a0e8236-9ec9-4369-bf0d-7add778dc507")
 	)
 	(wire
 		(pts
@@ -6776,6 +6954,16 @@
 	)
 	(wire
 		(pts
+			(xy 255.27 72.39) (xy 257.81 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "932b1e06-86c3-45f2-8b4d-c9022245c0be")
+	)
+	(wire
+		(pts
 			(xy 67.31 80.01) (xy 82.55 80.01)
 		)
 		(stroke
@@ -6886,13 +7074,13 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 101.6) (xy 204.47 105.41)
+			(xy 204.47 105.41) (xy 205.74 105.41)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a274705c-23c5-49ae-8c1d-0692f5777368")
+		(uuid "a29c0187-d961-4a93-8d84-31c1a914624a")
 	)
 	(polyline
 		(pts
@@ -7043,6 +7231,16 @@
 			(type default)
 		)
 		(uuid "c6c8880d-1d13-44b1-ac6b-e717028f8aa3")
+	)
+	(wire
+		(pts
+			(xy 203.2 26.67) (xy 203.2 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6ea27b4-d06e-41b7-a74c-615caffa61c8")
 	)
 	(wire
 		(pts
@@ -7216,16 +7414,6 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 101.6) (xy 204.47 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e74b8f27-de89-4965-8e55-47d6385e3ac5")
-	)
-	(wire
-		(pts
 			(xy 209.55 26.67) (xy 209.55 29.21)
 		)
 		(stroke
@@ -7246,7 +7434,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 96.52) (xy 219.71 96.52)
+			(xy 195.58 96.52) (xy 208.28 96.52)
 		)
 		(stroke
 			(width 0)
@@ -9304,7 +9492,7 @@
 		)
 	)
 	(image
-		(at 271.78 81.28)
+		(at 278.765 81.28)
 		(uuid "a40ade8c-5398-4a41-ba75-5b59756730e2")
 		(data "iVBORw0KGgoAAAANSUhEUgAAALkAAADGCAIAAAABu7YfAAAAA3NCSVQICAjb4U/gAAAgAElEQVR4"
 			"nOy9d1xUZ74//pxzpheYQYbm0DvSBEGw19gSIFFj1pi4xrQ1e3dzN7vmtfdmk+zd3yY32cTsphuz"
@@ -9690,6 +9878,16 @@
 			"SUVORK5CYIIA"
 		)
 	)
+	(label "SH1-"
+		(at 198.12 107.95 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0c22ba4e-421a-45f8-8fe0-f6b719d1be8c")
+	)
 	(label "D+"
 		(at 54.61 80.01 180)
 		(effects
@@ -9699,6 +9897,16 @@
 			(justify right bottom)
 		)
 		(uuid "215f20d5-83bf-42b6-8a69-435f81fafb23")
+	)
+	(label "USB-"
+		(at 74.93 77.47 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "302083be-9372-432c-a6a0-374097899f4d")
 	)
 	(label "RX_SCL_MOSI"
 		(at 36.83 146.05 0)
@@ -9720,6 +9928,26 @@
 		)
 		(uuid "37b95245-d3fa-4489-8780-e48777bd5735")
 	)
+	(label "USB+"
+		(at 74.93 80.01 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "51284e26-1472-4f83-a41d-531f7cb7c191")
+	)
+	(label "SH1+"
+		(at 198.12 113.03 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "5792b5ce-b700-4b77-b7bd-aa9ee6666a13")
+	)
 	(label "D-"
 		(at 54.61 77.47 180)
 		(effects
@@ -9729,6 +9957,16 @@
 			(justify right bottom)
 		)
 		(uuid "7e1727b2-4e68-409e-9fe4-1b148dd1f1b7")
+	)
+	(label "SH2-"
+		(at 210.82 120.65 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "91bc4e61-5c54-409d-a936-651c07606ebf")
 	)
 	(label "D-"
 		(at 31.75 77.47 0)
@@ -9769,6 +10007,16 @@
 			(justify left bottom)
 		)
 		(uuid "cd5b46e4-30cd-4989-9811-16c445c5fcb3")
+	)
+	(label "SH2+"
+		(at 210.82 125.73 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d3457c40-0f7c-443e-9bf9-ebb46ef30f8e")
 	)
 	(global_label "V_SUPPLY"
 		(shape input)
@@ -11280,7 +11528,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "CRF1:1PAD_4x5mm"
+		(property "Footprint" "Library:PAD"
 			(at 227.33 35.56 0)
 			(effects
 				(font
@@ -11355,7 +11603,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "CRF1:1PAD_4x5mm"
+		(property "Footprint" "Library:PAD"
 			(at 227.33 30.48 0)
 			(effects
 				(font
@@ -11405,7 +11653,7 @@
 	(symbol
 		(lib_name "CONN_1_6")
 		(lib_id "vesc4-legacy:CONN_1_6")
-		(at 259.08 68.58 0)
+		(at 261.62 92.71 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11413,7 +11661,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000053fa5b71")
 		(property "Reference" "P9"
-			(at 257.81 67.31 0)
+			(at 260.35 91.44 0)
 			(effects
 				(font
 					(size 1.016 1.016)
@@ -11422,7 +11670,7 @@
 			)
 		)
 		(property "Value" "MOTOR3"
-			(at 259.08 67.183 0)
+			(at 261.62 91.313 0)
 			(effects
 				(font
 					(size 0.762 0.762)
@@ -11430,8 +11678,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "CRF1:1PAD_4x5mm"
-			(at 259.08 68.58 0)
+		(property "Footprint" "Library:PAD"
+			(at 261.62 92.71 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -11440,7 +11688,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 259.08 68.58 0)
+			(at 261.62 92.71 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -11449,7 +11697,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 259.08 68.58 0)
+			(at 261.62 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11457,7 +11705,7 @@
 			)
 		)
 		(property "mfg#" ""
-			(at 259.08 68.58 0)
+			(at 261.62 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11469,7 +11717,7 @@
 			(uuid "12a810f5-c4f7-48a2-a218-48176c6fff52")
 		)
 		(instances
-			(project ""
+			(project "after-remap"
 				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
 					(reference "P9")
 					(unit 1)
@@ -11480,7 +11728,7 @@
 	(symbol
 		(lib_name "CONN_1_7")
 		(lib_id "vesc4-legacy:CONN_1_7")
-		(at 259.08 72.39 0)
+		(at 261.62 72.39 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11488,7 +11736,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000053fa5b78")
 		(property "Reference" "P7"
-			(at 257.81 71.12 0)
+			(at 260.35 71.12 0)
 			(effects
 				(font
 					(size 1.016 1.016)
@@ -11497,7 +11745,7 @@
 			)
 		)
 		(property "Value" "MOTOR2"
-			(at 259.08 70.993 0)
+			(at 261.62 70.993 0)
 			(effects
 				(font
 					(size 0.762 0.762)
@@ -11505,8 +11753,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "CRF1:1PAD_4x5mm"
-			(at 259.08 72.39 0)
+		(property "Footprint" "Library:PAD"
+			(at 261.62 72.39 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -11515,7 +11763,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 259.08 72.39 0)
+			(at 261.62 72.39 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -11524,7 +11772,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 259.08 72.39 0)
+			(at 261.62 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11532,7 +11780,7 @@
 			)
 		)
 		(property "mfg#" ""
-			(at 259.08 72.39 0)
+			(at 261.62 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11555,7 +11803,7 @@
 	(symbol
 		(lib_name "CONN_1_8")
 		(lib_id "vesc4-legacy:CONN_1_8")
-		(at 259.08 92.71 0)
+		(at 261.62 68.58 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11563,7 +11811,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000053fa5b7f")
 		(property "Reference" "P6"
-			(at 257.81 91.44 0)
+			(at 260.35 67.31 0)
 			(effects
 				(font
 					(size 1.016 1.016)
@@ -11572,7 +11820,7 @@
 			)
 		)
 		(property "Value" "MOTOR1"
-			(at 259.08 91.313 0)
+			(at 261.62 67.183 0)
 			(effects
 				(font
 					(size 0.762 0.762)
@@ -11580,8 +11828,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "CRF1:1PAD_4x5mm"
-			(at 259.08 92.71 0)
+		(property "Footprint" "Library:PAD"
+			(at 261.62 68.58 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -11590,7 +11838,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 259.08 92.71 0)
+			(at 261.62 68.58 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -11599,7 +11847,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 259.08 92.71 0)
+			(at 261.62 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11607,7 +11855,7 @@
 			)
 		)
 		(property "mfg#" ""
-			(at 259.08 92.71 0)
+			(at 261.62 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11619,7 +11867,7 @@
 			(uuid "c7dce939-258f-4483-a0da-c8823ffac3b7")
 		)
 		(instances
-			(project ""
+			(project "after-remap"
 				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
 					(reference "P6")
 					(unit 1)
@@ -13077,7 +13325,7 @@
 	(symbol
 		(lib_name "GND-RESCUE-BLDC_4_17")
 		(lib_id "vesc4-legacy:GND-RESCUE-BLDC_4_17")
-		(at 205.74 115.57 90)
+		(at 205.74 105.41 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13085,7 +13333,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-0000548f2529")
 		(property "Reference" "#PWR020"
-			(at 205.74 115.57 0)
+			(at 205.74 105.41 0)
 			(effects
 				(font
 					(size 0.762 0.762)
@@ -13094,7 +13342,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 207.518 115.57 0)
+			(at 207.518 105.41 0)
 			(effects
 				(font
 					(size 0.762 0.762)
@@ -13103,7 +13351,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 205.74 115.57 0)
+			(at 205.74 105.41 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -13112,7 +13360,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 205.74 115.57 0)
+			(at 205.74 105.41 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -13121,7 +13369,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 205.74 115.57 0)
+			(at 205.74 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13132,7 +13380,7 @@
 			(uuid "d0ee9ca0-99f1-47c2-81f7-8be271e7dfed")
 		)
 		(instances
-			(project ""
+			(project "after-remap"
 				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
 					(reference "#PWR020")
 					(unit 1)
@@ -13521,6 +13769,168 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 257.81 74.93 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "21046be0-af26-4106-bb97-e98756dcaa4d")
+		(property "Reference" "H7"
+			(at 260.35 76.1999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 255.27 73.6601 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
+			(at 257.81 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 257.81 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 257.81 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "286743c1-504c-4f15-a2e8-4d6697d0457c")
+		)
+		(instances
+			(project "after-remap"
+				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
+					(reference "H7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "LED-RESCUE-BLDC_4_6")
+		(lib_id "vesc4-legacy:LED-RESCUE-BLDC_4_6")
+		(at 171.45 173.99 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3822d07f-eb26-4fd3-b635-df294faf2d39")
+		(property "Reference" "D7"
+			(at 172.72 176.53 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 173.99 171.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "easypretty:LED0603-R-RD_WHITE"
+			(at 171.45 173.99 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 171.45 173.99 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 171.45 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2290"
+			(at 171.45 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C2290"
+			(at 171.45 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "mfg#" ""
+			(at 171.45 173.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "331821ee-fe1f-454c-bb23-927d74058b70")
+		)
+		(pin "1"
+			(uuid "e9d0d4d8-f190-4ce3-93d1-29f144f17295")
+		)
+		(instances
+			(project "after-remap"
+				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
+					(reference "D7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Mechanical:MountingHole")
 		(at 27.94 182.88 0)
 		(unit 1)
@@ -13669,6 +14079,183 @@
 		)
 	)
 	(symbol
+		(lib_name "R-RESCUE-BLDC_4_15")
+		(lib_id "vesc4-legacy:R-RESCUE-BLDC_4_15")
+		(at 171.45 162.56 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "499eff55-a463-4a41-aff7-a7c49b08911e")
+		(property "Reference" "R14"
+			(at 173.99 162.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2k2"
+			(at 171.45 162.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "easypretty:R0603"
+			(at 171.45 162.56 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 171.45 162.56 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 171.45 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC_3DModel" "6bd5cd867e9542ebae21caaf5d2d4c4d"
+			(at 171.45 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_3D_Size" "0.81 1.62"
+			(at 171.45 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C4190"
+			(at 171.45 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C23164"
+			(at 171.45 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "mfg#" ""
+			(at 171.45 162.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "45a1d262-6cbf-49b7-ad2f-07ff3e365916")
+		)
+		(pin "2"
+			(uuid "17824741-b24c-41e7-960b-b8d79ee79968")
+		)
+		(instances
+			(project "after-remap"
+				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
+					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "+5V_5")
+		(lib_id "vesc4-legacy:+5V_5")
+		(at 171.45 156.21 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5dc19e69-5509-49d5-b58e-2d2c3b2a9f00")
+		(property "Reference" "#PWR076"
+			(at 169.164 156.21 0)
+			(effects
+				(font
+					(size 0.508 0.508)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 169.164 156.21 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 171.45 156.21 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 171.45 156.21 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 171.45 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "817f8dcf-bd29-4fc5-8673-2ebd9fe50a1a")
+		)
+		(instances
+			(project "after-remap"
+				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
+					(reference "#PWR076")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "R-RESCUE-BLDC_4_13")
 		(lib_id "vesc4-legacy:R-RESCUE-BLDC_4_13")
 		(at 44.45 156.21 180)
@@ -13781,6 +14368,140 @@
 		)
 	)
 	(symbol
+		(lib_name "GND-RESCUE-BLDC_4_26")
+		(lib_id "vesc4-legacy:GND-RESCUE-BLDC_4_26")
+		(at 203.2 30.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "74ce70c1-21bd-4597-b7aa-f7dccb0cb967")
+		(property "Reference" "#PWR075"
+			(at 203.2 30.48 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 203.2 32.258 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 203.2 30.48 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 203.2 30.48 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 203.2 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8c3970b3-6c58-4278-aaaa-4aabfc3e3778")
+		)
+		(instances
+			(project "after-remap"
+				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
+					(reference "#PWR075")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 257.81 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "76f39f73-b9d4-49b7-a0e2-337b4ec6d8b9")
+		(property "Reference" "H6"
+			(at 260.35 64.7699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 260.35 67.3099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
+			(at 257.81 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 257.81 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 257.81 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9b33d64d-ccbd-43b0-bf64-170ad53631c6")
+		)
+		(instances
+			(project ""
+				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
+					(reference "H6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "GND-RESCUE-BLDC_4_27")
 		(lib_id "vesc4-legacy:GND-RESCUE-BLDC_4_27")
 		(at 19.05 95.25 0)
@@ -13841,6 +14562,74 @@
 			(project "after-remap"
 				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
 					(reference "#PWR047")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 257.81 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "829c7eb8-cb32-4076-992e-26fafa150499")
+		(property "Reference" "H8"
+			(at 260.35 88.8999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 260.35 91.4399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
+			(at 257.81 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 257.81 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 257.81 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "027d4faa-64b9-4217-9d42-7c5a8f603c71")
+		)
+		(instances
+			(project "after-remap"
+				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
+					(reference "H8")
 					(unit 1)
 				)
 			)
@@ -13989,6 +14778,72 @@
 			(project ""
 				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
 					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "GND-RESCUE-BLDC_4_23")
+		(lib_id "vesc4-legacy:GND-RESCUE-BLDC_4_23")
+		(at 171.45 179.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9378efc4-1f5e-4d11-bf3e-3ee951220e2f")
+		(property "Reference" "#PWR077"
+			(at 171.45 179.07 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 171.45 180.848 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 171.45 179.07 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 171.45 179.07 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 171.45 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0feb6070-98f1-48b8-a099-c2073bb112af")
+		)
+		(instances
+			(project "after-remap"
+				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
+					(reference "#PWR077")
 					(unit 1)
 				)
 			)
@@ -14152,6 +15007,7 @@
 	(symbol
 		(lib_id "Library:WSLP27262L000FEA")
 		(at 203.2 110.49 90)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14159,7 +15015,7 @@
 		(dnp no)
 		(uuid "9e6d5b21-c83e-4cb0-9aab-6b0c0b7e230b")
 		(property "Reference" "R54"
-			(at 205.994 108.712 0)
+			(at 205.994 112.268 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14168,7 +15024,7 @@
 			)
 		)
 		(property "Value" "WSLP27262L000FEA"
-			(at 205.74 111.7599 90)
+			(at 205.74 109.2201 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14366,6 +15222,74 @@
 			(project "after-remap"
 				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
 					(reference "#PWR073")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 203.2 24.13 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "db70dd1d-1791-46dd-a253-91e671bac105")
+		(property "Reference" "H9"
+			(at 205.74 21.5899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 205.74 24.1299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
+			(at 203.2 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 203.2 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 203.2 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7d26e56e-965a-48c9-a4ba-e3c63cdbc65d")
+		)
+		(instances
+			(project "after-remap"
+				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09"
+					(reference "H9")
 					(unit 1)
 				)
 			)
