@@ -9912,113 +9912,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "VCC_6"
-			(power)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "VCC"
-				(at 0 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Field5" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "VCC_6_0_1"
-				(circle
-					(center 0 1.905)
-					(radius 0.635)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 1.27)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "VCC_6_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(hide yes)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 	)
 	(text "MCU must sense the\nvoltage at each phase"
 		(exclude_from_sim no)
@@ -11619,16 +11512,6 @@
 			(type default)
 		)
 		(uuid "767970bb-b952-4b23-b221-94cdbdd0d572")
-	)
-	(wire
-		(pts
-			(xy 96.52 132.08) (xy 96.52 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "77418f44-c445-4fa2-b742-ae87790c3600")
 	)
 	(wire
 		(pts
@@ -20539,6 +20422,28 @@
 			)
 		)
 	)
+	(global_label "VDDA"
+		(shape input)
+		(at 96.52 132.08 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ce0f90bb-5185-4016-989c-950272d89af4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 96.52 139.1282 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "V_SUPPLY"
 		(shape input)
 		(at 218.44 25.4 180)
@@ -24773,71 +24678,6 @@
 			(project "after-remap"
 				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09/00000000-0000-0000-0000-0000504f83be"
 					(reference "#PWR061")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "VCC_6")
-		(lib_id "vesc4-legacy:VCC_6")
-		(at 96.52 128.27 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-0000505014bc")
-		(property "Reference" "#PWR062"
-			(at 96.52 125.73 0)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 96.52 125.73 0)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 96.52 128.27 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 96.52 128.27 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 96.52 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c1e1e526-1491-4723-966f-c521eb58286a")
-		)
-		(instances
-			(project "after-remap"
-				(path "/97cdaedc-7981-4798-95b0-56b9c66aae09/00000000-0000-0000-0000-0000504f83be"
-					(reference "#PWR062")
 					(unit 1)
 				)
 			)

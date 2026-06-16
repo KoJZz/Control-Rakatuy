@@ -3881,6 +3881,7 @@
 					(size 1.524 1.524)
 				)
 				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "easypretty:HSOF-8_IPT007N06N"
@@ -4035,6 +4036,7 @@
 					(size 1.524 1.524)
 				)
 				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "easypretty:HSOF-8_IPT007N06N"
@@ -4189,6 +4191,7 @@
 					(size 1.524 1.524)
 				)
 				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "easypretty:HSOF-8_IPT007N06N"
@@ -4343,6 +4346,7 @@
 					(size 1.524 1.524)
 				)
 				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "easypretty:HSOF-8_IPT007N06N"
@@ -4497,6 +4501,7 @@
 					(size 1.524 1.524)
 				)
 				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "easypretty:HSOF-8_IPT007N06N"
@@ -4651,6 +4656,7 @@
 					(size 1.524 1.524)
 				)
 				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "easypretty:HSOF-8_IPT007N06N"

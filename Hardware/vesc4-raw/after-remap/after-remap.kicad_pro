@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.55,
-          "height": 0.55,
-          "width": 0.55
+          "drill": 0.0,
+          "height": 1.7,
+          "width": 0.4
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -1140,6 +1140,12 @@
           "label": "JLC_3DModel_Q",
           "name": "JLC_3DModel_Q",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MPN",
+          "name": "MPN",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -1178,7 +1184,7 @@
     },
     "net_format_name": "",
     "page_layout_descr_file": "",
-    "plot_directory": "",
+    "plot_directory": "Plot/",
     "space_save_all_events": true,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
