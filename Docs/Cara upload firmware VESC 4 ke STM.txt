@@ -1,0 +1,11 @@
+Cara upload firmware VESC 4 ke STM
+
+1. hubungkan VESC-based board ke laptop/pc pake st-link (clk, gnd, io)
+2. Buka STMCubeProgrammer ato apapun yang bisa program STM
+3. Connect boardnya. Kalo misalnya sebelumnya udah keisi, Full Chip erase dulu
+4. Browse file, cari file "VESC_default.bin" buat yang VESC 4
+5. Start address di 0x08000000
+6. Centang Verify programming 
+7. Start programming
+8. Disconnect filenya, mati-nyalain power supply
+9. Hubungkan USB dari VESC ke laptop
