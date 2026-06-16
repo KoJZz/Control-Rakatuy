@@ -1,0 +1,321 @@
+================================================================================
+  VESC FIRMWARE FLASHING GUIDE — FOR BEGINNERS / PANDUAN UNTUK PEMULA
+  Target Hardware : Custom BLDC Controller (STM32F405 + DRV8302)
+  Firmware Source : https://github.com/vedderb/bldc
+  Last Updated    : 2025
+================================================================================
+
+IMPORTANT NOTE / CATATAN PENTING
+----------------------------------
+ID: Panduan ini ditujukan untuk orang yang baru pertama kali bekerja dengan
+    STM32 dan VESC firmware. Berbeda dengan ESP32 yang tinggal colok USB dan
+    upload lewat Arduino IDE, STM32 kosong (fresh from factory) TIDAK punya
+    bootloader bawaan. Artinya kamu WAJIB melakukan flash pertama kali
+    menggunakan programmer fisik (ST-Link) sebelum bisa menggunakan VESC Tool.
+
+EN: This guide is intended for those who are new to STM32 and VESC firmware.
+    Unlike ESP32 which just needs a USB cable and Arduino IDE, a blank STM32
+    (fresh from factory) does NOT have a built-in bootloader. This means you
+    MUST perform the first flash using a physical programmer (ST-Link) before
+    you can use VESC Tool.
+
+
+================================================================================
+  WHAT YOU NEED / APA YANG DIBUTUHKAN
+================================================================================
+
+Hardware:
+  - Custom BLDC board (STM32F405 + DRV8302)
+  - ST-Link V3MINIE (recommended) — official from STMicroelectronics
+    * Lebih cepat dan reliable dibanding ST-Link V2 clone
+    * Faster and more reliable than ST-Link V2 clones
+  - Kabel jumper / Jumper wires (minimal 4 kabel: SWDIO, SWCLK, GND, 3.3V)
+
+Software (Windows):
+  - ARM GNU Toolchain   : https://developer.arm.com/downloads
+  - Make for Windows    : via Chocolatey (lihat Step 1.3)
+  - Git                 : https://git-scm.com
+  - STM32CubeProgrammer : https://www.st.com/en/development-tools/stm32cubeprog.html
+  - VESC Tool (optional, untuk fase 2) : https://vesc-project.com
+
+================================================================================
+  FASE 1 — FIRST TIME FLASH (WAJIB ST-LINK / MANDATORY ST-LINK)
+================================================================================
+
+ID: Fase ini wajib dilakukan SATU KALI di awal, sebelum apapun bisa dilakukan
+    lewat USB. Semua step di bawah dilakukan di PC kamu.
+
+EN: This phase is mandatory and done ONCE at the beginning, before anything
+    can be done via USB. All steps below are performed on your PC.
+
+--------------------------------------------------------------------------------
+STEP 1 — INSTALL TOOLCHAIN (Setup Kompiler / Setup Compiler)
+--------------------------------------------------------------------------------
+
+  STEP 1.1 — ARM GNU Toolchain (Compiler)
+  -----------------------------------------
+  ID: Ini adalah compiler-nya — software yang mengubah kode C/C++ menjadi
+      machine code yang dimengerti oleh processor ARM Cortex-M4 di STM32F405.
+      Tanpa ini, source code VESC tidak bisa diubah menjadi file binary (.bin).
+
+  EN: This is the compiler — software that converts C/C++ source code into
+      machine code understood by the ARM Cortex-M4 processor in STM32F405.
+      Without this, VESC source code cannot be converted into a binary file.
+
+  - Download: https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads
+  - Pilih versi: arm-gnu-toolchain-...-mingw-w64-x86_64-arm-none-eabi.exe
+  - Install, lalu tambahkan path install ke Environment Variable PATH Windows.
+    Contoh path: C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\13.x\bin
+  - Verifikasi di Command Prompt:
+      arm-none-eabi-gcc --version
+
+  STEP 1.2 — Git
+  ---------------
+  ID: Digunakan untuk mengunduh (clone) source code VESC firmware dari GitHub.
+
+  EN: Used to download (clone) the VESC firmware source code from GitHub.
+
+  - Download: https://git-scm.com/download/win
+  - Install dengan pengaturan default.
+  - Verifikasi: git --version
+
+  STEP 1.3 — Make (via Chocolatey)
+  ----------------------------------
+  ID: Make adalah tool yang membaca file Makefile di dalam folder VESC dan
+      mengatur urutan kompilasi ratusan file C secara otomatis. Tanpa Make,
+      kamu harus mengetik command compiler satu per satu — tidak praktis.
+
+  EN: Make is a tool that reads the Makefile inside the VESC folder and
+      automatically manages the compilation order of hundreds of C files.
+      Without Make, you would need to type compiler commands one by one.
+
+  - Buka PowerShell sebagai Administrator / Open PowerShell as Administrator
+  - Install Chocolatey (package manager untuk Windows):
+
+      Set-ExecutionPolicy Bypass -Scope Process -Force; `
+      iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
+
+  - Install Make:
+      choco install make
+
+  - Verifikasi: make --version
+
+  STEP 1.4 — STM32CubeProgrammer
+  --------------------------------
+  ID: Software resmi dari ST untuk mem-flash file binary ke STM32 melalui
+      ST-Link. Ini pengganti "upload" button di Arduino IDE.
+
+  EN: Official software from ST to flash binary files to STM32 via ST-Link.
+      This is the equivalent of the "upload" button in Arduino IDE.
+
+  - Download: https://www.st.com/en/development-tools/stm32cubeprog.html
+    (perlu registrasi akun ST / requires ST account registration)
+  - Install dengan pengaturan default, termasuk driver ST-Link.
+
+--------------------------------------------------------------------------------
+STEP 2 — CLONE VESC FIRMWARE (Download Source Code)
+--------------------------------------------------------------------------------
+
+  ID: Source code VESC firmware diunduh dari GitHub menggunakan Git. Ini bukan
+      file siap pakai — ini adalah kode sumber yang harus dikompilasi terlebih
+      dahulu menjadi file .bin sesuai hardware kamu.
+
+  EN: VESC firmware source code is downloaded from GitHub using Git. This is
+      NOT a ready-to-use file — it is source code that must be compiled first
+      into a .bin file matching your hardware.
+
+  - Buka Command Prompt / Git Bash, navigasi ke folder pilihan kamu, lalu:
+
+      git clone https://github.com/vedderb/bldc.git
+      cd bldc
+
+  - Struktur folder penting:
+      bldc/
+      ├── main.c          → Entry point firmware
+      ├── Makefile        → Instruksi build / Build instructions
+      ├── hwconf/         → Konfigurasi hardware per board (pin mapping, dll)
+      ├── mc_interface.c  → Logika motor control / Motor control logic
+      └── ChibiOS/        → RTOS yang digunakan VESC / RTOS used by VESC
+
+--------------------------------------------------------------------------------
+STEP 3 — PILIH HARDWARE TARGET / SELECT HARDWARE TARGET
+--------------------------------------------------------------------------------
+
+  ID: VESC firmware mendukung banyak varian board (VESC 4, VESC 6, dll).
+      Kamu harus memberitahu compiler board mana yang sedang dikompilasi,
+      karena setiap board punya pin mapping yang berbeda.
+      Untuk board berbasis VESC 4.12, target yang digunakan adalah hw_410_412.
+
+  EN: VESC firmware supports many board variants (VESC 4, VESC 6, etc.).
+      You need to tell the compiler which board is being compiled, because
+      each board has different pin mappings.
+      For VESC 4.12-based boards, the target used is hw_410_412.
+
+  - Buka file Makefile di folder bldc, cari baris:
+      HWVER = 410_412
+
+  - Jika kamu memodifikasi pin dari referensi VESC 4.12, edit file:
+      hwconf/hw_410_412.h
+    Sesuaikan definisi pin dengan hardware kamu.
+
+  CATATAN / NOTE:
+  ID: Jika pin mapping board kamu identik dengan VESC 4.12 original,
+      tidak perlu mengubah apapun di step ini untuk uji awal.
+  EN: If your board's pin mapping is identical to the original VESC 4.12,
+      no changes are needed here for initial testing.
+
+--------------------------------------------------------------------------------
+STEP 4 — COMPILE FIRMWARE (Mengubah Source Code menjadi File Binary)
+--------------------------------------------------------------------------------
+
+  ID: Ini adalah proses mengubah source code (.c/.h) menjadi file binary
+      (.bin) yang bisa di-flash ke STM32. Proses ini dilakukan sepenuhnya
+      di PC kamu menggunakan ARM GNU Toolchain + Make yang sudah diinstall.
+      TIDAK memerlukan koneksi ke board sama sekali.
+
+  EN: This is the process of converting source code (.c/.h) into a binary
+      file (.bin) that can be flashed to the STM32. This process runs entirely
+      on your PC using the installed ARM GNU Toolchain + Make.
+      Does NOT require any connection to the board.
+
+  COMPILE LEWAT / COMPILE VIA: Command Prompt / Terminal
+  --------------------------------------------------------
+  - Pastikan kamu berada di folder bldc:
+      cd path/ke/folder/bldc
+
+  - Jalankan kompilasi:
+      make -j4
+
+    ID: Flag -j4 artinya gunakan 4 proses paralel untuk mempercepat kompilasi.
+        Sesuaikan angkanya dengan jumlah core CPU kamu (misal -j8 untuk 8 core).
+    EN: The -j4 flag means use 4 parallel processes to speed up compilation.
+        Adjust the number to your CPU core count (e.g. -j8 for 8 cores).
+
+  - Output yang dihasilkan (di folder build/):
+      BLDC_4_ChibiOS.elf   → Binary dengan debug info (untuk debugging)
+      BLDC_4_ChibiOS.bin   → Binary murni (INI yang di-flash ke STM32)
+
+  TROUBLESHOOTING COMPILE:
+  ID: Jika muncul error saat compile, kemungkinan besar penyebabnya adalah:
+      - Path ARM GNU Toolchain belum masuk ke Environment Variable PATH
+      - Make belum terinstall dengan benar
+      - Dependency/submodule belum di-init (jalankan: git submodule update --init)
+  EN: If errors occur during compile, the most likely causes are:
+      - ARM GNU Toolchain path not added to Environment Variable PATH
+      - Make not installed correctly
+      - Dependencies/submodules not initialized (run: git submodule update --init)
+
+--------------------------------------------------------------------------------
+STEP 5 — SAMBUNGKAN ST-LINK KE BOARD / CONNECT ST-LINK TO BOARD
+--------------------------------------------------------------------------------
+
+  ID: ST-Link dihubungkan ke konektor SWD di board (P2 pada skematik).
+      SWD (Serial Wire Debug) adalah protokol 2-wire untuk programming dan
+      debugging STM32 — lebih simpel dari JTAG yang butuh 4-5 kabel.
+
+  EN: ST-Link connects to the SWD connector on the board (P2 in the schematic).
+      SWD (Serial Wire Debug) is a 2-wire protocol for programming and debugging
+      STM32 — simpler than JTAG which requires 4-5 wires.
+
+  Koneksi / Connection:
+  ┌─────────────────────┬──────────────────────┐
+  │ ST-Link V3MINIE     │ Board (P2 Schematic) │
+  ├─────────────────────┼──────────────────────┤
+  │ SWDIO               │ PA13 / SWDIO         │
+  │ SWCLK               │ PA14 / SWCLK         │
+  │ GND                 │ GND                  │
+  │ 3.3V (opsional)     │ 3.3V (optional)      │
+  └─────────────────────┴──────────────────────┘
+
+  CATATAN / NOTE:
+  ID: 3.3V dari ST-Link hanya cukup untuk menyalakan MCU saja (bukan power
+      staging). Untuk uji pertama flash saja, ini sudah cukup.
+  EN: 3.3V from ST-Link is only enough to power the MCU (not the power stage).
+      For initial flash testing only, this is sufficient.
+
+--------------------------------------------------------------------------------
+STEP 6 — FLASH FIRMWARE KE STM32 / FLASH FIRMWARE TO STM32
+--------------------------------------------------------------------------------
+
+  ID: File .bin yang dihasilkan dari Step 4 sekarang di-flash ke memory
+      internal STM32F405 menggunakan STM32CubeProgrammer. Proses ini mirip
+      dengan "upload" di Arduino IDE, tapi dilakukan via ST-Link bukan USB.
+
+  EN: The .bin file generated in Step 4 is now flashed to the internal memory
+      of STM32F405 using STM32CubeProgrammer. This is similar to "upload" in
+      Arduino IDE, but done via ST-Link instead of USB.
+
+  Langkah / Steps:
+  1. Buka STM32CubeProgrammer
+  2. Pilih koneksi: ST-LINK (dropdown kanan atas)
+  3. Klik "Connect" — pastikan ST-Link terdeteksi dan terhubung ke board
+  4. Klik "Open file" → pilih file BLDC_4_ChibiOS.bin dari folder build/
+  5. Klik "Download"
+  6. Tunggu hingga selesai → klik "Disconnect"
+  7. Reset board (tekan tombol reset atau cabut-pasang power)
+
+  ID: Setelah step ini selesai, STM32 kamu sudah memiliki VESC firmware
+      dan siap digunakan / dikonfigurasi.
+  EN: After this step, your STM32 now has VESC firmware and is ready
+      to be used / configured.
+
+================================================================================
+  FASE 2 — FIRMWARE UPDATE (SETELAH FASE 1 SELESAI / AFTER PHASE 1 IS DONE)
+================================================================================
+
+  ID: Setelah Fase 1 selesai dan VESC firmware sudah ada di STM32, update
+      firmware berikutnya bisa dilakukan lewat USB menggunakan VESC Tool —
+      TANPA perlu ST-Link lagi.
+
+  EN: After Phase 1 is complete and VESC firmware is on the STM32, future
+      firmware updates can be done via USB using VESC Tool —
+      WITHOUT needing ST-Link anymore.
+
+  Langkah / Steps:
+  1. Compile firmware baru (ulangi Step 4) → dapat .bin baru
+  2. Colok USB board ke PC / Connect board USB to PC
+  3. Buka VESC Tool
+  4. Connect ke board (pilih port yang muncul)
+  5. Pergi ke menu Firmware → Upload
+  6. Pilih file .bin baru → Upload
+  7. Tunggu hingga selesai → board restart otomatis
+
+  ID: VESC Tool juga digunakan untuk konfigurasi motor (deteksi parameter,
+      tuning FOC/BLDC, setting arus, dll) — bukan hanya untuk update firmware.
+  EN: VESC Tool is also used for motor configuration (parameter detection,
+      FOC/BLDC tuning, current settings, etc.) — not just for firmware updates.
+
+================================================================================
+  RINGKASAN ALUR / FLOW SUMMARY
+================================================================================
+
+  FASE 1 (First time):
+  Source code (.c/.h)
+        ↓  arm-none-eabi-gcc + make  [di PC / on PC]
+  Binary (.bin)
+        ↓  STM32CubeProgrammer + ST-Link  [via SWD]
+  Flash memory STM32F405
+        ↓
+  VESC Firmware berjalan / VESC Firmware running
+
+  FASE 2 (Update berikutnya / Subsequent updates):
+  Binary (.bin) baru
+        ↓  VESC Tool  [via USB]
+  Flash memory STM32F405
+        ↓
+  Firmware updated
+
+================================================================================
+  REFERENSI / REFERENCES
+================================================================================
+
+  VESC Firmware Source   : https://github.com/vedderb/bldc
+  VESC Tool              : https://vesc-project.com
+  ARM GNU Toolchain      : https://developer.arm.com/downloads
+  STM32CubeProgrammer    : https://www.st.com/en/development-tools/stm32cubeprog.html
+  ST-Link V3MINIE        : https://www.st.com/en/development-tools/stlink-v3minie.html
+  VESC Community Forum   : https://vesc-project.com/forum
+
+================================================================================
+  END OF DOCUMENT
+================================================================================
