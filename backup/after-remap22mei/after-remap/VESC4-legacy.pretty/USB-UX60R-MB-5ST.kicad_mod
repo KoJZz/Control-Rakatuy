@@ -1,0 +1,146 @@
+(footprint "USB-UX60R-MB-5ST"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 5.9 3.3 90)
+		(layer "F.SilkS")
+		(uuid "a23d8363-dd14-433a-b362-3ca93139a25b")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.175)
+			)
+		)
+	)
+	(property "Value" "MINI-USB-SHIELD-32005-201"
+		(at -0.3 -5.575 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "f6a5e5f4-b120-4502-a398-bbbfc7dfd091")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.175)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d769c80c-8542-4bc6-9af0-5c5aaffef3fc")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d5995d60-afe3-4ac4-917d-ec8b0bed7c5c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -4 4.25)
+		(end 4 4.25)
+		(stroke
+			(width 0.09906)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b9e0a433-1817-4b4d-9052-fc95fda8b10f")
+	)
+	(pad "" np_thru_hole circle
+		(at -2 0)
+		(size 1 1)
+		(drill 1)
+		(layers "*.Cu" "*.Mask" "F.SilkS")
+		(clearance 0.2)
+		(uuid "418b5e23-2fa1-44c3-a340-cb01bc442a86")
+	)
+	(pad "" np_thru_hole circle
+		(at 2 0)
+		(size 1 1)
+		(drill 1)
+		(layers "*.Cu" "*.Mask" "F.SilkS")
+		(clearance 0.2)
+		(uuid "e777eb47-dc59-4370-9dd5-8234c0c78b3d")
+	)
+	(pad "1" smd rect
+		(at 1.6 -1.5)
+		(size 0.5 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "195baf2b-6c2f-4765-b329-93f97f95b7e5")
+	)
+	(pad "2" smd rect
+		(at 0.8 -1.5)
+		(size 0.5 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "65e1d7d9-75bb-4f62-b3db-cd3a47f3bfba")
+	)
+	(pad "3" smd rect
+		(at 0 -1.5)
+		(size 0.5 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "fe6efa38-46ab-4de8-a035-0e6cb0d9a140")
+	)
+	(pad "4" smd rect
+		(at -0.8 -1.5)
+		(size 0.5 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "9cb05d5d-6d67-45c1-a9b3-e3035b3045b2")
+	)
+	(pad "5" smd rect
+		(at -4.55 -0.3)
+		(size 2.4 2.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8d41fd04-8d06-4c65-9249-554dbff86c33")
+	)
+	(pad "5" smd rect
+		(at -4.35 2.775)
+		(size 2 2.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f577f9c5-f52f-4436-a009-f610b201536d")
+	)
+	(pad "5" smd rect
+		(at -1.6 -1.5)
+		(size 0.5 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f6ab4dea-bd65-4d92-9c01-95eb56ec964a")
+	)
+	(pad "5" smd rect
+		(at 4.35 2.775)
+		(size 2 2.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c86cc6e9-90d0-4317-b6b0-534f13d2d69d")
+	)
+	(pad "5" smd rect
+		(at 4.55 -0.3)
+		(size 2.4 2.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "7edc68d9-b41c-4da0-932e-2c36858e7e30")
+	)
+	(embedded_fonts no)
+	(model "Libraries/3D/UX60R-MB-5ST-STEP.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 0.393701 0.393701 0.393701)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
