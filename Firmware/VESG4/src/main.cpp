@@ -61,6 +61,7 @@ void setup() {
     
     digitalWrite(PIN_LED_RED, HIGH); 
 
+    // ============================ POWER
     uint32_t timeout = millis();
     while (!Serial && (millis() - timeout < 3000)) { delay(10); }
     Serial.println("USB Serial connected. Initializing hardware...");
@@ -79,6 +80,8 @@ void setup() {
 
     Serial.println("SUCCESS: High Voltage detected.");
     digitalWrite(PIN_LED_RED, LOW);
+
+    // ============================
 
     drv.init();
     drv.disableGate(); 
