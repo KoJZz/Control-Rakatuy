@@ -2,44 +2,13 @@
 #include "board_config.h"
 #include "drv8302.h"
 
-const PinMap PinMap_TIM[] = {
-  // --- Core Phase High-Side Channels (TIM1) ---
-  {PA_8,  TIM1,   STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF1_TIM1, 1, 0)}, // TIM1_CH1  (Phase C High)
-  {PA_9,  TIM1,   STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF1_TIM1, 2, 0)}, // TIM1_CH2  (Phase B High)
-  {PA_10, TIM1,   STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF1_TIM1, 3, 0)}, // TIM1_CH3  (Phase A High)
-
-  // --- Auxiliary Board Timers (Preserved for PPM/Servos/Inputs) ---
-  {PA_0,  TIM2,   STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF1_TIM2, 1, 0)}, 
-  {PA_1,  TIM5,   STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF2_TIM5, 2, 0)}, 
-  {PA_2,  TIM5,   STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF2_TIM5, 3, 0)}, 
-  {PA_3,  TIM5,   STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF2_TIM5, 4, 0)}, 
-  {PA_5,  TIM2,   STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF1_TIM2, 1, 0)}, 
-  {PA_6,  TIM13,  STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF9_TIM13, 1, 0)}, 
-  {PA_7,  TIM14,  STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF9_TIM14, 1, 0)},
-  // {PB_0,  TIM3,   STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF2_TIM3, 3, 0)}, 
-  // {PB_1,  TIM3,   STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF2_TIM3, 4, 0)}, 
-  {PB_3,  TIM2,   STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF1_TIM2, 2, 0)}, 
-  {PB_4,  TIM3,   STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF2_TIM3, 1, 0)}, 
-  {PB_5,  TIM3,   STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF2_TIM3, 2, 0)}, 
-  {PB_6,  TIM4,   STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF2_TIM4, 1, 0)}, 
-  {PB_7,  TIM4,   STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF2_TIM4, 2, 0)}, 
-  {PB_8,  TIM4,   STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF2_TIM4, 3, 0)}, 
-  {PB_9,  TIM4,   STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF2_TIM4, 4, 0)}, 
-  {PC_6,  TIM3,   STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF2_TIM3, 1, 0)}, 
-  {PC_7,  TIM8,   STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF3_TIM8, 2, 0)}, 
-  {PC_8,  TIM3,   STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF2_TIM3, 3, 0)}, 
-  {PC_9,  TIM8,   STM_PIN_DATA_EXT(STM_MODE_AF_PP, GPIO_PULLUP, GPIO_AF3_TIM8, 4, 0)}, 
-
-  {NC,    NULL,   0} // Termination guard indicator for the compiler loop
-};
-
 // ===== Throttle scaling (from original Pico sketch, unused unless you wire analog throttle later) =====
 #define THROTTLE_LOW  4
 #define THROTTLE_HIGH 741
 
 #define HALL_OVERSAMPLE 4
 
-// Sequence Mitsuba Clockwise - verify against your actual hall wiring before trusting it
+// Sequence Mitsuba Clockwise
 uint8_t hallToMotor[8] = {255, 1, 3, 2, 5, 0, 4, 255};
 
 DRV8302 drv(PIN_EN_GATE, PIN_DCCAL, PIN_DRV_FAULT);
@@ -61,7 +30,7 @@ void setup() {
 
     pinMode(PIN_LED_GREEN, OUTPUT);
     pinMode(PIN_LED_RED, OUTPUT);
-    digitalWrite(PIN_LED_RED, HIGH); // red while booting, same convention as your FOC sketch
+    digitalWrite(PIN_LED_RED, HIGH); // red while booting
 
     uint32_t timeout = millis();
     while (!Serial && (millis() - timeout < 3000)) { delay(10); }
@@ -114,7 +83,9 @@ void setup() {
 
     // ===== FAULT BYPASS IN SETUP =====
     if (drv.isFaulted()) {
+        faultResetCount++;
         Serial.println("WARNING: DRV is throwing a hard fault at setup, but bypassing as requested.");
+        Serial.println(faultResetCount);
         digitalWrite(PIN_LED_RED, HIGH);
     }
 
@@ -124,6 +95,7 @@ void setup() {
 void loop() {
     // ===== Fault check - Non-blocking Auto-Reset =====
     if (drv.isFaulted()) {
+        faultResetCount++;
         digitalWrite(PIN_LED_RED, HIGH);
         Serial.println("!!! DRV FAULT PIN ACTIVE !!! Attempting hard reset on EN_GATE...");
         

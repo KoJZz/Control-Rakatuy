@@ -5,7 +5,7 @@ DRV8302::DRV8302(int enGatePin, int dcCalPin, int faultPin)
 
 void DRV8302::init() {
     pinMode(_enGatePin, OUTPUT);
-    digitalWrite(_enGatePin, LOW);  // start disabled, mirrors VESC's DISABLE_GATE()
+    digitalWrite(_enGatePin, LOW);
 
     pinMode(_dcCalPin, OUTPUT);
     digitalWrite(_dcCalPin, LOW);
