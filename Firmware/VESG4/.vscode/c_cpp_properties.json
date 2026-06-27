@@ -99,7 +99,6 @@
                 "STM32F4",
                 "STM32F405xx",
                 "STM32F4xx",
-                "HSE_VALUE=8000000",
                 "PIO_FRAMEWORK_ARDUINO_ENABLE_CDC",
                 "USBCON",
                 "USBD_VID=0x0483",
