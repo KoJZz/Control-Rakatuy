@@ -129,7 +129,7 @@ void loop() {
         currentAccumulatorPB0 += analogRead(PIN_CURR_C);
         currentAccumulatorPB1 += analogRead(PIN_CURR_A);
     }
-
+    
     // Capture the averaged result of those 200 high-speed iterations
     int activeCurrentPB0 = currentAccumulatorPB0 / 200;
     int activeCurrentPB1 = currentAccumulatorPB1 / 200;

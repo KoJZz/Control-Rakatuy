@@ -1,0 +1,140 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "ed2d60bb-6f67-4058-a44c-768469965820")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 226.06 74.295)
+		(size 32.385 26.035)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "0d9cd732-c30b-4910-a0d5-e799ce957825")
+		(property "Sheetname" "MOSFETs"
+			(at 226.06 73.5834 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mosfet.kicad_sch"
+			(at 226.06 100.9146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "gos_esc"
+				(path "/ed2d60bb-6f67-4058-a44c-768469965820"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 99.06 48.895)
+		(size 53.975 86.36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "23c30a42-ae61-48fa-9e76-0ce9749fdf8d")
+		(property "Sheetname" "MCU"
+			(at 99.06 48.1834 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mcu.kicad_sch"
+			(at 99.06 135.8396 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "gos_esc"
+				(path "/ed2d60bb-6f67-4058-a44c-768469965820"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 166.37 57.785)
+		(size 29.845 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a21fc3e1-8a1b-4d6a-b772-49bfe69a0b9d")
+		(property "Sheetname" "POWER"
+			(at 166.37 57.0734 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 166.37 77.4196 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "gos_esc"
+				(path "/ed2d60bb-6f67-4058-a44c-768469965820"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
