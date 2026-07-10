@@ -1,0 +1,5285 @@
+This file is a merged representation of a subset of the codebase, containing specifically included files, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of a subset of the repository's contents that is considered the most important context.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Only files matching these patterns are included: Core/Src/**/*, Core/Inc/**/*, USB_DEVICE/**/*, *.ioc
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+Core/Inc/main.h
+Core/Inc/stm32f4xx_hal_conf.h
+Core/Inc/stm32f4xx_it.h
+Core/Src/main.c
+Core/Src/stm32f4xx_hal_msp.c
+Core/Src/stm32f4xx_it.c
+Core/Src/syscalls.c
+Core/Src/sysmem.c
+Core/Src/system_stm32f4xx.c
+EasySTMz.ioc
+USB_DEVICE/App/usb_device.c
+USB_DEVICE/App/usb_device.h
+USB_DEVICE/App/usbd_cdc_if.c
+USB_DEVICE/App/usbd_cdc_if.h
+USB_DEVICE/App/usbd_desc.c
+USB_DEVICE/App/usbd_desc.h
+USB_DEVICE/Target/usbd_conf.c
+USB_DEVICE/Target/usbd_conf.h
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="Core/Inc/main.h">
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           : main.h
+  * @brief          : Header for main.c file.
+  *                   This file contains the common defines of the application.
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2026 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+
+/* Define to prevent recursive inclusion -------------------------------------*/
+#ifndef __MAIN_H
+#define __MAIN_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* Includes ------------------------------------------------------------------*/
+#include "stm32f4xx_hal.h"
+
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
+
+/* USER CODE END Includes */
+
+/* Exported types ------------------------------------------------------------*/
+/* USER CODE BEGIN ET */
+
+/* USER CODE END ET */
+
+/* Exported constants --------------------------------------------------------*/
+/* USER CODE BEGIN EC */
+
+/* USER CODE END EC */
+
+/* Exported macro ------------------------------------------------------------*/
+/* USER CODE BEGIN EM */
+
+/* USER CODE END EM */
+
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+
+/* Exported functions prototypes ---------------------------------------------*/
+void Error_Handler(void);
+
+/* USER CODE BEGIN EFP */
+
+/* USER CODE END EFP */
+
+/* Private defines -----------------------------------------------------------*/
+
+/* USER CODE BEGIN Private defines */
+
+/* USER CODE END Private defines */
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __MAIN_H */
+</file>
+
+<file path="Core/Inc/stm32f4xx_hal_conf.h">
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file    stm32f4xx_hal_conf_template.h
+  * @author  MCD Application Team
+  * @brief   HAL configuration template file.
+  *          This file should be copied to the application folder and renamed
+  *          to stm32f4xx_hal_conf.h.
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2017 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+
+/* Define to prevent recursive inclusion -------------------------------------*/
+#ifndef __STM32F4xx_HAL_CONF_H
+#define __STM32F4xx_HAL_CONF_H
+
+#ifdef __cplusplus
+ extern "C" {
+#endif
+
+/* Exported types ------------------------------------------------------------*/
+/* Exported constants --------------------------------------------------------*/
+
+/* ########################## Module Selection ############################## */
+/**
+  * @brief This is the list of modules to be used in the HAL driver
+  */
+#define HAL_MODULE_ENABLED
+
+  /* #define HAL_CRYP_MODULE_ENABLED */
+#define HAL_ADC_MODULE_ENABLED
+/* #define HAL_CAN_MODULE_ENABLED */
+/* #define HAL_CRC_MODULE_ENABLED */
+/* #define HAL_CAN_LEGACY_MODULE_ENABLED */
+/* #define HAL_DAC_MODULE_ENABLED */
+/* #define HAL_DCMI_MODULE_ENABLED */
+/* #define HAL_DMA2D_MODULE_ENABLED */
+/* #define HAL_ETH_MODULE_ENABLED */
+/* #define HAL_ETH_LEGACY_MODULE_ENABLED */
+/* #define HAL_NAND_MODULE_ENABLED */
+/* #define HAL_NOR_MODULE_ENABLED */
+/* #define HAL_PCCARD_MODULE_ENABLED */
+/* #define HAL_SRAM_MODULE_ENABLED */
+/* #define HAL_SDRAM_MODULE_ENABLED */
+/* #define HAL_HASH_MODULE_ENABLED */
+/* #define HAL_I2C_MODULE_ENABLED */
+/* #define HAL_I2S_MODULE_ENABLED */
+/* #define HAL_IWDG_MODULE_ENABLED */
+/* #define HAL_LTDC_MODULE_ENABLED */
+/* #define HAL_RNG_MODULE_ENABLED */
+/* #define HAL_RTC_MODULE_ENABLED */
+/* #define HAL_SAI_MODULE_ENABLED */
+/* #define HAL_SD_MODULE_ENABLED */
+/* #define HAL_MMC_MODULE_ENABLED */
+/* #define HAL_SPI_MODULE_ENABLED */
+#define HAL_TIM_MODULE_ENABLED
+/* #define HAL_UART_MODULE_ENABLED */
+/* #define HAL_USART_MODULE_ENABLED */
+/* #define HAL_IRDA_MODULE_ENABLED */
+/* #define HAL_SMARTCARD_MODULE_ENABLED */
+/* #define HAL_SMBUS_MODULE_ENABLED */
+/* #define HAL_WWDG_MODULE_ENABLED */
+#define HAL_PCD_MODULE_ENABLED
+/* #define HAL_HCD_MODULE_ENABLED */
+/* #define HAL_DSI_MODULE_ENABLED */
+/* #define HAL_QSPI_MODULE_ENABLED */
+/* #define HAL_QSPI_MODULE_ENABLED */
+/* #define HAL_CEC_MODULE_ENABLED */
+/* #define HAL_FMPI2C_MODULE_ENABLED */
+/* #define HAL_FMPSMBUS_MODULE_ENABLED */
+/* #define HAL_SPDIFRX_MODULE_ENABLED */
+/* #define HAL_DFSDM_MODULE_ENABLED */
+/* #define HAL_LPTIM_MODULE_ENABLED */
+#define HAL_GPIO_MODULE_ENABLED
+#define HAL_EXTI_MODULE_ENABLED
+#define HAL_DMA_MODULE_ENABLED
+#define HAL_RCC_MODULE_ENABLED
+#define HAL_FLASH_MODULE_ENABLED
+#define HAL_PWR_MODULE_ENABLED
+#define HAL_CORTEX_MODULE_ENABLED
+
+/* ########################## HSE/HSI Values adaptation ##################### */
+/**
+  * @brief Adjust the value of External High Speed oscillator (HSE) used in your application.
+  *        This value is used by the RCC HAL module to compute the system frequency
+  *        (when HSE is used as system clock source, directly or through the PLL).
+  */
+#if !defined  (HSE_VALUE)
+  #define HSE_VALUE    8000000U /*!< Value of the External oscillator in Hz */
+#endif /* HSE_VALUE */
+
+#if !defined  (HSE_STARTUP_TIMEOUT)
+  #define HSE_STARTUP_TIMEOUT    100U   /*!< Time out for HSE start up, in ms */
+#endif /* HSE_STARTUP_TIMEOUT */
+
+/**
+  * @brief Internal High Speed oscillator (HSI) value.
+  *        This value is used by the RCC HAL module to compute the system frequency
+  *        (when HSI is used as system clock source, directly or through the PLL).
+  */
+#if !defined  (HSI_VALUE)
+  #define HSI_VALUE    ((uint32_t)16000000U) /*!< Value of the Internal oscillator in Hz*/
+#endif /* HSI_VALUE */
+
+/**
+  * @brief Internal Low Speed oscillator (LSI) value.
+  */
+#if !defined  (LSI_VALUE)
+ #define LSI_VALUE  32000U       /*!< LSI Typical Value in Hz*/
+#endif /* LSI_VALUE */                      /*!< Value of the Internal Low Speed oscillator in Hz
+                                             The real value may vary depending on the variations
+                                             in voltage and temperature.*/
+/**
+  * @brief External Low Speed oscillator (LSE) value.
+  */
+#if !defined  (LSE_VALUE)
+ #define LSE_VALUE  32768U    /*!< Value of the External Low Speed oscillator in Hz */
+#endif /* LSE_VALUE */
+
+#if !defined  (LSE_STARTUP_TIMEOUT)
+  #define LSE_STARTUP_TIMEOUT    5000U   /*!< Time out for LSE start up, in ms */
+#endif /* LSE_STARTUP_TIMEOUT */
+
+/**
+  * @brief External clock source for I2S peripheral
+  *        This value is used by the I2S HAL module to compute the I2S clock source
+  *        frequency, this source is inserted directly through I2S_CKIN pad.
+  */
+#if !defined  (EXTERNAL_CLOCK_VALUE)
+  #define EXTERNAL_CLOCK_VALUE    12288000U /*!< Value of the External audio frequency in Hz*/
+#endif /* EXTERNAL_CLOCK_VALUE */
+
+/* Tip: To avoid modifying this file each time you need to use different HSE,
+   ===  you can define the HSE value in your toolchain compiler preprocessor. */
+
+/* ########################### System Configuration ######################### */
+/**
+  * @brief This is the HAL system configuration section
+  */
+#define  VDD_VALUE		      3300U /*!< Value of VDD in mv */
+#define  TICK_INT_PRIORITY            15U   /*!< tick interrupt priority */
+#define  USE_RTOS                     0U
+#define  PREFETCH_ENABLE              1U
+#define  INSTRUCTION_CACHE_ENABLE     1U
+#define  DATA_CACHE_ENABLE            1U
+
+#define  USE_HAL_ADC_REGISTER_CALLBACKS         0U /* ADC register callback disabled       */
+#define  USE_HAL_CAN_REGISTER_CALLBACKS         0U /* CAN register callback disabled       */
+#define  USE_HAL_CEC_REGISTER_CALLBACKS         0U /* CEC register callback disabled       */
+#define  USE_HAL_CRYP_REGISTER_CALLBACKS        0U /* CRYP register callback disabled      */
+#define  USE_HAL_DAC_REGISTER_CALLBACKS         0U /* DAC register callback disabled       */
+#define  USE_HAL_DCMI_REGISTER_CALLBACKS        0U /* DCMI register callback disabled      */
+#define  USE_HAL_DFSDM_REGISTER_CALLBACKS       0U /* DFSDM register callback disabled     */
+#define  USE_HAL_DMA2D_REGISTER_CALLBACKS       0U /* DMA2D register callback disabled     */
+#define  USE_HAL_DSI_REGISTER_CALLBACKS         0U /* DSI register callback disabled       */
+#define  USE_HAL_ETH_REGISTER_CALLBACKS         0U /* ETH register callback disabled       */
+#define  USE_HAL_HASH_REGISTER_CALLBACKS        0U /* HASH register callback disabled      */
+#define  USE_HAL_HCD_REGISTER_CALLBACKS         0U /* HCD register callback disabled       */
+#define  USE_HAL_I2C_REGISTER_CALLBACKS         0U /* I2C register callback disabled       */
+#define  USE_HAL_FMPI2C_REGISTER_CALLBACKS      0U /* FMPI2C register callback disabled    */
+#define  USE_HAL_FMPSMBUS_REGISTER_CALLBACKS    0U /* FMPSMBUS register callback disabled  */
+#define  USE_HAL_I2S_REGISTER_CALLBACKS         0U /* I2S register callback disabled       */
+#define  USE_HAL_IRDA_REGISTER_CALLBACKS        0U /* IRDA register callback disabled      */
+#define  USE_HAL_LPTIM_REGISTER_CALLBACKS       0U /* LPTIM register callback disabled     */
+#define  USE_HAL_LTDC_REGISTER_CALLBACKS        0U /* LTDC register callback disabled      */
+#define  USE_HAL_MMC_REGISTER_CALLBACKS         0U /* MMC register callback disabled       */
+#define  USE_HAL_NAND_REGISTER_CALLBACKS        0U /* NAND register callback disabled      */
+#define  USE_HAL_NOR_REGISTER_CALLBACKS         0U /* NOR register callback disabled       */
+#define  USE_HAL_PCCARD_REGISTER_CALLBACKS      0U /* PCCARD register callback disabled    */
+#define  USE_HAL_PCD_REGISTER_CALLBACKS         0U /* PCD register callback disabled       */
+#define  USE_HAL_QSPI_REGISTER_CALLBACKS        0U /* QSPI register callback disabled      */
+#define  USE_HAL_RNG_REGISTER_CALLBACKS         0U /* RNG register callback disabled       */
+#define  USE_HAL_RTC_REGISTER_CALLBACKS         0U /* RTC register callback disabled       */
+#define  USE_HAL_SAI_REGISTER_CALLBACKS         0U /* SAI register callback disabled       */
+#define  USE_HAL_SD_REGISTER_CALLBACKS          0U /* SD register callback disabled        */
+#define  USE_HAL_SMARTCARD_REGISTER_CALLBACKS   0U /* SMARTCARD register callback disabled */
+#define  USE_HAL_SDRAM_REGISTER_CALLBACKS       0U /* SDRAM register callback disabled     */
+#define  USE_HAL_SRAM_REGISTER_CALLBACKS        0U /* SRAM register callback disabled      */
+#define  USE_HAL_SPDIFRX_REGISTER_CALLBACKS     0U /* SPDIFRX register callback disabled   */
+#define  USE_HAL_SMBUS_REGISTER_CALLBACKS       0U /* SMBUS register callback disabled     */
+#define  USE_HAL_SPI_REGISTER_CALLBACKS         0U /* SPI register callback disabled       */
+#define  USE_HAL_TIM_REGISTER_CALLBACKS         0U /* TIM register callback disabled       */
+#define  USE_HAL_UART_REGISTER_CALLBACKS        0U /* UART register callback disabled      */
+#define  USE_HAL_USART_REGISTER_CALLBACKS       0U /* USART register callback disabled     */
+#define  USE_HAL_WWDG_REGISTER_CALLBACKS        0U /* WWDG register callback disabled      */
+
+/* ########################## Assert Selection ############################## */
+/**
+  * @brief Uncomment the line below to expanse the "assert_param" macro in the
+  *        HAL drivers code
+  */
+/* #define USE_FULL_ASSERT    1U */
+
+/* ################## Ethernet peripheral configuration ##################### */
+
+/* Section 1 : Ethernet peripheral configuration */
+
+/* MAC ADDRESS: MAC_ADDR0:MAC_ADDR1:MAC_ADDR2:MAC_ADDR3:MAC_ADDR4:MAC_ADDR5 */
+#define MAC_ADDR0   2U
+#define MAC_ADDR1   0U
+#define MAC_ADDR2   0U
+#define MAC_ADDR3   0U
+#define MAC_ADDR4   0U
+#define MAC_ADDR5   0U
+
+/* Definition of the Ethernet driver buffers size and count */
+#define ETH_RX_BUF_SIZE                ETH_MAX_PACKET_SIZE /* buffer size for receive               */
+#define ETH_TX_BUF_SIZE                ETH_MAX_PACKET_SIZE /* buffer size for transmit              */
+#define ETH_RXBUFNB                    4U       /* 4 Rx buffers of size ETH_RX_BUF_SIZE  */
+#define ETH_TXBUFNB                    4U       /* 4 Tx buffers of size ETH_TX_BUF_SIZE  */
+
+/* Section 2: PHY configuration section */
+
+/* DP83848_PHY_ADDRESS Address*/
+#define DP83848_PHY_ADDRESS
+/* PHY Reset delay these values are based on a 1 ms Systick interrupt*/
+#define PHY_RESET_DELAY                 0x000000FFU
+/* PHY Configuration delay */
+#define PHY_CONFIG_DELAY                0x00000FFFU
+
+#define PHY_READ_TO                     0x0000FFFFU
+#define PHY_WRITE_TO                    0x0000FFFFU
+
+/* Section 3: Common PHY Registers */
+
+#define PHY_BCR                         ((uint16_t)0x0000U)    /*!< Transceiver Basic Control Register   */
+#define PHY_BSR                         ((uint16_t)0x0001U)    /*!< Transceiver Basic Status Register    */
+
+#define PHY_RESET                       ((uint16_t)0x8000U)  /*!< PHY Reset */
+#define PHY_LOOPBACK                    ((uint16_t)0x4000U)  /*!< Select loop-back mode */
+#define PHY_FULLDUPLEX_100M             ((uint16_t)0x2100U)  /*!< Set the full-duplex mode at 100 Mb/s */
+#define PHY_HALFDUPLEX_100M             ((uint16_t)0x2000U)  /*!< Set the half-duplex mode at 100 Mb/s */
+#define PHY_FULLDUPLEX_10M              ((uint16_t)0x0100U)  /*!< Set the full-duplex mode at 10 Mb/s  */
+#define PHY_HALFDUPLEX_10M              ((uint16_t)0x0000U)  /*!< Set the half-duplex mode at 10 Mb/s  */
+#define PHY_AUTONEGOTIATION             ((uint16_t)0x1000U)  /*!< Enable auto-negotiation function     */
+#define PHY_RESTART_AUTONEGOTIATION     ((uint16_t)0x0200U)  /*!< Restart auto-negotiation function    */
+#define PHY_POWERDOWN                   ((uint16_t)0x0800U)  /*!< Select the power down mode           */
+#define PHY_ISOLATE                     ((uint16_t)0x0400U)  /*!< Isolate PHY from MII                 */
+
+#define PHY_AUTONEGO_COMPLETE           ((uint16_t)0x0020U)  /*!< Auto-Negotiation process completed   */
+#define PHY_LINKED_STATUS               ((uint16_t)0x0004U)  /*!< Valid link established               */
+#define PHY_JABBER_DETECTION            ((uint16_t)0x0002U)  /*!< Jabber condition detected            */
+
+/* Section 4: Extended PHY Registers */
+#define PHY_SR                          ((uint16_t))    /*!< PHY status register Offset                      */
+
+#define PHY_SPEED_STATUS                ((uint16_t))  /*!< PHY Speed mask                                  */
+#define PHY_DUPLEX_STATUS               ((uint16_t))  /*!< PHY Duplex mask                                 */
+
+/* ################## SPI peripheral configuration ########################## */
+
+/* CRC FEATURE: Use to activate CRC feature inside HAL SPI Driver
+* Activated: CRC code is present inside driver
+* Deactivated: CRC code cleaned from driver
+*/
+
+#define USE_SPI_CRC                     0U
+
+/* Includes ------------------------------------------------------------------*/
+/**
+  * @brief Include module's header file
+  */
+
+#ifdef HAL_RCC_MODULE_ENABLED
+  #include "stm32f4xx_hal_rcc.h"
+#endif /* HAL_RCC_MODULE_ENABLED */
+
+#ifdef HAL_GPIO_MODULE_ENABLED
+  #include "stm32f4xx_hal_gpio.h"
+#endif /* HAL_GPIO_MODULE_ENABLED */
+
+#ifdef HAL_EXTI_MODULE_ENABLED
+  #include "stm32f4xx_hal_exti.h"
+#endif /* HAL_EXTI_MODULE_ENABLED */
+
+#ifdef HAL_DMA_MODULE_ENABLED
+  #include "stm32f4xx_hal_dma.h"
+#endif /* HAL_DMA_MODULE_ENABLED */
+
+#ifdef HAL_CORTEX_MODULE_ENABLED
+  #include "stm32f4xx_hal_cortex.h"
+#endif /* HAL_CORTEX_MODULE_ENABLED */
+
+#ifdef HAL_ADC_MODULE_ENABLED
+  #include "stm32f4xx_hal_adc.h"
+#endif /* HAL_ADC_MODULE_ENABLED */
+
+#ifdef HAL_CAN_MODULE_ENABLED
+  #include "stm32f4xx_hal_can.h"
+#endif /* HAL_CAN_MODULE_ENABLED */
+
+#ifdef HAL_CAN_LEGACY_MODULE_ENABLED
+  #include "stm32f4xx_hal_can_legacy.h"
+#endif /* HAL_CAN_LEGACY_MODULE_ENABLED */
+
+#ifdef HAL_CRC_MODULE_ENABLED
+  #include "stm32f4xx_hal_crc.h"
+#endif /* HAL_CRC_MODULE_ENABLED */
+
+#ifdef HAL_CRYP_MODULE_ENABLED
+  #include "stm32f4xx_hal_cryp.h"
+#endif /* HAL_CRYP_MODULE_ENABLED */
+
+#ifdef HAL_DMA2D_MODULE_ENABLED
+  #include "stm32f4xx_hal_dma2d.h"
+#endif /* HAL_DMA2D_MODULE_ENABLED */
+
+#ifdef HAL_DAC_MODULE_ENABLED
+  #include "stm32f4xx_hal_dac.h"
+#endif /* HAL_DAC_MODULE_ENABLED */
+
+#ifdef HAL_DCMI_MODULE_ENABLED
+  #include "stm32f4xx_hal_dcmi.h"
+#endif /* HAL_DCMI_MODULE_ENABLED */
+
+#ifdef HAL_ETH_MODULE_ENABLED
+  #include "stm32f4xx_hal_eth.h"
+#endif /* HAL_ETH_MODULE_ENABLED */
+
+#ifdef HAL_ETH_LEGACY_MODULE_ENABLED
+  #include "stm32f4xx_hal_eth_legacy.h"
+#endif /* HAL_ETH_LEGACY_MODULE_ENABLED */
+
+#ifdef HAL_FLASH_MODULE_ENABLED
+  #include "stm32f4xx_hal_flash.h"
+#endif /* HAL_FLASH_MODULE_ENABLED */
+
+#ifdef HAL_SRAM_MODULE_ENABLED
+  #include "stm32f4xx_hal_sram.h"
+#endif /* HAL_SRAM_MODULE_ENABLED */
+
+#ifdef HAL_NOR_MODULE_ENABLED
+  #include "stm32f4xx_hal_nor.h"
+#endif /* HAL_NOR_MODULE_ENABLED */
+
+#ifdef HAL_NAND_MODULE_ENABLED
+  #include "stm32f4xx_hal_nand.h"
+#endif /* HAL_NAND_MODULE_ENABLED */
+
+#ifdef HAL_PCCARD_MODULE_ENABLED
+  #include "stm32f4xx_hal_pccard.h"
+#endif /* HAL_PCCARD_MODULE_ENABLED */
+
+#ifdef HAL_SDRAM_MODULE_ENABLED
+  #include "stm32f4xx_hal_sdram.h"
+#endif /* HAL_SDRAM_MODULE_ENABLED */
+
+#ifdef HAL_HASH_MODULE_ENABLED
+ #include "stm32f4xx_hal_hash.h"
+#endif /* HAL_HASH_MODULE_ENABLED */
+
+#ifdef HAL_I2C_MODULE_ENABLED
+ #include "stm32f4xx_hal_i2c.h"
+#endif /* HAL_I2C_MODULE_ENABLED */
+
+#ifdef HAL_SMBUS_MODULE_ENABLED
+ #include "stm32f4xx_hal_smbus.h"
+#endif /* HAL_SMBUS_MODULE_ENABLED */
+
+#ifdef HAL_I2S_MODULE_ENABLED
+ #include "stm32f4xx_hal_i2s.h"
+#endif /* HAL_I2S_MODULE_ENABLED */
+
+#ifdef HAL_IWDG_MODULE_ENABLED
+ #include "stm32f4xx_hal_iwdg.h"
+#endif /* HAL_IWDG_MODULE_ENABLED */
+
+#ifdef HAL_LTDC_MODULE_ENABLED
+ #include "stm32f4xx_hal_ltdc.h"
+#endif /* HAL_LTDC_MODULE_ENABLED */
+
+#ifdef HAL_PWR_MODULE_ENABLED
+ #include "stm32f4xx_hal_pwr.h"
+#endif /* HAL_PWR_MODULE_ENABLED */
+
+#ifdef HAL_RNG_MODULE_ENABLED
+ #include "stm32f4xx_hal_rng.h"
+#endif /* HAL_RNG_MODULE_ENABLED */
+
+#ifdef HAL_RTC_MODULE_ENABLED
+ #include "stm32f4xx_hal_rtc.h"
+#endif /* HAL_RTC_MODULE_ENABLED */
+
+#ifdef HAL_SAI_MODULE_ENABLED
+ #include "stm32f4xx_hal_sai.h"
+#endif /* HAL_SAI_MODULE_ENABLED */
+
+#ifdef HAL_SD_MODULE_ENABLED
+ #include "stm32f4xx_hal_sd.h"
+#endif /* HAL_SD_MODULE_ENABLED */
+
+#ifdef HAL_SPI_MODULE_ENABLED
+ #include "stm32f4xx_hal_spi.h"
+#endif /* HAL_SPI_MODULE_ENABLED */
+
+#ifdef HAL_TIM_MODULE_ENABLED
+ #include "stm32f4xx_hal_tim.h"
+#endif /* HAL_TIM_MODULE_ENABLED */
+
+#ifdef HAL_UART_MODULE_ENABLED
+ #include "stm32f4xx_hal_uart.h"
+#endif /* HAL_UART_MODULE_ENABLED */
+
+#ifdef HAL_USART_MODULE_ENABLED
+ #include "stm32f4xx_hal_usart.h"
+#endif /* HAL_USART_MODULE_ENABLED */
+
+#ifdef HAL_IRDA_MODULE_ENABLED
+ #include "stm32f4xx_hal_irda.h"
+#endif /* HAL_IRDA_MODULE_ENABLED */
+
+#ifdef HAL_SMARTCARD_MODULE_ENABLED
+ #include "stm32f4xx_hal_smartcard.h"
+#endif /* HAL_SMARTCARD_MODULE_ENABLED */
+
+#ifdef HAL_WWDG_MODULE_ENABLED
+ #include "stm32f4xx_hal_wwdg.h"
+#endif /* HAL_WWDG_MODULE_ENABLED */
+
+#ifdef HAL_PCD_MODULE_ENABLED
+ #include "stm32f4xx_hal_pcd.h"
+#endif /* HAL_PCD_MODULE_ENABLED */
+
+#ifdef HAL_HCD_MODULE_ENABLED
+ #include "stm32f4xx_hal_hcd.h"
+#endif /* HAL_HCD_MODULE_ENABLED */
+
+#ifdef HAL_DSI_MODULE_ENABLED
+ #include "stm32f4xx_hal_dsi.h"
+#endif /* HAL_DSI_MODULE_ENABLED */
+
+#ifdef HAL_QSPI_MODULE_ENABLED
+ #include "stm32f4xx_hal_qspi.h"
+#endif /* HAL_QSPI_MODULE_ENABLED */
+
+#ifdef HAL_CEC_MODULE_ENABLED
+ #include "stm32f4xx_hal_cec.h"
+#endif /* HAL_CEC_MODULE_ENABLED */
+
+#ifdef HAL_FMPI2C_MODULE_ENABLED
+ #include "stm32f4xx_hal_fmpi2c.h"
+#endif /* HAL_FMPI2C_MODULE_ENABLED */
+
+#ifdef HAL_FMPSMBUS_MODULE_ENABLED
+ #include "stm32f4xx_hal_fmpsmbus.h"
+#endif /* HAL_FMPSMBUS_MODULE_ENABLED */
+
+#ifdef HAL_SPDIFRX_MODULE_ENABLED
+ #include "stm32f4xx_hal_spdifrx.h"
+#endif /* HAL_SPDIFRX_MODULE_ENABLED */
+
+#ifdef HAL_DFSDM_MODULE_ENABLED
+ #include "stm32f4xx_hal_dfsdm.h"
+#endif /* HAL_DFSDM_MODULE_ENABLED */
+
+#ifdef HAL_LPTIM_MODULE_ENABLED
+ #include "stm32f4xx_hal_lptim.h"
+#endif /* HAL_LPTIM_MODULE_ENABLED */
+
+#ifdef HAL_MMC_MODULE_ENABLED
+ #include "stm32f4xx_hal_mmc.h"
+#endif /* HAL_MMC_MODULE_ENABLED */
+
+/* Exported macro ------------------------------------------------------------*/
+#ifdef  USE_FULL_ASSERT
+/**
+  * @brief  The assert_param macro is used for function's parameters check.
+  * @param  expr If expr is false, it calls assert_failed function
+  *         which reports the name of the source file and the source
+  *         line number of the call that failed.
+  *         If expr is true, it returns no value.
+  * @retval None
+  */
+  #define assert_param(expr) ((expr) ? (void)0U : assert_failed((uint8_t *)__FILE__, __LINE__))
+/* Exported functions ------------------------------------------------------- */
+  void assert_failed(uint8_t* file, uint32_t line);
+#else
+  #define assert_param(expr) ((void)0U)
+#endif /* USE_FULL_ASSERT */
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __STM32F4xx_HAL_CONF_H */
+</file>
+
+<file path="Core/Inc/stm32f4xx_it.h">
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file    stm32f4xx_it.h
+  * @brief   This file contains the headers of the interrupt handlers.
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2026 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+
+/* Define to prevent recursive inclusion -------------------------------------*/
+#ifndef __STM32F4xx_IT_H
+#define __STM32F4xx_IT_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
+
+/* USER CODE END Includes */
+
+/* Exported types ------------------------------------------------------------*/
+/* USER CODE BEGIN ET */
+
+/* USER CODE END ET */
+
+/* Exported constants --------------------------------------------------------*/
+/* USER CODE BEGIN EC */
+
+/* USER CODE END EC */
+
+/* Exported macro ------------------------------------------------------------*/
+/* USER CODE BEGIN EM */
+
+/* USER CODE END EM */
+
+/* Exported functions prototypes ---------------------------------------------*/
+void NMI_Handler(void);
+void HardFault_Handler(void);
+void MemManage_Handler(void);
+void BusFault_Handler(void);
+void UsageFault_Handler(void);
+void SVC_Handler(void);
+void DebugMon_Handler(void);
+void PendSV_Handler(void);
+void SysTick_Handler(void);
+void ADC_IRQHandler(void);
+void EXTI9_5_IRQHandler(void);
+void EXTI15_10_IRQHandler(void);
+void OTG_FS_IRQHandler(void);
+/* USER CODE BEGIN EFP */
+
+/* USER CODE END EFP */
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __STM32F4xx_IT_H */
+</file>
+
+<file path="Core/Src/main.c">
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           : main.c
+  * @brief          : Main program body
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2026 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+/* Includes ------------------------------------------------------------------*/
+#include "main.h"
+#include "usb_device.h"
+
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
+#include "main.h"
+#include "usb_device.h"
+#include "usbd_cdc_if.h"
+#include <stdio.h>
+/* USER CODE END Includes */
+
+/* Private typedef -----------------------------------------------------------*/
+/* USER CODE BEGIN PTD */
+
+/* USER CODE END PTD */
+
+/* Private define ------------------------------------------------------------*/
+/* USER CODE BEGIN PD */
+
+/* USER CODE END PD */
+
+/* Private macro -------------------------------------------------------------*/
+/* USER CODE BEGIN PM */
+
+/* USER CODE END PM */
+
+/* Private variables ---------------------------------------------------------*/
+ADC_HandleTypeDef hadc1;
+
+TIM_HandleTypeDef htim1;
+
+/* USER CODE BEGIN PV */
+volatile uint8_t usb_throttle_target = 0;
+const uint8_t hallToMotor[8] = {255, 1, 3, 2, 5, 6, 4, 255};
+
+uint32_t lastDebugPrint = 0;
+uint32_t faultResetCount = 0;
+float v_bat = 0.0f;
+uint16_t raw_throttle = 0;
+
+// Variables to catch the hardware-synced ADC readings
+volatile uint16_t current_phase_A = 0;
+volatile uint16_t current_phase_C = 0;
+/* USER CODE END PV */
+
+/* Private function prototypes -----------------------------------------------*/
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+static void MX_ADC1_Init(void);
+static void MX_TIM1_Init(void);
+/* USER CODE BEGIN PFP */
+void Commutate(uint8_t state, uint16_t throttle);
+/* USER CODE END PFP */
+
+/* Private user code ---------------------------------------------------------*/
+/* USER CODE BEGIN 0 */
+
+
+// Retarget standard library printf to the USB CDC interface safely
+int _write(int file, char *ptr, int len) {
+    uint32_t timeout = 500000; // Failsafe timeout to prevent locking the MCU
+
+    // Wait until the USB interface is no longer BUSY
+    while (CDC_Transmit_FS((uint8_t*)ptr, len) == USBD_BUSY && timeout-- > 0) {
+        // Do nothing, just wait
+    }
+    return len;
+}
+/* USER CODE END 0 */
+
+/**
+  * @brief  The application entry point.
+  * @retval int
+  */
+int main(void)
+{
+
+  /* USER CODE BEGIN 1 */
+
+  /* USER CODE END 1 */
+
+  /* MCU Configuration--------------------------------------------------------*/
+
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  HAL_Init();
+
+  /* USER CODE BEGIN Init */
+
+  /* USER CODE END Init */
+
+  /* Configure the system clock */
+  SystemClock_Config();
+
+  /* USER CODE BEGIN SysInit */
+
+  /* USER CODE END SysInit */
+
+  /* Initialize all configured peripherals */
+  MX_GPIO_Init();
+  MX_ADC1_Init();
+  MX_TIM1_Init();
+  MX_USB_DEVICE_Init();
+  /* USER CODE BEGIN 2 */
+  // Start the High-Side PWM channels
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1); // Phase C
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2); // Phase B
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3); // Phase A
+
+  // Start the Low-Side Complementary channels
+  HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
+  HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
+  HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);
+
+  Commutate(0, 0);
+  // 2. Start the Hardware-Synced Current Sensing
+  HAL_ADCEx_InjectedStart_IT(&hadc1);
+
+  setvbuf(stdout, NULL, _IONBF, 0); // Disable printf buffering
+  // 3. Calibrate ADC & Check High Voltage
+  printf("Waiting for High Voltage power supply...\r\n");
+  do {
+	HAL_ADC_Start(&hadc1);
+	HAL_ADC_PollForConversion(&hadc1, 5);
+	HAL_ADC_GetValue(&hadc1);             // <-- ADD THIS: Physically pulls data to clear EOC flag
+	HAL_ADC_PollForConversion(&hadc1, 5);
+	uint16_t raw_v = HAL_ADC_GetValue(&hadc1);
+	v_bat = (raw_v / 4095.0f) * 3.3f * ((39000.0f + 2200.0f) / 2200.0f);
+	HAL_Delay(100);
+  } while (v_bat < 8.0f);
+
+  printf("SUCCESS: High Voltage detected at %.2fV\r\n", v_bat);
+
+  // 4. Enable the DRV8302 Gate Driver
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_10, GPIO_PIN_SET); // EN_GATE HIGH
+  HAL_Delay(100);
+  /* USER CODE END 2 */
+
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
+  while (1)
+  {
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
+	  // --- Kickstart & Instant-Stop Logic ---
+	  static uint8_t active_throttle = 0;
+
+	  if (usb_throttle_target > 0 && active_throttle == 0) {
+		  // Kickstart: The motor is stopped. Read halls manually to fire the first commutation.
+		  uint8_t hallA = (GPIOB->IDR & GPIO_PIN_6)  ? 1 : 0;
+		  uint8_t hallB = (GPIOB->IDR & GPIO_PIN_7)  ? 1 : 0;
+		  uint8_t hallC = (GPIOC->IDR & GPIO_PIN_11) ? 1 : 0;
+		  uint8_t hall_val = hallA | (hallB << 1) | (hallC << 2);
+
+		  Commutate(hallToMotor[hall_val], usb_throttle_target);
+	  }
+	  else if (usb_throttle_target == 0 && active_throttle > 0) {
+		  // Instant Stop: Cut power immediately instead of waiting for a slow coasting interrupt
+		  Commutate(0, 0);
+	  }
+
+	  active_throttle = usb_throttle_target; // Update the tracker
+	  // ===== 1. Hardware Fault Check (DRV8302 Active-Low Fault) =====
+	  if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_12) == GPIO_PIN_RESET) {
+		  faultResetCount++;
+
+		  // --- ADD THESE TWO LINES FOR SAFETY ---
+		  usb_throttle_target = 0; // Force user to manually throttle up again
+		  Commutate(0, 0);         // Instantly disconnect all MOSFETs
+
+		  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_SET); // LED_RED ON
+		  printf("!!! DRV FAULT !!! Resetting EN_GATE. Throttle Zeroed.\r\n");
+
+		  // Pulse EN_GATE low to clear latched faults
+		  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_10, GPIO_PIN_RESET);
+		  HAL_Delay(1); // 1 ms guarantees a successful hardware latch clear
+		  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_10, GPIO_PIN_SET);
+	  } else {
+		  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_RESET); // LED_RED OFF
+	  }
+
+	  // ===== 2. Read Regular ADC (Throttle & Voltage) =====
+	  HAL_ADC_Start(&hadc1);
+	  if (HAL_ADC_PollForConversion(&hadc1, 5) == HAL_OK) {
+		  raw_throttle = HAL_ADC_GetValue(&hadc1); // Rank 1: Throttle
+	  }
+	  if (HAL_ADC_PollForConversion(&hadc1, 5) == HAL_OK) {
+		  uint16_t raw_v = HAL_ADC_GetValue(&hadc1); // Rank 2: Bus Voltage
+		  v_bat = (raw_v / 4095.0f) * 3.3f * ((39000.0f + 2200.0f) / 2200.0f);
+	  }
+
+	  // Turn on Green LED if throttle is active (using your USB override variable)
+	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_4, (usb_throttle_target > 0) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+
+	  // ===== 3. Telemetry Heartbeat (Non-blocking, 500ms) =====
+	  if (HAL_GetTick() - lastDebugPrint >= 500) {
+		  lastDebugPrint = HAL_GetTick();
+
+		  printf("[DATA] Thr_Target: %d | IA_Raw: %d | IC_Raw: %d | Bus: %.2fV | Resets: %lu\r\n",
+				  usb_throttle_target,
+				  current_phase_A,
+				  current_phase_C,
+				  v_bat,
+				  faultResetCount);
+	  }
+  }
+  /* USER CODE END 3 */
+}
+
+/**
+  * @brief System Clock Configuration
+  * @retval None
+  */
+void SystemClock_Config(void)
+{
+  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+
+  /** Configure the main internal regulator output voltage
+  */
+  __HAL_RCC_PWR_CLK_ENABLE();
+  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+
+  /** Initializes the RCC Oscillators according to the specified parameters
+  * in the RCC_OscInitTypeDef structure.
+  */
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+  RCC_OscInitStruct.PLL.PLLM = 4;
+  RCC_OscInitStruct.PLL.PLLN = 168;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+  RCC_OscInitStruct.PLL.PLLQ = 7;
+  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Initializes the CPU, AHB and APB buses clocks
+  */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
+
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)
+  {
+    Error_Handler();
+  }
+}
+
+/**
+  * @brief ADC1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_ADC1_Init(void)
+{
+
+  /* USER CODE BEGIN ADC1_Init 0 */
+
+  /* USER CODE END ADC1_Init 0 */
+
+  ADC_ChannelConfTypeDef sConfig = {0};
+  ADC_InjectionConfTypeDef sConfigInjected = {0};
+
+  /* USER CODE BEGIN ADC1_Init 1 */
+
+  /* USER CODE END ADC1_Init 1 */
+
+  /** Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion)
+  */
+  hadc1.Instance = ADC1;
+  hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
+  hadc1.Init.Resolution = ADC_RESOLUTION_12B;
+  hadc1.Init.ScanConvMode = ENABLE;
+  hadc1.Init.ContinuousConvMode = DISABLE;
+  hadc1.Init.DiscontinuousConvMode = DISABLE;
+  hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+  hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
+  hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+  hadc1.Init.NbrOfConversion = 2;
+  hadc1.Init.DMAContinuousRequests = DISABLE;
+  hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
+  if (HAL_ADC_Init(&hadc1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
+  */
+  sConfig.Channel = ADC_CHANNEL_5;
+  sConfig.Rank = 1;
+  sConfig.SamplingTime = ADC_SAMPLETIME_84CYCLES;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
+  */
+  sConfig.Channel = ADC_CHANNEL_12;
+  sConfig.Rank = 2;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configures for the selected ADC injected channel its corresponding rank in the sequencer and its sample time
+  */
+  sConfigInjected.InjectedChannel = ADC_CHANNEL_8;
+  sConfigInjected.InjectedRank = 1;
+  sConfigInjected.InjectedNbrOfConversion = 2;
+  sConfigInjected.InjectedSamplingTime = ADC_SAMPLETIME_15CYCLES;
+  sConfigInjected.ExternalTrigInjecConvEdge = ADC_EXTERNALTRIGINJECCONVEDGE_RISING;
+  sConfigInjected.ExternalTrigInjecConv = ADC_EXTERNALTRIGINJECCONV_T1_TRGO;
+  sConfigInjected.AutoInjectedConv = DISABLE;
+  sConfigInjected.InjectedDiscontinuousConvMode = DISABLE;
+  sConfigInjected.InjectedOffset = 0;
+  if (HAL_ADCEx_InjectedConfigChannel(&hadc1, &sConfigInjected) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configures for the selected ADC injected channel its corresponding rank in the sequencer and its sample time
+  */
+  sConfigInjected.InjectedChannel = ADC_CHANNEL_9;
+  sConfigInjected.InjectedRank = 2;
+  if (HAL_ADCEx_InjectedConfigChannel(&hadc1, &sConfigInjected) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN ADC1_Init 2 */
+
+  /* USER CODE END ADC1_Init 2 */
+
+}
+
+/**
+  * @brief TIM1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM1_Init(void)
+{
+
+  /* USER CODE BEGIN TIM1_Init 0 */
+
+  /* USER CODE END TIM1_Init 0 */
+
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_OC_InitTypeDef sConfigOC = {0};
+  TIM_BreakDeadTimeConfigTypeDef sBreakDeadTimeConfig = {0};
+
+  /* USER CODE BEGIN TIM1_Init 1 */
+
+  /* USER CODE END TIM1_Init 1 */
+  htim1.Instance = TIM1;
+  htim1.Init.Prescaler = 0;
+  htim1.Init.CounterMode = TIM_COUNTERMODE_CENTERALIGNED1;
+  htim1.Init.Period = 4199;
+  htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim1.Init.RepetitionCounter = 1;
+  htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_PWM_Init(&htim1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_UPDATE;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sConfigOC.OCMode = TIM_OCMODE_PWM1;
+  sConfigOC.Pulse = 0;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  sConfigOC.OCIdleState = TIM_OCIDLESTATE_RESET;
+  sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_RESET;
+  if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sBreakDeadTimeConfig.OffStateRunMode = TIM_OSSR_DISABLE;
+  sBreakDeadTimeConfig.OffStateIDLEMode = TIM_OSSI_DISABLE;
+  sBreakDeadTimeConfig.LockLevel = TIM_LOCKLEVEL_OFF;
+  sBreakDeadTimeConfig.DeadTime = 67;
+  sBreakDeadTimeConfig.BreakState = TIM_BREAK_DISABLE;
+  sBreakDeadTimeConfig.BreakPolarity = TIM_BREAKPOLARITY_HIGH;
+  sBreakDeadTimeConfig.AutomaticOutput = TIM_AUTOMATICOUTPUT_DISABLE;
+  if (HAL_TIMEx_ConfigBreakDeadTime(&htim1, &sBreakDeadTimeConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM1_Init 2 */
+
+  /* USER CODE END TIM1_Init 2 */
+  HAL_TIM_MspPostInit(&htim1);
+
+}
+
+/**
+  * @brief GPIO Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_GPIO_Init(void)
+{
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+
+  /* USER CODE END MX_GPIO_Init_1 */
+
+  /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOH_CLK_ENABLE();
+  __HAL_RCC_GPIOC_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_10, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : PA6 */
+  GPIO_InitStruct.Pin = GPIO_PIN_6;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PC4 PC5 PC10 */
+  GPIO_InitStruct.Pin = GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_10;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PB12 */
+  GPIO_InitStruct.Pin = GPIO_PIN_12;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PC11 */
+  GPIO_InitStruct.Pin = GPIO_PIN_11;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PC12 */
+  GPIO_InitStruct.Pin = GPIO_PIN_12;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PB6 PB7 */
+  GPIO_InitStruct.Pin = GPIO_PIN_6|GPIO_PIN_7;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 1, 0);
+  HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
+
+  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 1, 0);
+  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
+
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+
+  /* USER CODE END MX_GPIO_Init_2 */
+}
+
+/* USER CODE BEGIN 4 */
+void Commutate(uint8_t state, uint16_t throttle) {
+	// SAFETY OVERRIDE: If throttle is 0, force state to 0 to coast/freewheel
+	if (throttle == 0) {
+		state = 0;
+	}
+
+	uint32_t duty = (throttle * 4199) / 255;
+
+    // 1. Force ALL gates OFF instantly to prevent any cross-conduction during state changes
+    TIM1->CCER &= ~(TIM_CCER_CC1E | TIM_CCER_CC1NE |
+                    TIM_CCER_CC2E | TIM_CCER_CC2NE |
+                    TIM_CCER_CC3E | TIM_CCER_CC3NE);
+
+    // 2. Set the duty cycle for all channels (doesn't output yet because CCER is off)
+    TIM1->CCR1 = duty; // Phase C
+    TIM1->CCR2 = duty; // Phase B
+    TIM1->CCR3 = duty; // Phase A
+
+    // 3. Enable only the specific High and Low sides needed for this step
+    switch (state) {
+        case 1:
+            // Phase C High, Phase A Low. Phase B floats.
+            TIM1->CCER |= (TIM_CCER_CC1E | TIM_CCER_CC3NE);
+            // Set Phase A duty to 0 so the Low side is fully ON (Complementary logic)
+            TIM1->CCR3 = 0;
+            break;
+        case 2:
+            // Phase C High, Phase B Low. Phase A floats.
+            TIM1->CCER |= (TIM_CCER_CC1E | TIM_CCER_CC2NE);
+            TIM1->CCR2 = 0;
+            break;
+        case 3:
+            // Phase A High, Phase B Low. Phase C floats.
+            TIM1->CCER |= (TIM_CCER_CC3E | TIM_CCER_CC2NE);
+            TIM1->CCR2 = 0;
+            break;
+        case 4:
+            // Phase A High, Phase C Low. Phase B floats.
+            TIM1->CCER |= (TIM_CCER_CC3E | TIM_CCER_CC1NE);
+            TIM1->CCR1 = 0;
+            break;
+        case 5:
+            // Phase B High, Phase C Low. Phase A floats.
+            TIM1->CCER |= (TIM_CCER_CC2E | TIM_CCER_CC1NE);
+            TIM1->CCR1 = 0;
+            break;
+        case 6:
+            // Phase B High, Phase A Low. Phase C floats.
+            TIM1->CCER |= (TIM_CCER_CC2E | TIM_CCER_CC3NE);
+            TIM1->CCR3 = 0;
+            break;
+        default:
+            // State 0 or invalid: All gates remain OFF (Coasting/Freewheeling)
+            break;
+    }
+}
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+    // A static variable retains its value between interrupt fires
+    static uint8_t last_hall_val = 255;
+
+    if(GPIO_Pin == GPIO_PIN_6 || GPIO_Pin == GPIO_PIN_7 || GPIO_Pin == GPIO_PIN_11)
+    {
+        uint8_t hallA = (GPIOB->IDR & GPIO_PIN_6)  ? 1 : 0;
+        uint8_t hallB = (GPIOB->IDR & GPIO_PIN_7)  ? 1 : 0;
+        uint8_t hallC = (GPIOC->IDR & GPIO_PIN_11) ? 1 : 0;
+
+        uint8_t hall_val = hallA | (hallB << 1) | (hallC << 2);
+
+        // ONLY commutate if the hall state actually changed (ignores hardware bounce)
+        if (hall_val != last_hall_val) {
+            last_hall_val = hall_val; // Update the latch
+            uint8_t state = hallToMotor[hall_val];
+            Commutate(state, usb_throttle_target);
+        }
+    }
+}
+
+void HAL_ADCEx_InjectedConvCpltCallback(ADC_HandleTypeDef* hadc) {
+    if(hadc->Instance == ADC1) {
+        // Grab the data out of the hardware registers.
+        // Rank 1 is Phase C (PB0), Rank 2 is Phase A (PB1) as set in CubeMX.
+        current_phase_C = HAL_ADCEx_InjectedGetValue(hadc, ADC_INJECTED_RANK_1);
+        current_phase_A = HAL_ADCEx_InjectedGetValue(hadc, ADC_INJECTED_RANK_2);
+    }
+}
+
+/* USER CODE END 4 */
+
+/**
+  * @brief  This function is executed in case of error occurrence.
+  * @retval None
+  */
+void Error_Handler(void)
+{
+  /* USER CODE BEGIN Error_Handler_Debug */
+  /* User can add his own implementation to report the HAL error return state */
+  __disable_irq();
+  while (1)
+  {
+  }
+  /* USER CODE END Error_Handler_Debug */
+}
+#ifdef USE_FULL_ASSERT
+/**
+  * @brief  Reports the name of the source file and the source line number
+  *         where the assert_param error has occurred.
+  * @param  file: pointer to the source file name
+  * @param  line: assert_param error line source number
+  * @retval None
+  */
+void assert_failed(uint8_t *file, uint32_t line)
+{
+  /* USER CODE BEGIN 6 */
+  /* User can add his own implementation to report the file name and line number,
+     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+  /* USER CODE END 6 */
+}
+#endif /* USE_FULL_ASSERT */
+</file>
+
+<file path="Core/Src/stm32f4xx_hal_msp.c">
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file         stm32f4xx_hal_msp.c
+  * @brief        This file provides code for the MSP Initialization
+  *               and de-Initialization codes.
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2026 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+
+/* Includes ------------------------------------------------------------------*/
+#include "main.h"
+/* USER CODE BEGIN Includes */
+
+/* USER CODE END Includes */
+
+/* Private typedef -----------------------------------------------------------*/
+/* USER CODE BEGIN TD */
+
+/* USER CODE END TD */
+
+/* Private define ------------------------------------------------------------*/
+/* USER CODE BEGIN Define */
+
+/* USER CODE END Define */
+
+/* Private macro -------------------------------------------------------------*/
+/* USER CODE BEGIN Macro */
+
+/* USER CODE END Macro */
+
+/* Private variables ---------------------------------------------------------*/
+/* USER CODE BEGIN PV */
+
+/* USER CODE END PV */
+
+/* Private function prototypes -----------------------------------------------*/
+/* USER CODE BEGIN PFP */
+
+/* USER CODE END PFP */
+
+/* External functions --------------------------------------------------------*/
+/* USER CODE BEGIN ExternalFunctions */
+
+/* USER CODE END ExternalFunctions */
+
+/* USER CODE BEGIN 0 */
+
+/* USER CODE END 0 */
+
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+                    /**
+  * Initializes the Global MSP.
+  */
+void HAL_MspInit(void)
+{
+
+  /* USER CODE BEGIN MspInit 0 */
+
+  /* USER CODE END MspInit 0 */
+
+  __HAL_RCC_SYSCFG_CLK_ENABLE();
+  __HAL_RCC_PWR_CLK_ENABLE();
+
+  /* System interrupt init*/
+
+  /* USER CODE BEGIN MspInit 1 */
+
+  /* USER CODE END MspInit 1 */
+}
+
+/**
+  * @brief ADC MSP Initialization
+  * This function configures the hardware resources used in this example
+  * @param hadc: ADC handle pointer
+  * @retval None
+  */
+void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc)
+{
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+  if(hadc->Instance==ADC1)
+  {
+    /* USER CODE BEGIN ADC1_MspInit 0 */
+
+    /* USER CODE END ADC1_MspInit 0 */
+    /* Peripheral clock enable */
+    __HAL_RCC_ADC1_CLK_ENABLE();
+
+    __HAL_RCC_GPIOC_CLK_ENABLE();
+    __HAL_RCC_GPIOA_CLK_ENABLE();
+    __HAL_RCC_GPIOB_CLK_ENABLE();
+    /**ADC1 GPIO Configuration
+    PC2     ------> ADC1_IN12
+    PA5     ------> ADC1_IN5
+    PB0     ------> ADC1_IN8
+    PB1     ------> ADC1_IN9
+    */
+    GPIO_InitStruct.Pin = GPIO_PIN_2;
+    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = GPIO_PIN_5;
+    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1;
+    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+    /* ADC1 interrupt Init */
+    HAL_NVIC_SetPriority(ADC_IRQn, 0, 0);
+    HAL_NVIC_EnableIRQ(ADC_IRQn);
+    /* USER CODE BEGIN ADC1_MspInit 1 */
+
+    /* USER CODE END ADC1_MspInit 1 */
+
+  }
+
+}
+
+/**
+  * @brief ADC MSP De-Initialization
+  * This function freeze the hardware resources used in this example
+  * @param hadc: ADC handle pointer
+  * @retval None
+  */
+void HAL_ADC_MspDeInit(ADC_HandleTypeDef* hadc)
+{
+  if(hadc->Instance==ADC1)
+  {
+    /* USER CODE BEGIN ADC1_MspDeInit 0 */
+
+    /* USER CODE END ADC1_MspDeInit 0 */
+    /* Peripheral clock disable */
+    __HAL_RCC_ADC1_CLK_DISABLE();
+
+    /**ADC1 GPIO Configuration
+    PC2     ------> ADC1_IN12
+    PA5     ------> ADC1_IN5
+    PB0     ------> ADC1_IN8
+    PB1     ------> ADC1_IN9
+    */
+    HAL_GPIO_DeInit(GPIOC, GPIO_PIN_2);
+
+    HAL_GPIO_DeInit(GPIOA, GPIO_PIN_5);
+
+    HAL_GPIO_DeInit(GPIOB, GPIO_PIN_0|GPIO_PIN_1);
+
+    /* ADC1 interrupt DeInit */
+    HAL_NVIC_DisableIRQ(ADC_IRQn);
+    /* USER CODE BEGIN ADC1_MspDeInit 1 */
+
+    /* USER CODE END ADC1_MspDeInit 1 */
+  }
+
+}
+
+/**
+  * @brief TIM_PWM MSP Initialization
+  * This function configures the hardware resources used in this example
+  * @param htim_pwm: TIM_PWM handle pointer
+  * @retval None
+  */
+void HAL_TIM_PWM_MspInit(TIM_HandleTypeDef* htim_pwm)
+{
+  if(htim_pwm->Instance==TIM1)
+  {
+    /* USER CODE BEGIN TIM1_MspInit 0 */
+
+    /* USER CODE END TIM1_MspInit 0 */
+    /* Peripheral clock enable */
+    __HAL_RCC_TIM1_CLK_ENABLE();
+    /* USER CODE BEGIN TIM1_MspInit 1 */
+
+    /* USER CODE END TIM1_MspInit 1 */
+
+  }
+
+}
+
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef* htim)
+{
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+  if(htim->Instance==TIM1)
+  {
+    /* USER CODE BEGIN TIM1_MspPostInit 0 */
+
+    /* USER CODE END TIM1_MspPostInit 0 */
+
+    __HAL_RCC_GPIOB_CLK_ENABLE();
+    __HAL_RCC_GPIOA_CLK_ENABLE();
+    /**TIM1 GPIO Configuration
+    PB13     ------> TIM1_CH1N
+    PB14     ------> TIM1_CH2N
+    PB15     ------> TIM1_CH3N
+    PA8     ------> TIM1_CH1
+    PA9     ------> TIM1_CH2
+    PA10     ------> TIM1_CH3
+    */
+    GPIO_InitStruct.Pin = GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    GPIO_InitStruct.Alternate = GPIO_AF1_TIM1;
+    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    GPIO_InitStruct.Alternate = GPIO_AF1_TIM1;
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+    /* USER CODE BEGIN TIM1_MspPostInit 1 */
+
+    /* USER CODE END TIM1_MspPostInit 1 */
+  }
+
+}
+/**
+  * @brief TIM_PWM MSP De-Initialization
+  * This function freeze the hardware resources used in this example
+  * @param htim_pwm: TIM_PWM handle pointer
+  * @retval None
+  */
+void HAL_TIM_PWM_MspDeInit(TIM_HandleTypeDef* htim_pwm)
+{
+  if(htim_pwm->Instance==TIM1)
+  {
+    /* USER CODE BEGIN TIM1_MspDeInit 0 */
+
+    /* USER CODE END TIM1_MspDeInit 0 */
+    /* Peripheral clock disable */
+    __HAL_RCC_TIM1_CLK_DISABLE();
+    /* USER CODE BEGIN TIM1_MspDeInit 1 */
+
+    /* USER CODE END TIM1_MspDeInit 1 */
+  }
+
+}
+
+/* USER CODE BEGIN 1 */
+
+/* USER CODE END 1 */
+</file>
+
+<file path="Core/Src/stm32f4xx_it.c">
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file    stm32f4xx_it.c
+  * @brief   Interrupt Service Routines.
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2026 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+
+/* Includes ------------------------------------------------------------------*/
+#include "main.h"
+#include "stm32f4xx_it.h"
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
+/* USER CODE END Includes */
+
+/* Private typedef -----------------------------------------------------------*/
+/* USER CODE BEGIN TD */
+
+/* USER CODE END TD */
+
+/* Private define ------------------------------------------------------------*/
+/* USER CODE BEGIN PD */
+
+/* USER CODE END PD */
+
+/* Private macro -------------------------------------------------------------*/
+/* USER CODE BEGIN PM */
+
+/* USER CODE END PM */
+
+/* Private variables ---------------------------------------------------------*/
+/* USER CODE BEGIN PV */
+
+/* USER CODE END PV */
+
+/* Private function prototypes -----------------------------------------------*/
+/* USER CODE BEGIN PFP */
+
+/* USER CODE END PFP */
+
+/* Private user code ---------------------------------------------------------*/
+/* USER CODE BEGIN 0 */
+
+/* USER CODE END 0 */
+
+/* External variables --------------------------------------------------------*/
+extern PCD_HandleTypeDef hpcd_USB_OTG_FS;
+extern ADC_HandleTypeDef hadc1;
+/* USER CODE BEGIN EV */
+
+/* USER CODE END EV */
+
+/******************************************************************************/
+/*           Cortex-M4 Processor Interruption and Exception Handlers          */
+/******************************************************************************/
+/**
+  * @brief This function handles Non maskable interrupt.
+  */
+void NMI_Handler(void)
+{
+  /* USER CODE BEGIN NonMaskableInt_IRQn 0 */
+
+  /* USER CODE END NonMaskableInt_IRQn 0 */
+  /* USER CODE BEGIN NonMaskableInt_IRQn 1 */
+   while (1)
+  {
+  }
+  /* USER CODE END NonMaskableInt_IRQn 1 */
+}
+
+/**
+  * @brief This function handles Hard fault interrupt.
+  */
+void HardFault_Handler(void)
+{
+  /* USER CODE BEGIN HardFault_IRQn 0 */
+
+  /* USER CODE END HardFault_IRQn 0 */
+  while (1)
+  {
+    /* USER CODE BEGIN W1_HardFault_IRQn 0 */
+    /* USER CODE END W1_HardFault_IRQn 0 */
+  }
+}
+
+/**
+  * @brief This function handles Memory management fault.
+  */
+void MemManage_Handler(void)
+{
+  /* USER CODE BEGIN MemoryManagement_IRQn 0 */
+
+  /* USER CODE END MemoryManagement_IRQn 0 */
+  while (1)
+  {
+    /* USER CODE BEGIN W1_MemoryManagement_IRQn 0 */
+    /* USER CODE END W1_MemoryManagement_IRQn 0 */
+  }
+}
+
+/**
+  * @brief This function handles Pre-fetch fault, memory access fault.
+  */
+void BusFault_Handler(void)
+{
+  /* USER CODE BEGIN BusFault_IRQn 0 */
+
+  /* USER CODE END BusFault_IRQn 0 */
+  while (1)
+  {
+    /* USER CODE BEGIN W1_BusFault_IRQn 0 */
+    /* USER CODE END W1_BusFault_IRQn 0 */
+  }
+}
+
+/**
+  * @brief This function handles Undefined instruction or illegal state.
+  */
+void UsageFault_Handler(void)
+{
+  /* USER CODE BEGIN UsageFault_IRQn 0 */
+
+  /* USER CODE END UsageFault_IRQn 0 */
+  while (1)
+  {
+    /* USER CODE BEGIN W1_UsageFault_IRQn 0 */
+    /* USER CODE END W1_UsageFault_IRQn 0 */
+  }
+}
+
+/**
+  * @brief This function handles System service call via SWI instruction.
+  */
+void SVC_Handler(void)
+{
+  /* USER CODE BEGIN SVCall_IRQn 0 */
+
+  /* USER CODE END SVCall_IRQn 0 */
+  /* USER CODE BEGIN SVCall_IRQn 1 */
+
+  /* USER CODE END SVCall_IRQn 1 */
+}
+
+/**
+  * @brief This function handles Debug monitor.
+  */
+void DebugMon_Handler(void)
+{
+  /* USER CODE BEGIN DebugMonitor_IRQn 0 */
+
+  /* USER CODE END DebugMonitor_IRQn 0 */
+  /* USER CODE BEGIN DebugMonitor_IRQn 1 */
+
+  /* USER CODE END DebugMonitor_IRQn 1 */
+}
+
+/**
+  * @brief This function handles Pendable request for system service.
+  */
+void PendSV_Handler(void)
+{
+  /* USER CODE BEGIN PendSV_IRQn 0 */
+
+  /* USER CODE END PendSV_IRQn 0 */
+  /* USER CODE BEGIN PendSV_IRQn 1 */
+
+  /* USER CODE END PendSV_IRQn 1 */
+}
+
+/**
+  * @brief This function handles System tick timer.
+  */
+void SysTick_Handler(void)
+{
+  /* USER CODE BEGIN SysTick_IRQn 0 */
+
+  /* USER CODE END SysTick_IRQn 0 */
+  HAL_IncTick();
+  /* USER CODE BEGIN SysTick_IRQn 1 */
+
+  /* USER CODE END SysTick_IRQn 1 */
+}
+
+/******************************************************************************/
+/* STM32F4xx Peripheral Interrupt Handlers                                    */
+/* Add here the Interrupt Handlers for the used peripherals.                  */
+/* For the available peripheral interrupt handler names,                      */
+/* please refer to the startup file (startup_stm32f4xx.s).                    */
+/******************************************************************************/
+
+/**
+  * @brief This function handles ADC1, ADC2 and ADC3 global interrupts.
+  */
+void ADC_IRQHandler(void)
+{
+  /* USER CODE BEGIN ADC_IRQn 0 */
+
+  /* USER CODE END ADC_IRQn 0 */
+  HAL_ADC_IRQHandler(&hadc1);
+  /* USER CODE BEGIN ADC_IRQn 1 */
+
+  /* USER CODE END ADC_IRQn 1 */
+}
+
+/**
+  * @brief This function handles EXTI line[9:5] interrupts.
+  */
+void EXTI9_5_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI9_5_IRQn 0 */
+
+  /* USER CODE END EXTI9_5_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_6);
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_7);
+  /* USER CODE BEGIN EXTI9_5_IRQn 1 */
+
+  /* USER CODE END EXTI9_5_IRQn 1 */
+}
+
+/**
+  * @brief This function handles EXTI line[15:10] interrupts.
+  */
+void EXTI15_10_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI15_10_IRQn 0 */
+
+  /* USER CODE END EXTI15_10_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_11);
+  /* USER CODE BEGIN EXTI15_10_IRQn 1 */
+
+  /* USER CODE END EXTI15_10_IRQn 1 */
+}
+
+/**
+  * @brief This function handles USB On The Go FS global interrupt.
+  */
+void OTG_FS_IRQHandler(void)
+{
+  /* USER CODE BEGIN OTG_FS_IRQn 0 */
+
+  /* USER CODE END OTG_FS_IRQn 0 */
+  HAL_PCD_IRQHandler(&hpcd_USB_OTG_FS);
+  /* USER CODE BEGIN OTG_FS_IRQn 1 */
+
+  /* USER CODE END OTG_FS_IRQn 1 */
+}
+
+/* USER CODE BEGIN 1 */
+
+/* USER CODE END 1 */
+</file>
+
+<file path="Core/Src/syscalls.c">
+/**
+ ******************************************************************************
+ * @file      syscalls.c
+ * @author    Auto-generated by STM32CubeIDE
+ * @brief     STM32CubeIDE Minimal System calls file
+ *
+ *            For more information about which c-functions
+ *            need which of these lowlevel functions
+ *            please consult the Newlib libc-manual
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2020-2025 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
+
+/* Includes */
+#include <sys/stat.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <stdio.h>
+#include <signal.h>
+#include <time.h>
+#include <sys/time.h>
+#include <sys/times.h>
+
+
+/* Variables */
+extern int __io_putchar(int ch) __attribute__((weak));
+extern int __io_getchar(void) __attribute__((weak));
+
+
+char *__env[1] = { 0 };
+char **environ = __env;
+
+
+/* Functions */
+void initialise_monitor_handles()
+{
+}
+
+int _getpid(void)
+{
+  return 1;
+}
+
+int _kill(int pid, int sig)
+{
+  (void)pid;
+  (void)sig;
+  errno = EINVAL;
+  return -1;
+}
+
+void _exit (int status)
+{
+  _kill(status, -1);
+  while (1) {}    /* Make sure we hang here */
+}
+
+__attribute__((weak)) int _read(int file, char *ptr, int len)
+{
+  (void)file;
+  int DataIdx;
+
+  for (DataIdx = 0; DataIdx < len; DataIdx++)
+  {
+    *ptr++ = __io_getchar();
+  }
+
+  return len;
+}
+
+__attribute__((weak)) int _write(int file, char *ptr, int len)
+{
+  (void)file;
+  int DataIdx;
+
+  for (DataIdx = 0; DataIdx < len; DataIdx++)
+  {
+    __io_putchar(*ptr++);
+  }
+  return len;
+}
+
+int _close(int file)
+{
+  (void)file;
+  return -1;
+}
+
+
+int _fstat(int file, struct stat *st)
+{
+  (void)file;
+  st->st_mode = S_IFCHR;
+  return 0;
+}
+
+int _isatty(int file)
+{
+  (void)file;
+  return 1;
+}
+
+int _lseek(int file, int ptr, int dir)
+{
+  (void)file;
+  (void)ptr;
+  (void)dir;
+  return 0;
+}
+
+int _open(char *path, int flags, ...)
+{
+  (void)path;
+  (void)flags;
+  /* Pretend like we always fail */
+  return -1;
+}
+
+int _wait(int *status)
+{
+  (void)status;
+  errno = ECHILD;
+  return -1;
+}
+
+int _unlink(char *name)
+{
+  (void)name;
+  errno = ENOENT;
+  return -1;
+}
+
+int _times(struct tms *buf)
+{
+  (void)buf;
+  return -1;
+}
+
+int _stat(char *file, struct stat *st)
+{
+  (void)file;
+  st->st_mode = S_IFCHR;
+  return 0;
+}
+
+int _link(char *old, char *new)
+{
+  (void)old;
+  (void)new;
+  errno = EMLINK;
+  return -1;
+}
+
+int _fork(void)
+{
+  errno = EAGAIN;
+  return -1;
+}
+
+int _execve(char *name, char **argv, char **env)
+{
+  (void)name;
+  (void)argv;
+  (void)env;
+  errno = ENOMEM;
+  return -1;
+}
+</file>
+
+<file path="Core/Src/sysmem.c">
+/**
+ ******************************************************************************
+ * @file      sysmem.c
+ * @author    Generated by STM32CubeIDE
+ * @brief     STM32CubeIDE System Memory calls file
+ *
+ *            For more information about which C functions
+ *            need which of these lowlevel functions
+ *            please consult the newlib libc manual
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2025 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
+
+/* Includes */
+#include <errno.h>
+#include <stdint.h>
+
+/**
+ * Pointer to the current high watermark of the heap usage
+ */
+static uint8_t *__sbrk_heap_end = NULL;
+
+/**
+ * @brief _sbrk() allocates memory to the newlib heap and is used by malloc
+ *        and others from the C library
+ *
+ * @verbatim
+ * ############################################################################
+ * #  .data  #  .bss  #       newlib heap       #          MSP stack          #
+ * #         #        #                         # Reserved by _Min_Stack_Size #
+ * ############################################################################
+ * ^-- RAM start      ^-- _end                             _estack, RAM end --^
+ * @endverbatim
+ *
+ * This implementation starts allocating at the '_end' linker symbol
+ * The '_Min_Stack_Size' linker symbol reserves a memory for the MSP stack
+ * The implementation considers '_estack' linker symbol to be RAM end
+ * NOTE: If the MSP stack, at any point during execution, grows larger than the
+ * reserved size, please increase the '_Min_Stack_Size'.
+ *
+ * @param incr Memory size
+ * @return Pointer to allocated memory
+ */
+void *_sbrk(ptrdiff_t incr)
+{
+  extern uint8_t _end; /* Symbol defined in the linker script */
+  extern uint8_t _estack; /* Symbol defined in the linker script */
+  extern uint32_t _Min_Stack_Size; /* Symbol defined in the linker script */
+  const uint32_t stack_limit = (uint32_t)&_estack - (uint32_t)&_Min_Stack_Size;
+  const uint8_t *max_heap = (uint8_t *)stack_limit;
+  uint8_t *prev_heap_end;
+
+  /* Initialize heap end at first call */
+  if (NULL == __sbrk_heap_end)
+  {
+    __sbrk_heap_end = &_end;
+  }
+
+  /* Protect heap from growing into the reserved MSP stack */
+  if (__sbrk_heap_end + incr > max_heap)
+  {
+    errno = ENOMEM;
+    return (void *)-1;
+  }
+
+  prev_heap_end = __sbrk_heap_end;
+  __sbrk_heap_end += incr;
+
+  return (void *)prev_heap_end;
+}
+</file>
+
+<file path="Core/Src/system_stm32f4xx.c">
+/**
+  ******************************************************************************
+  * @file    system_stm32f4xx.c
+  * @author  MCD Application Team
+  * @brief   CMSIS Cortex-M4 Device Peripheral Access Layer System Source File.
+  *
+  *   This file provides two functions and one global variable to be called from 
+  *   user application:
+  *      - SystemInit(): This function is called at startup just after reset and 
+  *                      before branch to main program. This call is made inside
+  *                      the "startup_stm32f4xx.s" file.
+  *
+  *      - SystemCoreClock variable: Contains the core clock (HCLK), it can be used
+  *                                  by the user application to setup the SysTick 
+  *                                  timer or configure other parameters.
+  *                                     
+  *      - SystemCoreClockUpdate(): Updates the variable SystemCoreClock and must
+  *                                 be called whenever the core clock is changed
+  *                                 during program execution.
+  *
+  *
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2017 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+
+/** @addtogroup CMSIS
+  * @{
+  */
+
+/** @addtogroup stm32f4xx_system
+  * @{
+  */  
+  
+/** @addtogroup STM32F4xx_System_Private_Includes
+  * @{
+  */
+
+
+#include "stm32f4xx.h"
+
+#if !defined  (HSE_VALUE) 
+  #define HSE_VALUE    ((uint32_t)25000000) /*!< Default value of the External oscillator in Hz */
+#endif /* HSE_VALUE */
+
+#if !defined  (HSI_VALUE)
+  #define HSI_VALUE    ((uint32_t)16000000) /*!< Value of the Internal oscillator in Hz*/
+#endif /* HSI_VALUE */
+
+/**
+  * @}
+  */
+
+/** @addtogroup STM32F4xx_System_Private_TypesDefinitions
+  * @{
+  */
+
+/**
+  * @}
+  */
+
+/** @addtogroup STM32F4xx_System_Private_Defines
+  * @{
+  */
+
+/************************* Miscellaneous Configuration ************************/
+/*!< Uncomment the following line if you need to use external SRAM or SDRAM as data memory  */
+#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx) || defined(STM32F417xx)\
+ || defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)\
+ || defined(STM32F469xx) || defined(STM32F479xx) || defined(STM32F412Zx) || defined(STM32F412Vx)
+/* #define DATA_IN_ExtSRAM */
+#endif /* STM32F40xxx || STM32F41xxx || STM32F42xxx || STM32F43xxx || STM32F469xx || STM32F479xx ||\
+          STM32F412Zx || STM32F412Vx */
+ 
+#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)\
+ || defined(STM32F446xx) || defined(STM32F469xx) || defined(STM32F479xx)
+/* #define DATA_IN_ExtSDRAM */
+#endif /* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F446xx || STM32F469xx ||\
+          STM32F479xx */
+
+/* Note: Following vector table addresses must be defined in line with linker
+         configuration. */
+/*!< Uncomment the following line if you need to relocate the vector table
+     anywhere in Flash or Sram, else the vector table is kept at the automatic
+     remap of boot address selected */
+/* #define USER_VECT_TAB_ADDRESS */
+
+#if defined(USER_VECT_TAB_ADDRESS)
+/*!< Uncomment the following line if you need to relocate your vector Table
+     in Sram else user remap will be done in Flash. */
+/* #define VECT_TAB_SRAM */
+#if defined(VECT_TAB_SRAM)
+#define VECT_TAB_BASE_ADDRESS   SRAM_BASE       /*!< Vector Table base address field.
+                                                     This value must be a multiple of 0x200. */
+#else
+#define VECT_TAB_BASE_ADDRESS   FLASH_BASE      /*!< Vector Table base address field.
+                                                     This value must be a multiple of 0x200. */
+#endif /* VECT_TAB_SRAM */
+#if !defined(VECT_TAB_OFFSET)
+#define VECT_TAB_OFFSET         0x00000000U     /*!< Vector Table offset field.
+                                                     This value must be a multiple of 0x200. */
+#endif /* VECT_TAB_OFFSET */
+#endif /* USER_VECT_TAB_ADDRESS */
+/******************************************************************************/
+
+/**
+  * @}
+  */
+
+/** @addtogroup STM32F4xx_System_Private_Macros
+  * @{
+  */
+
+/**
+  * @}
+  */
+
+/** @addtogroup STM32F4xx_System_Private_Variables
+  * @{
+  */
+  /* This variable is updated in three ways:
+      1) by calling CMSIS function SystemCoreClockUpdate()
+      2) by calling HAL API function HAL_RCC_GetHCLKFreq()
+      3) each time HAL_RCC_ClockConfig() is called to configure the system clock frequency 
+         Note: If you use this function to configure the system clock; then there
+               is no need to call the 2 first functions listed above, since SystemCoreClock
+               variable is updated automatically.
+  */
+uint32_t SystemCoreClock = 16000000;
+const uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+const uint8_t APBPrescTable[8]  = {0, 0, 0, 0, 1, 2, 3, 4};
+/**
+  * @}
+  */
+
+/** @addtogroup STM32F4xx_System_Private_FunctionPrototypes
+  * @{
+  */
+
+#if defined (DATA_IN_ExtSRAM) || defined (DATA_IN_ExtSDRAM)
+  static void SystemInit_ExtMemCtl(void); 
+#endif /* DATA_IN_ExtSRAM || DATA_IN_ExtSDRAM */
+
+/**
+  * @}
+  */
+
+/** @addtogroup STM32F4xx_System_Private_Functions
+  * @{
+  */
+
+/**
+  * @brief  Setup the microcontroller system
+  *         Initialize the FPU setting, vector table location and External memory 
+  *         configuration.
+  * @param  None
+  * @retval None
+  */
+void SystemInit(void)
+{
+  /* FPU settings ------------------------------------------------------------*/
+  #if (__FPU_PRESENT == 1) && (__FPU_USED == 1)
+    SCB->CPACR |= ((3UL << 10*2)|(3UL << 11*2));  /* set CP10 and CP11 Full Access */
+  #endif
+
+#if defined (DATA_IN_ExtSRAM) || defined (DATA_IN_ExtSDRAM)
+  SystemInit_ExtMemCtl(); 
+#endif /* DATA_IN_ExtSRAM || DATA_IN_ExtSDRAM */
+
+  /* Configure the Vector Table location -------------------------------------*/
+#if defined(USER_VECT_TAB_ADDRESS)
+  SCB->VTOR = VECT_TAB_BASE_ADDRESS | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal SRAM */
+#endif /* USER_VECT_TAB_ADDRESS */
+}
+
+/**
+   * @brief  Update SystemCoreClock variable according to Clock Register Values.
+  *         The SystemCoreClock variable contains the core clock (HCLK), it can
+  *         be used by the user application to setup the SysTick timer or configure
+  *         other parameters.
+  *           
+  * @note   Each time the core clock (HCLK) changes, this function must be called
+  *         to update SystemCoreClock variable value. Otherwise, any configuration
+  *         based on this variable will be incorrect.         
+  *     
+  * @note   - The system frequency computed by this function is not the real 
+  *           frequency in the chip. It is calculated based on the predefined 
+  *           constant and the selected clock source:
+  *             
+  *           - If SYSCLK source is HSI, SystemCoreClock will contain the HSI_VALUE(*)
+  *                                              
+  *           - If SYSCLK source is HSE, SystemCoreClock will contain the HSE_VALUE(**)
+  *                          
+  *           - If SYSCLK source is PLL, SystemCoreClock will contain the HSE_VALUE(**) 
+  *             or HSI_VALUE(*) multiplied/divided by the PLL factors.
+  *         
+  *         (*) HSI_VALUE is a constant defined in stm32f4xx_hal_conf.h file (default value
+  *             16 MHz) but the real value may vary depending on the variations
+  *             in voltage and temperature.   
+  *    
+  *         (**) HSE_VALUE is a constant defined in stm32f4xx_hal_conf.h file (its value
+  *              depends on the application requirements), user has to ensure that HSE_VALUE
+  *              is same as the real frequency of the crystal used. Otherwise, this function
+  *              may have wrong result.
+  *                
+  *         - The result of this function could be not correct when using fractional
+  *           value for HSE crystal.
+  *     
+  * @param  None
+  * @retval None
+  */
+void SystemCoreClockUpdate(void)
+{
+  uint32_t tmp, pllvco, pllp, pllsource, pllm;
+  
+  /* Get SYSCLK source -------------------------------------------------------*/
+  tmp = RCC->CFGR & RCC_CFGR_SWS;
+
+  switch (tmp)
+  {
+    case 0x00:  /* HSI used as system clock source */
+      SystemCoreClock = HSI_VALUE;
+      break;
+    case 0x04:  /* HSE used as system clock source */
+      SystemCoreClock = HSE_VALUE;
+      break;
+    case 0x08:  /* PLL used as system clock source */
+
+      /* PLL_VCO = (HSE_VALUE or HSI_VALUE / PLL_M) * PLL_N
+         SYSCLK = PLL_VCO / PLL_P
+         */    
+      pllsource = (RCC->PLLCFGR & RCC_PLLCFGR_PLLSRC) >> 22;
+      pllm = RCC->PLLCFGR & RCC_PLLCFGR_PLLM;
+      
+      if (pllsource != 0)
+      {
+        /* HSE used as PLL clock source */
+        pllvco = (HSE_VALUE / pllm) * ((RCC->PLLCFGR & RCC_PLLCFGR_PLLN) >> 6);
+      }
+      else
+      {
+        /* HSI used as PLL clock source */
+        pllvco = (HSI_VALUE / pllm) * ((RCC->PLLCFGR & RCC_PLLCFGR_PLLN) >> 6);
+      }
+
+      pllp = (((RCC->PLLCFGR & RCC_PLLCFGR_PLLP) >>16) + 1 ) *2;
+      SystemCoreClock = pllvco/pllp;
+      break;
+    default:
+      SystemCoreClock = HSI_VALUE;
+      break;
+  }
+  /* Compute HCLK frequency --------------------------------------------------*/
+  /* Get HCLK prescaler */
+  tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4)];
+  /* HCLK frequency */
+  SystemCoreClock >>= tmp;
+}
+
+#if defined (DATA_IN_ExtSRAM) && defined (DATA_IN_ExtSDRAM)
+#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)\
+ || defined(STM32F469xx) || defined(STM32F479xx)
+/**
+  * @brief  Setup the external memory controller.
+  *         Called in startup_stm32f4xx.s before jump to main.
+  *         This function configures the external memories (SRAM/SDRAM)
+  *         This SRAM/SDRAM will be used as program data memory (including heap and stack).
+  * @param  None
+  * @retval None
+  */
+void SystemInit_ExtMemCtl(void)
+{
+  __IO uint32_t tmp = 0x00;
+
+  register uint32_t tmpreg = 0, timeout = 0xFFFF;
+  register __IO uint32_t index;
+
+  /* Enable GPIOC, GPIOD, GPIOE, GPIOF, GPIOG, GPIOH and GPIOI interface clock */
+  RCC->AHB1ENR |= 0x000001F8;
+
+  /* Delay after an RCC peripheral clock enabling */
+  tmp = READ_BIT(RCC->AHB1ENR, RCC_AHB1ENR_GPIOCEN);
+  
+  /* Connect PDx pins to FMC Alternate function */
+  GPIOD->AFR[0]  = 0x00CCC0CC;
+  GPIOD->AFR[1]  = 0xCCCCCCCC;
+  /* Configure PDx pins in Alternate function mode */  
+  GPIOD->MODER   = 0xAAAA0A8A;
+  /* Configure PDx pins speed to 100 MHz */  
+  GPIOD->OSPEEDR = 0xFFFF0FCF;
+  /* Configure PDx pins Output type to push-pull */  
+  GPIOD->OTYPER  = 0x00000000;
+  /* No pull-up, pull-down for PDx pins */ 
+  GPIOD->PUPDR   = 0x00000000;
+
+  /* Connect PEx pins to FMC Alternate function */
+  GPIOE->AFR[0]  = 0xC00CC0CC;
+  GPIOE->AFR[1]  = 0xCCCCCCCC;
+  /* Configure PEx pins in Alternate function mode */ 
+  GPIOE->MODER   = 0xAAAA828A;
+  /* Configure PEx pins speed to 100 MHz */ 
+  GPIOE->OSPEEDR = 0xFFFFC3CF;
+  /* Configure PEx pins Output type to push-pull */  
+  GPIOE->OTYPER  = 0x00000000;
+  /* No pull-up, pull-down for PEx pins */ 
+  GPIOE->PUPDR   = 0x00000000;
+  
+  /* Connect PFx pins to FMC Alternate function */
+  GPIOF->AFR[0]  = 0xCCCCCCCC;
+  GPIOF->AFR[1]  = 0xCCCCCCCC;
+  /* Configure PFx pins in Alternate function mode */   
+  GPIOF->MODER   = 0xAA800AAA;
+  /* Configure PFx pins speed to 50 MHz */ 
+  GPIOF->OSPEEDR = 0xAA800AAA;
+  /* Configure PFx pins Output type to push-pull */  
+  GPIOF->OTYPER  = 0x00000000;
+  /* No pull-up, pull-down for PFx pins */ 
+  GPIOF->PUPDR   = 0x00000000;
+
+  /* Connect PGx pins to FMC Alternate function */
+  GPIOG->AFR[0]  = 0xCCCCCCCC;
+  GPIOG->AFR[1]  = 0xCCCCCCCC;
+  /* Configure PGx pins in Alternate function mode */ 
+  GPIOG->MODER   = 0xAAAAAAAA;
+  /* Configure PGx pins speed to 50 MHz */ 
+  GPIOG->OSPEEDR = 0xAAAAAAAA;
+  /* Configure PGx pins Output type to push-pull */  
+  GPIOG->OTYPER  = 0x00000000;
+  /* No pull-up, pull-down for PGx pins */ 
+  GPIOG->PUPDR   = 0x00000000;
+  
+  /* Connect PHx pins to FMC Alternate function */
+  GPIOH->AFR[0]  = 0x00C0CC00;
+  GPIOH->AFR[1]  = 0xCCCCCCCC;
+  /* Configure PHx pins in Alternate function mode */ 
+  GPIOH->MODER   = 0xAAAA08A0;
+  /* Configure PHx pins speed to 50 MHz */ 
+  GPIOH->OSPEEDR = 0xAAAA08A0;
+  /* Configure PHx pins Output type to push-pull */  
+  GPIOH->OTYPER  = 0x00000000;
+  /* No pull-up, pull-down for PHx pins */ 
+  GPIOH->PUPDR   = 0x00000000;
+  
+  /* Connect PIx pins to FMC Alternate function */
+  GPIOI->AFR[0]  = 0xCCCCCCCC;
+  GPIOI->AFR[1]  = 0x00000CC0;
+  /* Configure PIx pins in Alternate function mode */ 
+  GPIOI->MODER   = 0x0028AAAA;
+  /* Configure PIx pins speed to 50 MHz */ 
+  GPIOI->OSPEEDR = 0x0028AAAA;
+  /* Configure PIx pins Output type to push-pull */  
+  GPIOI->OTYPER  = 0x00000000;
+  /* No pull-up, pull-down for PIx pins */ 
+  GPIOI->PUPDR   = 0x00000000;
+  
+/*-- FMC Configuration -------------------------------------------------------*/
+  /* Enable the FMC interface clock */
+  RCC->AHB3ENR |= 0x00000001;
+  /* Delay after an RCC peripheral clock enabling */
+  tmp = READ_BIT(RCC->AHB3ENR, RCC_AHB3ENR_FMCEN);
+
+  FMC_Bank5_6->SDCR[0] = 0x000019E4;
+  FMC_Bank5_6->SDTR[0] = 0x01115351;      
+  
+  /* SDRAM initialization sequence */
+  /* Clock enable command */
+  FMC_Bank5_6->SDCMR = 0x00000011; 
+  tmpreg = FMC_Bank5_6->SDSR & 0x00000020; 
+  while((tmpreg != 0) && (timeout-- > 0))
+  {
+    tmpreg = FMC_Bank5_6->SDSR & 0x00000020; 
+  }
+
+  /* Delay */
+  for (index = 0; index<1000; index++);
+  
+  /* PALL command */
+  FMC_Bank5_6->SDCMR = 0x00000012;           
+  tmpreg = FMC_Bank5_6->SDSR & 0x00000020;
+  timeout = 0xFFFF;
+  while((tmpreg != 0) && (timeout-- > 0))
+  {
+    tmpreg = FMC_Bank5_6->SDSR & 0x00000020; 
+  }
+  
+  /* Auto refresh command */
+  FMC_Bank5_6->SDCMR = 0x00000073;
+  tmpreg = FMC_Bank5_6->SDSR & 0x00000020;
+  timeout = 0xFFFF;
+  while((tmpreg != 0) && (timeout-- > 0))
+  {
+    tmpreg = FMC_Bank5_6->SDSR & 0x00000020; 
+  }
+ 
+  /* MRD register program */
+  FMC_Bank5_6->SDCMR = 0x00046014;
+  tmpreg = FMC_Bank5_6->SDSR & 0x00000020;
+  timeout = 0xFFFF;
+  while((tmpreg != 0) && (timeout-- > 0))
+  {
+    tmpreg = FMC_Bank5_6->SDSR & 0x00000020; 
+  } 
+  
+  /* Set refresh count */
+  tmpreg = FMC_Bank5_6->SDRTR;
+  FMC_Bank5_6->SDRTR = (tmpreg | (0x0000027C<<1));
+  
+  /* Disable write protection */
+  tmpreg = FMC_Bank5_6->SDCR[0]; 
+  FMC_Bank5_6->SDCR[0] = (tmpreg & 0xFFFFFDFF);
+
+#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)
+  /* Configure and enable Bank1_SRAM2 */
+  FMC_Bank1->BTCR[2]  = 0x00001011;
+  FMC_Bank1->BTCR[3]  = 0x00000201;
+  FMC_Bank1E->BWTR[2] = 0x0fffffff;
+#endif /* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */ 
+#if defined(STM32F469xx) || defined(STM32F479xx)
+  /* Configure and enable Bank1_SRAM2 */
+  FMC_Bank1->BTCR[2]  = 0x00001091;
+  FMC_Bank1->BTCR[3]  = 0x00110212;
+  FMC_Bank1E->BWTR[2] = 0x0fffffff;
+#endif /* STM32F469xx || STM32F479xx */
+
+  (void)(tmp); 
+}
+#endif /* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F469xx || STM32F479xx */
+#elif defined (DATA_IN_ExtSRAM) || defined (DATA_IN_ExtSDRAM)
+/**
+  * @brief  Setup the external memory controller.
+  *         Called in startup_stm32f4xx.s before jump to main.
+  *         This function configures the external memories (SRAM/SDRAM)
+  *         This SRAM/SDRAM will be used as program data memory (including heap and stack).
+  * @param  None
+  * @retval None
+  */
+void SystemInit_ExtMemCtl(void)
+{
+  __IO uint32_t tmp = 0x00;
+#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)\
+ || defined(STM32F446xx) || defined(STM32F469xx) || defined(STM32F479xx)
+#if defined (DATA_IN_ExtSDRAM)
+  register uint32_t tmpreg = 0, timeout = 0xFFFF;
+  register __IO uint32_t index;
+
+#if defined(STM32F446xx)
+  /* Enable GPIOA, GPIOC, GPIOD, GPIOE, GPIOF, GPIOG interface
+      clock */
+  RCC->AHB1ENR |= 0x0000007D;
+#else
+  /* Enable GPIOC, GPIOD, GPIOE, GPIOF, GPIOG, GPIOH and GPIOI interface 
+      clock */
+  RCC->AHB1ENR |= 0x000001F8;
+#endif /* STM32F446xx */  
+  /* Delay after an RCC peripheral clock enabling */
+  tmp = READ_BIT(RCC->AHB1ENR, RCC_AHB1ENR_GPIOCEN);
+  
+#if defined(STM32F446xx)
+  /* Connect PAx pins to FMC Alternate function */
+  GPIOA->AFR[0]  |= 0xC0000000;
+  GPIOA->AFR[1]  |= 0x00000000;
+  /* Configure PDx pins in Alternate function mode */
+  GPIOA->MODER   |= 0x00008000;
+  /* Configure PDx pins speed to 50 MHz */
+  GPIOA->OSPEEDR |= 0x00008000;
+  /* Configure PDx pins Output type to push-pull */
+  GPIOA->OTYPER  |= 0x00000000;
+  /* No pull-up, pull-down for PDx pins */
+  GPIOA->PUPDR   |= 0x00000000;
+
+  /* Connect PCx pins to FMC Alternate function */
+  GPIOC->AFR[0]  |= 0x00CC0000;
+  GPIOC->AFR[1]  |= 0x00000000;
+  /* Configure PDx pins in Alternate function mode */
+  GPIOC->MODER   |= 0x00000A00;
+  /* Configure PDx pins speed to 50 MHz */
+  GPIOC->OSPEEDR |= 0x00000A00;
+  /* Configure PDx pins Output type to push-pull */
+  GPIOC->OTYPER  |= 0x00000000;
+  /* No pull-up, pull-down for PDx pins */
+  GPIOC->PUPDR   |= 0x00000000;
+#endif /* STM32F446xx */
+
+  /* Connect PDx pins to FMC Alternate function */
+  GPIOD->AFR[0]  = 0x000000CC;
+  GPIOD->AFR[1]  = 0xCC000CCC;
+  /* Configure PDx pins in Alternate function mode */  
+  GPIOD->MODER   = 0xA02A000A;
+  /* Configure PDx pins speed to 50 MHz */  
+  GPIOD->OSPEEDR = 0xA02A000A;
+  /* Configure PDx pins Output type to push-pull */  
+  GPIOD->OTYPER  = 0x00000000;
+  /* No pull-up, pull-down for PDx pins */ 
+  GPIOD->PUPDR   = 0x00000000;
+
+  /* Connect PEx pins to FMC Alternate function */
+  GPIOE->AFR[0]  = 0xC00000CC;
+  GPIOE->AFR[1]  = 0xCCCCCCCC;
+  /* Configure PEx pins in Alternate function mode */ 
+  GPIOE->MODER   = 0xAAAA800A;
+  /* Configure PEx pins speed to 50 MHz */ 
+  GPIOE->OSPEEDR = 0xAAAA800A;
+  /* Configure PEx pins Output type to push-pull */  
+  GPIOE->OTYPER  = 0x00000000;
+  /* No pull-up, pull-down for PEx pins */ 
+  GPIOE->PUPDR   = 0x00000000;
+
+  /* Connect PFx pins to FMC Alternate function */
+  GPIOF->AFR[0]  = 0xCCCCCCCC;
+  GPIOF->AFR[1]  = 0xCCCCCCCC;
+  /* Configure PFx pins in Alternate function mode */   
+  GPIOF->MODER   = 0xAA800AAA;
+  /* Configure PFx pins speed to 50 MHz */ 
+  GPIOF->OSPEEDR = 0xAA800AAA;
+  /* Configure PFx pins Output type to push-pull */  
+  GPIOF->OTYPER  = 0x00000000;
+  /* No pull-up, pull-down for PFx pins */ 
+  GPIOF->PUPDR   = 0x00000000;
+
+  /* Connect PGx pins to FMC Alternate function */
+  GPIOG->AFR[0]  = 0xCCCCCCCC;
+  GPIOG->AFR[1]  = 0xCCCCCCCC;
+  /* Configure PGx pins in Alternate function mode */ 
+  GPIOG->MODER   = 0xAAAAAAAA;
+  /* Configure PGx pins speed to 50 MHz */ 
+  GPIOG->OSPEEDR = 0xAAAAAAAA;
+  /* Configure PGx pins Output type to push-pull */  
+  GPIOG->OTYPER  = 0x00000000;
+  /* No pull-up, pull-down for PGx pins */ 
+  GPIOG->PUPDR   = 0x00000000;
+
+#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)\
+ || defined(STM32F469xx) || defined(STM32F479xx)  
+  /* Connect PHx pins to FMC Alternate function */
+  GPIOH->AFR[0]  = 0x00C0CC00;
+  GPIOH->AFR[1]  = 0xCCCCCCCC;
+  /* Configure PHx pins in Alternate function mode */ 
+  GPIOH->MODER   = 0xAAAA08A0;
+  /* Configure PHx pins speed to 50 MHz */ 
+  GPIOH->OSPEEDR = 0xAAAA08A0;
+  /* Configure PHx pins Output type to push-pull */  
+  GPIOH->OTYPER  = 0x00000000;
+  /* No pull-up, pull-down for PHx pins */ 
+  GPIOH->PUPDR   = 0x00000000;
+  
+  /* Connect PIx pins to FMC Alternate function */
+  GPIOI->AFR[0]  = 0xCCCCCCCC;
+  GPIOI->AFR[1]  = 0x00000CC0;
+  /* Configure PIx pins in Alternate function mode */ 
+  GPIOI->MODER   = 0x0028AAAA;
+  /* Configure PIx pins speed to 50 MHz */ 
+  GPIOI->OSPEEDR = 0x0028AAAA;
+  /* Configure PIx pins Output type to push-pull */  
+  GPIOI->OTYPER  = 0x00000000;
+  /* No pull-up, pull-down for PIx pins */ 
+  GPIOI->PUPDR   = 0x00000000;
+#endif /* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F469xx || STM32F479xx */
+  
+/*-- FMC Configuration -------------------------------------------------------*/
+  /* Enable the FMC interface clock */
+  RCC->AHB3ENR |= 0x00000001;
+  /* Delay after an RCC peripheral clock enabling */
+  tmp = READ_BIT(RCC->AHB3ENR, RCC_AHB3ENR_FMCEN);
+
+  /* Configure and enable SDRAM bank1 */
+#if defined(STM32F446xx)
+  FMC_Bank5_6->SDCR[0] = 0x00001954;
+#else  
+  FMC_Bank5_6->SDCR[0] = 0x000019E4;
+#endif /* STM32F446xx */
+  FMC_Bank5_6->SDTR[0] = 0x01115351;      
+  
+  /* SDRAM initialization sequence */
+  /* Clock enable command */
+  FMC_Bank5_6->SDCMR = 0x00000011; 
+  tmpreg = FMC_Bank5_6->SDSR & 0x00000020; 
+  while((tmpreg != 0) && (timeout-- > 0))
+  {
+    tmpreg = FMC_Bank5_6->SDSR & 0x00000020; 
+  }
+
+  /* Delay */
+  for (index = 0; index<1000; index++);
+  
+  /* PALL command */
+  FMC_Bank5_6->SDCMR = 0x00000012;           
+  tmpreg = FMC_Bank5_6->SDSR & 0x00000020;
+  timeout = 0xFFFF;
+  while((tmpreg != 0) && (timeout-- > 0))
+  {
+    tmpreg = FMC_Bank5_6->SDSR & 0x00000020; 
+  }
+  
+  /* Auto refresh command */
+#if defined(STM32F446xx)
+  FMC_Bank5_6->SDCMR = 0x000000F3;
+#else  
+  FMC_Bank5_6->SDCMR = 0x00000073;
+#endif /* STM32F446xx */
+  tmpreg = FMC_Bank5_6->SDSR & 0x00000020;
+  timeout = 0xFFFF;
+  while((tmpreg != 0) && (timeout-- > 0))
+  {
+    tmpreg = FMC_Bank5_6->SDSR & 0x00000020; 
+  }
+ 
+  /* MRD register program */
+#if defined(STM32F446xx)
+  FMC_Bank5_6->SDCMR = 0x00044014;
+#else  
+  FMC_Bank5_6->SDCMR = 0x00046014;
+#endif /* STM32F446xx */
+  tmpreg = FMC_Bank5_6->SDSR & 0x00000020;
+  timeout = 0xFFFF;
+  while((tmpreg != 0) && (timeout-- > 0))
+  {
+    tmpreg = FMC_Bank5_6->SDSR & 0x00000020; 
+  } 
+  
+  /* Set refresh count */
+  tmpreg = FMC_Bank5_6->SDRTR;
+#if defined(STM32F446xx)
+  FMC_Bank5_6->SDRTR = (tmpreg | (0x0000050C<<1));
+#else    
+  FMC_Bank5_6->SDRTR = (tmpreg | (0x0000027C<<1));
+#endif /* STM32F446xx */
+  
+  /* Disable write protection */
+  tmpreg = FMC_Bank5_6->SDCR[0]; 
+  FMC_Bank5_6->SDCR[0] = (tmpreg & 0xFFFFFDFF);
+#endif /* DATA_IN_ExtSDRAM */
+#endif /* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F446xx || STM32F469xx || STM32F479xx */
+
+#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx) || defined(STM32F417xx)\
+ || defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)\
+ || defined(STM32F469xx) || defined(STM32F479xx) || defined(STM32F412Zx) || defined(STM32F412Vx)
+
+#if defined(DATA_IN_ExtSRAM)
+/*-- GPIOs Configuration -----------------------------------------------------*/
+   /* Enable GPIOD, GPIOE, GPIOF and GPIOG interface clock */
+  RCC->AHB1ENR   |= 0x00000078;
+  /* Delay after an RCC peripheral clock enabling */
+  tmp = READ_BIT(RCC->AHB1ENR, RCC_AHB1ENR_GPIODEN);
+  
+  /* Connect PDx pins to FMC Alternate function */
+  GPIOD->AFR[0]  = 0x00CCC0CC;
+  GPIOD->AFR[1]  = 0xCCCCCCCC;
+  /* Configure PDx pins in Alternate function mode */  
+  GPIOD->MODER   = 0xAAAA0A8A;
+  /* Configure PDx pins speed to 100 MHz */  
+  GPIOD->OSPEEDR = 0xFFFF0FCF;
+  /* Configure PDx pins Output type to push-pull */  
+  GPIOD->OTYPER  = 0x00000000;
+  /* No pull-up, pull-down for PDx pins */ 
+  GPIOD->PUPDR   = 0x00000000;
+
+  /* Connect PEx pins to FMC Alternate function */
+  GPIOE->AFR[0]  = 0xC00CC0CC;
+  GPIOE->AFR[1]  = 0xCCCCCCCC;
+  /* Configure PEx pins in Alternate function mode */ 
+  GPIOE->MODER   = 0xAAAA828A;
+  /* Configure PEx pins speed to 100 MHz */ 
+  GPIOE->OSPEEDR = 0xFFFFC3CF;
+  /* Configure PEx pins Output type to push-pull */  
+  GPIOE->OTYPER  = 0x00000000;
+  /* No pull-up, pull-down for PEx pins */ 
+  GPIOE->PUPDR   = 0x00000000;
+
+  /* Connect PFx pins to FMC Alternate function */
+  GPIOF->AFR[0]  = 0x00CCCCCC;
+  GPIOF->AFR[1]  = 0xCCCC0000;
+  /* Configure PFx pins in Alternate function mode */   
+  GPIOF->MODER   = 0xAA000AAA;
+  /* Configure PFx pins speed to 100 MHz */ 
+  GPIOF->OSPEEDR = 0xFF000FFF;
+  /* Configure PFx pins Output type to push-pull */  
+  GPIOF->OTYPER  = 0x00000000;
+  /* No pull-up, pull-down for PFx pins */ 
+  GPIOF->PUPDR   = 0x00000000;
+
+  /* Connect PGx pins to FMC Alternate function */
+  GPIOG->AFR[0]  = 0x00CCCCCC;
+  GPIOG->AFR[1]  = 0x000000C0;
+  /* Configure PGx pins in Alternate function mode */ 
+  GPIOG->MODER   = 0x00085AAA;
+  /* Configure PGx pins speed to 100 MHz */ 
+  GPIOG->OSPEEDR = 0x000CAFFF;
+  /* Configure PGx pins Output type to push-pull */  
+  GPIOG->OTYPER  = 0x00000000;
+  /* No pull-up, pull-down for PGx pins */ 
+  GPIOG->PUPDR   = 0x00000000;
+  
+/*-- FMC/FSMC Configuration --------------------------------------------------*/
+  /* Enable the FMC/FSMC interface clock */
+  RCC->AHB3ENR         |= 0x00000001;
+
+#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)
+  /* Delay after an RCC peripheral clock enabling */
+  tmp = READ_BIT(RCC->AHB3ENR, RCC_AHB3ENR_FMCEN);
+  /* Configure and enable Bank1_SRAM2 */
+  FMC_Bank1->BTCR[2]  = 0x00001011;
+  FMC_Bank1->BTCR[3]  = 0x00000201;
+  FMC_Bank1E->BWTR[2] = 0x0fffffff;
+#endif /* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */ 
+#if defined(STM32F469xx) || defined(STM32F479xx)
+  /* Delay after an RCC peripheral clock enabling */
+  tmp = READ_BIT(RCC->AHB3ENR, RCC_AHB3ENR_FMCEN);
+  /* Configure and enable Bank1_SRAM2 */
+  FMC_Bank1->BTCR[2]  = 0x00001091;
+  FMC_Bank1->BTCR[3]  = 0x00110212;
+  FMC_Bank1E->BWTR[2] = 0x0fffffff;
+#endif /* STM32F469xx || STM32F479xx */
+#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx)|| defined(STM32F417xx)\
+   || defined(STM32F412Zx) || defined(STM32F412Vx)
+  /* Delay after an RCC peripheral clock enabling */
+  tmp = READ_BIT(RCC->AHB3ENR, RCC_AHB3ENR_FSMCEN);
+  /* Configure and enable Bank1_SRAM2 */
+  FSMC_Bank1->BTCR[2]  = 0x00001011;
+  FSMC_Bank1->BTCR[3]  = 0x00000201;
+  FSMC_Bank1E->BWTR[2] = 0x0FFFFFFF;
+#endif /* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F412Zx || STM32F412Vx */
+
+#endif /* DATA_IN_ExtSRAM */
+#endif /* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F427xx || STM32F437xx ||\
+          STM32F429xx || STM32F439xx || STM32F469xx || STM32F479xx || STM32F412Zx || STM32F412Vx  */ 
+  (void)(tmp); 
+}
+#endif /* DATA_IN_ExtSRAM && DATA_IN_ExtSDRAM */
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
+</file>
+
+<file path="EasySTMz.ioc">
+#MicroXplorer Configuration settings - do not modify
+ADC1.Channel-0\#ChannelRegularConversion=ADC_CHANNEL_5
+ADC1.Channel-1\#ChannelInjectedConversion=ADC_CHANNEL_8
+ADC1.Channel-2\#ChannelInjectedConversion=ADC_CHANNEL_9
+ADC1.Channel-3\#ChannelRegularConversion=ADC_CHANNEL_12
+ADC1.ExternalTrigInjecConv=ADC_EXTERNALTRIGINJECCONV_T1_TRGO
+ADC1.IPParameters=Rank-0\#ChannelRegularConversion,master,Channel-0\#ChannelRegularConversion,SamplingTime-0\#ChannelRegularConversion,NbrOfConversionFlag,InjectedRank-1\#ChannelInjectedConversion,Channel-1\#ChannelInjectedConversion,SamplingTime-1\#ChannelInjectedConversion,InjectedOffset-1\#ChannelInjectedConversion,InjectedRank-2\#ChannelInjectedConversion,Channel-2\#ChannelInjectedConversion,SamplingTime-2\#ChannelInjectedConversion,InjectedOffset-2\#ChannelInjectedConversion,InjNumberOfConversion,ExternalTrigInjecConv,Rank-3\#ChannelRegularConversion,Channel-3\#ChannelRegularConversion,SamplingTime-3\#ChannelRegularConversion,NbrOfConversion
+ADC1.InjNumberOfConversion=2
+ADC1.InjectedOffset-1\#ChannelInjectedConversion=0
+ADC1.InjectedOffset-2\#ChannelInjectedConversion=0
+ADC1.InjectedRank-1\#ChannelInjectedConversion=1
+ADC1.InjectedRank-2\#ChannelInjectedConversion=2
+ADC1.NbrOfConversion=2
+ADC1.NbrOfConversionFlag=1
+ADC1.Rank-0\#ChannelRegularConversion=1
+ADC1.Rank-3\#ChannelRegularConversion=2
+ADC1.SamplingTime-0\#ChannelRegularConversion=ADC_SAMPLETIME_84CYCLES
+ADC1.SamplingTime-1\#ChannelInjectedConversion=ADC_SAMPLETIME_15CYCLES
+ADC1.SamplingTime-2\#ChannelInjectedConversion=ADC_SAMPLETIME_15CYCLES
+ADC1.SamplingTime-3\#ChannelRegularConversion=ADC_SAMPLETIME_84CYCLES
+ADC1.master=1
+CAD.formats=
+CAD.pinconfig=
+CAD.provider=
+File.Version=6
+GPIO.groupedBy=Group By Peripherals
+KeepUserPlacement=false
+Mcu.CPN=STM32F405RGT6
+Mcu.Family=STM32F4
+Mcu.IP0=ADC1
+Mcu.IP1=NVIC
+Mcu.IP2=RCC
+Mcu.IP3=SYS
+Mcu.IP4=TIM1
+Mcu.IP5=USB_DEVICE
+Mcu.IP6=USB_OTG_FS
+Mcu.IPNb=7
+Mcu.Name=STM32F405RGTx
+Mcu.Package=LQFP64
+Mcu.Pin0=PH0-OSC_IN
+Mcu.Pin1=PH1-OSC_OUT
+Mcu.Pin10=PB13
+Mcu.Pin11=PB14
+Mcu.Pin12=PB15
+Mcu.Pin13=PA8
+Mcu.Pin14=PA9
+Mcu.Pin15=PA10
+Mcu.Pin16=PA11
+Mcu.Pin17=PA12
+Mcu.Pin18=PA13
+Mcu.Pin19=PA14
+Mcu.Pin2=PC2
+Mcu.Pin20=PC10
+Mcu.Pin21=PC11
+Mcu.Pin22=PC12
+Mcu.Pin23=PB6
+Mcu.Pin24=PB7
+Mcu.Pin25=VP_SYS_VS_Systick
+Mcu.Pin26=VP_USB_DEVICE_VS_USB_DEVICE_CDC_FS
+Mcu.Pin3=PA5
+Mcu.Pin4=PA6
+Mcu.Pin5=PC4
+Mcu.Pin6=PC5
+Mcu.Pin7=PB0
+Mcu.Pin8=PB1
+Mcu.Pin9=PB12
+Mcu.PinsNb=27
+Mcu.ThirdPartyNb=0
+Mcu.UserConstants=
+Mcu.UserName=STM32F405RGTx
+MxCube.Version=6.15.0
+MxDb.Version=DB.6.0.150
+NVIC.ADC_IRQn=true\:0\:0\:false\:false\:true\:true\:true\:true
+NVIC.BusFault_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:false
+NVIC.DebugMonitor_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:false
+NVIC.EXTI15_10_IRQn=true\:1\:0\:true\:false\:true\:true\:true\:true
+NVIC.EXTI9_5_IRQn=true\:1\:0\:true\:false\:true\:true\:true\:true
+NVIC.ForceEnableDMAVector=true
+NVIC.HardFault_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:false
+NVIC.MemoryManagement_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:false
+NVIC.NonMaskableInt_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:false
+NVIC.OTG_FS_IRQn=true\:0\:0\:false\:false\:true\:false\:true\:true
+NVIC.PendSV_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:false
+NVIC.PriorityGroup=NVIC_PRIORITYGROUP_4
+NVIC.SVCall_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:false
+NVIC.SysTick_IRQn=true\:15\:0\:false\:false\:true\:false\:true\:false
+NVIC.UsageFault_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:false
+PA10.Locked=true
+PA10.Signal=S_TIM1_CH3
+PA11.Mode=Device_Only
+PA11.Signal=USB_OTG_FS_DM
+PA12.Mode=Device_Only
+PA12.Signal=USB_OTG_FS_DP
+PA13.Mode=Serial_Wire
+PA13.Signal=SYS_JTMS-SWDIO
+PA14.Mode=Serial_Wire
+PA14.Signal=SYS_JTCK-SWCLK
+PA5.Locked=true
+PA5.Signal=ADCx_IN5
+PA6.Locked=true
+PA6.Signal=GPIO_Input
+PA8.Locked=true
+PA8.Signal=S_TIM1_CH1
+PA9.Locked=true
+PA9.Signal=S_TIM1_CH2
+PB0.Locked=true
+PB0.Signal=ADCx_IN8
+PB1.Locked=true
+PB1.Signal=ADCx_IN9
+PB12.Locked=true
+PB12.Signal=GPIO_Output
+PB13.Locked=true
+PB13.Mode=PWM Generation1 CH1 CH1N
+PB13.Signal=TIM1_CH1N
+PB14.Locked=true
+PB14.Mode=PWM Generation2 CH2 CH2N
+PB14.Signal=TIM1_CH2N
+PB15.Locked=true
+PB15.Mode=PWM Generation3 CH3 CH3N
+PB15.Signal=TIM1_CH3N
+PB6.GPIOParameters=GPIO_ModeDefaultEXTI
+PB6.GPIO_ModeDefaultEXTI=GPIO_MODE_IT_RISING_FALLING
+PB6.Locked=true
+PB6.Signal=GPXTI6
+PB7.GPIOParameters=GPIO_ModeDefaultEXTI
+PB7.GPIO_ModeDefaultEXTI=GPIO_MODE_IT_RISING_FALLING
+PB7.Locked=true
+PB7.Signal=GPXTI7
+PC10.Locked=true
+PC10.Signal=GPIO_Output
+PC11.GPIOParameters=GPIO_ModeDefaultEXTI
+PC11.GPIO_ModeDefaultEXTI=GPIO_MODE_IT_RISING_FALLING
+PC11.Locked=true
+PC11.Signal=GPXTI11
+PC12.GPIOParameters=GPIO_PuPd
+PC12.GPIO_PuPd=GPIO_PULLUP
+PC12.Locked=true
+PC12.Signal=GPIO_Input
+PC2.Locked=true
+PC2.Signal=ADCx_IN12
+PC4.Locked=true
+PC4.Signal=GPIO_Output
+PC5.Locked=true
+PC5.Signal=GPIO_Output
+PH0-OSC_IN.Mode=HSE-External-Oscillator
+PH0-OSC_IN.Signal=RCC_OSC_IN
+PH1-OSC_OUT.Mode=HSE-External-Oscillator
+PH1-OSC_OUT.Signal=RCC_OSC_OUT
+PinOutPanel.RotationAngle=0
+ProjectManager.AskForMigrate=true
+ProjectManager.BackupPrevious=false
+ProjectManager.CompilerLinker=GCC
+ProjectManager.CompilerOptimize=6
+ProjectManager.ComputerToolchain=false
+ProjectManager.CoupleFile=false
+ProjectManager.CustomerFirmwarePackage=
+ProjectManager.DefaultFWLocation=true
+ProjectManager.DeletePrevious=true
+ProjectManager.DeviceId=STM32F405RGTx
+ProjectManager.FirmwarePackage=STM32Cube FW_F4 V1.28.3
+ProjectManager.FreePins=false
+ProjectManager.HalAssertFull=false
+ProjectManager.HeapSize=0x600
+ProjectManager.KeepUserCode=true
+ProjectManager.LastFirmware=true
+ProjectManager.LibraryCopy=1
+ProjectManager.MainLocation=Core/Src
+ProjectManager.NoMain=false
+ProjectManager.PreviousToolchain=
+ProjectManager.ProjectBuild=false
+ProjectManager.ProjectFileName=EasySTMz.ioc
+ProjectManager.ProjectName=EasySTMz
+ProjectManager.ProjectStructure=
+ProjectManager.RegisterCallBack=
+ProjectManager.StackSize=0x1000
+ProjectManager.TargetToolchain=STM32CubeIDE
+ProjectManager.ToolChainLocation=
+ProjectManager.UAScriptAfterPath=
+ProjectManager.UAScriptBeforePath=
+ProjectManager.UnderRoot=true
+ProjectManager.functionlistsort=1-SystemClock_Config-RCC-false-HAL-false,2-MX_GPIO_Init-GPIO-false-HAL-true,3-MX_ADC1_Init-ADC1-false-HAL-true,4-MX_TIM1_Init-TIM1-false-HAL-true,5-MX_USB_DEVICE_Init-USB_DEVICE-false-HAL-false
+RCC.48MHZClocksFreq_Value=48000000
+RCC.AHBFreq_Value=168000000
+RCC.APB1CLKDivider=RCC_HCLK_DIV4
+RCC.APB1Freq_Value=42000000
+RCC.APB1TimFreq_Value=84000000
+RCC.APB2CLKDivider=RCC_HCLK_DIV2
+RCC.APB2Freq_Value=84000000
+RCC.APB2TimFreq_Value=168000000
+RCC.CortexFreq_Value=168000000
+RCC.EthernetFreq_Value=168000000
+RCC.FCLKCortexFreq_Value=168000000
+RCC.FamilyName=M
+RCC.HCLKFreq_Value=168000000
+RCC.HSE_VALUE=8000000
+RCC.HSI_VALUE=16000000
+RCC.I2SClocksFreq_Value=192000000
+RCC.IPParameters=48MHZClocksFreq_Value,AHBFreq_Value,APB1CLKDivider,APB1Freq_Value,APB1TimFreq_Value,APB2CLKDivider,APB2Freq_Value,APB2TimFreq_Value,CortexFreq_Value,EthernetFreq_Value,FCLKCortexFreq_Value,FamilyName,HCLKFreq_Value,HSE_VALUE,HSI_VALUE,I2SClocksFreq_Value,LSE_VALUE,LSI_VALUE,MCO2PinFreq_Value,PLLCLKFreq_Value,PLLM,PLLN,PLLQ,PLLQCLKFreq_Value,RTCFreq_Value,RTCHSEDivFreq_Value,SYSCLKFreq_VALUE,SYSCLKSource,VCOI2SOutputFreq_Value,VCOInputFreq_Value,VCOOutputFreq_Value,VcooutputI2S
+RCC.LSE_VALUE=32768
+RCC.LSI_VALUE=32000
+RCC.MCO2PinFreq_Value=168000000
+RCC.PLLCLKFreq_Value=168000000
+RCC.PLLM=4
+RCC.PLLN=168
+RCC.PLLQ=7
+RCC.PLLQCLKFreq_Value=48000000
+RCC.RTCFreq_Value=32000
+RCC.RTCHSEDivFreq_Value=4000000
+RCC.SYSCLKFreq_VALUE=168000000
+RCC.SYSCLKSource=RCC_SYSCLKSOURCE_PLLCLK
+RCC.VCOI2SOutputFreq_Value=384000000
+RCC.VCOInputFreq_Value=2000000
+RCC.VCOOutputFreq_Value=336000000
+RCC.VcooutputI2S=192000000
+SH.ADCx_IN12.0=ADC1_IN12,IN12
+SH.ADCx_IN12.ConfNb=1
+SH.ADCx_IN5.0=ADC1_IN5,IN5
+SH.ADCx_IN5.ConfNb=1
+SH.ADCx_IN8.0=ADC1_IN8,IN8
+SH.ADCx_IN8.ConfNb=1
+SH.ADCx_IN9.0=ADC1_IN9,IN9
+SH.ADCx_IN9.ConfNb=1
+SH.GPXTI11.0=GPIO_EXTI11
+SH.GPXTI11.ConfNb=1
+SH.GPXTI6.0=GPIO_EXTI6
+SH.GPXTI6.ConfNb=1
+SH.GPXTI7.0=GPIO_EXTI7
+SH.GPXTI7.ConfNb=1
+SH.S_TIM1_CH1.0=TIM1_CH1,PWM Generation1 CH1 CH1N
+SH.S_TIM1_CH1.ConfNb=1
+SH.S_TIM1_CH2.0=TIM1_CH2,PWM Generation2 CH2 CH2N
+SH.S_TIM1_CH2.ConfNb=1
+SH.S_TIM1_CH3.0=TIM1_CH3,PWM Generation3 CH3 CH3N
+SH.S_TIM1_CH3.ConfNb=1
+TIM1.Channel-PWM\ Generation1\ CH1\ CH1N=TIM_CHANNEL_1
+TIM1.Channel-PWM\ Generation2\ CH2\ CH2N=TIM_CHANNEL_2
+TIM1.Channel-PWM\ Generation3\ CH3\ CH3N=TIM_CHANNEL_3
+TIM1.CounterMode=TIM_COUNTERMODE_CENTERALIGNED1
+TIM1.DeadTime=67
+TIM1.IPParameters=Channel-PWM Generation1 CH1 CH1N,Channel-PWM Generation2 CH2 CH2N,Channel-PWM Generation3 CH3 CH3N,Period,DeadTime,TIM_MasterOutputTrigger,CounterMode,RepetitionCounter
+TIM1.Period=4199
+TIM1.RepetitionCounter=1
+TIM1.TIM_MasterOutputTrigger=TIM_TRGO_UPDATE
+USB_DEVICE.CLASS_NAME_FS=CDC
+USB_DEVICE.IPParameters=VirtualMode-CDC_FS,VirtualModeFS,CLASS_NAME_FS
+USB_DEVICE.VirtualMode-CDC_FS=Cdc
+USB_DEVICE.VirtualModeFS=Cdc_FS
+USB_OTG_FS.IPParameters=VirtualMode
+USB_OTG_FS.VirtualMode=Device_Only
+VP_SYS_VS_Systick.Mode=SysTick
+VP_SYS_VS_Systick.Signal=SYS_VS_Systick
+VP_USB_DEVICE_VS_USB_DEVICE_CDC_FS.Mode=CDC_FS
+VP_USB_DEVICE_VS_USB_DEVICE_CDC_FS.Signal=USB_DEVICE_VS_USB_DEVICE_CDC_FS
+board=custom
+isbadioc=false
+</file>
+
+<file path="USB_DEVICE/App/usb_device.c">
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           : usb_device.c
+  * @version        : v1.0_Cube
+  * @brief          : This file implements the USB Device
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2026 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+
+/* Includes ------------------------------------------------------------------*/
+
+#include "usb_device.h"
+#include "usbd_core.h"
+#include "usbd_desc.h"
+#include "usbd_cdc.h"
+#include "usbd_cdc_if.h"
+
+/* USER CODE BEGIN Includes */
+
+/* USER CODE END Includes */
+
+/* USER CODE BEGIN PV */
+/* Private variables ---------------------------------------------------------*/
+
+/* USER CODE END PV */
+
+/* USER CODE BEGIN PFP */
+/* Private function prototypes -----------------------------------------------*/
+
+/* USER CODE END PFP */
+
+/* USB Device Core handle declaration. */
+USBD_HandleTypeDef hUsbDeviceFS;
+
+/*
+ * -- Insert your variables declaration here --
+ */
+/* USER CODE BEGIN 0 */
+
+/* USER CODE END 0 */
+
+/*
+ * -- Insert your external function declaration here --
+ */
+/* USER CODE BEGIN 1 */
+
+/* USER CODE END 1 */
+
+/**
+  * Init USB device Library, add supported class and start the library
+  * @retval None
+  */
+void MX_USB_DEVICE_Init(void)
+{
+  /* USER CODE BEGIN USB_DEVICE_Init_PreTreatment */
+
+  /* USER CODE END USB_DEVICE_Init_PreTreatment */
+
+  /* Init Device Library, add supported class and start the library. */
+  if (USBD_Init(&hUsbDeviceFS, &FS_Desc, DEVICE_FS) != USBD_OK)
+  {
+    Error_Handler();
+  }
+  if (USBD_RegisterClass(&hUsbDeviceFS, &USBD_CDC) != USBD_OK)
+  {
+    Error_Handler();
+  }
+  if (USBD_CDC_RegisterInterface(&hUsbDeviceFS, &USBD_Interface_fops_FS) != USBD_OK)
+  {
+    Error_Handler();
+  }
+  if (USBD_Start(&hUsbDeviceFS) != USBD_OK)
+  {
+    Error_Handler();
+  }
+
+  /* USER CODE BEGIN USB_DEVICE_Init_PostTreatment */
+
+  /* USER CODE END USB_DEVICE_Init_PostTreatment */
+}
+
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
+</file>
+
+<file path="USB_DEVICE/App/usb_device.h">
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           : usb_device.h
+  * @version        : v1.0_Cube
+  * @brief          : Header for usb_device.c file.
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2026 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+
+/* Define to prevent recursive inclusion -------------------------------------*/
+#ifndef __USB_DEVICE__H__
+#define __USB_DEVICE__H__
+
+#ifdef __cplusplus
+ extern "C" {
+#endif
+
+/* Includes ------------------------------------------------------------------*/
+#include "stm32f4xx.h"
+#include "stm32f4xx_hal.h"
+#include "usbd_def.h"
+
+/* USER CODE BEGIN INCLUDE */
+
+/* USER CODE END INCLUDE */
+
+/** @addtogroup USBD_OTG_DRIVER
+  * @{
+  */
+
+/** @defgroup USBD_DEVICE USBD_DEVICE
+  * @brief Device file for Usb otg low level driver.
+  * @{
+  */
+
+/** @defgroup USBD_DEVICE_Exported_Variables USBD_DEVICE_Exported_Variables
+  * @brief Public variables.
+  * @{
+  */
+
+/* Private variables ---------------------------------------------------------*/
+/* USER CODE BEGIN PV */
+
+/* USER CODE END PV */
+
+/* Private function prototypes -----------------------------------------------*/
+/* USER CODE BEGIN PFP */
+
+/* USER CODE END PFP */
+
+/*
+ * -- Insert your variables declaration here --
+ */
+/* USER CODE BEGIN VARIABLES */
+
+/* USER CODE END VARIABLES */
+/**
+  * @}
+  */
+
+/** @defgroup USBD_DEVICE_Exported_FunctionsPrototype USBD_DEVICE_Exported_FunctionsPrototype
+  * @brief Declaration of public functions for Usb device.
+  * @{
+  */
+
+/** USB Device initialization function. */
+void MX_USB_DEVICE_Init(void);
+
+/*
+ * -- Insert functions declaration here --
+ */
+/* USER CODE BEGIN FD */
+
+/* USER CODE END FD */
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __USB_DEVICE__H__ */
+</file>
+
+<file path="USB_DEVICE/App/usbd_cdc_if.c">
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           : usbd_cdc_if.c
+  * @version        : v1.0_Cube
+  * @brief          : Usb device for Virtual Com Port.
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2026 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+
+/* Includes ------------------------------------------------------------------*/
+#include "usbd_cdc_if.h"
+
+/* USER CODE BEGIN INCLUDE */
+#include <stdlib.h> // For atoi()
+/* USER CODE END INCLUDE */
+
+/* Private typedef -----------------------------------------------------------*/
+/* Private define ------------------------------------------------------------*/
+/* Private macro -------------------------------------------------------------*/
+
+/* USER CODE BEGIN PV */
+/* Private variables ---------------------------------------------------------*/
+char rx_buffer[32];
+uint8_t rx_index = 0;
+extern volatile uint8_t usb_throttle_target; // Defined in main.c
+
+/* USER CODE END PV */
+
+/** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY
+  * @brief Usb device library.
+  * @{
+  */
+
+/** @addtogroup USBD_CDC_IF
+  * @{
+  */
+
+/** @defgroup USBD_CDC_IF_Private_TypesDefinitions USBD_CDC_IF_Private_TypesDefinitions
+  * @brief Private types.
+  * @{
+  */
+
+/* USER CODE BEGIN PRIVATE_TYPES */
+
+/* USER CODE END PRIVATE_TYPES */
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_CDC_IF_Private_Defines USBD_CDC_IF_Private_Defines
+  * @brief Private defines.
+  * @{
+  */
+
+/* USER CODE BEGIN PRIVATE_DEFINES */
+/* USER CODE END PRIVATE_DEFINES */
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_CDC_IF_Private_Macros USBD_CDC_IF_Private_Macros
+  * @brief Private macros.
+  * @{
+  */
+
+/* USER CODE BEGIN PRIVATE_MACRO */
+
+/* USER CODE END PRIVATE_MACRO */
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_CDC_IF_Private_Variables USBD_CDC_IF_Private_Variables
+  * @brief Private variables.
+  * @{
+  */
+/* Create buffer for reception and transmission           */
+/* It's up to user to redefine and/or remove those define */
+/** Received data over USB are stored in this buffer      */
+uint8_t UserRxBufferFS[APP_RX_DATA_SIZE];
+
+/** Data to send over USB CDC are stored in this buffer   */
+uint8_t UserTxBufferFS[APP_TX_DATA_SIZE];
+
+/* USER CODE BEGIN PRIVATE_VARIABLES */
+
+/* USER CODE END PRIVATE_VARIABLES */
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_CDC_IF_Exported_Variables USBD_CDC_IF_Exported_Variables
+  * @brief Public variables.
+  * @{
+  */
+
+extern USBD_HandleTypeDef hUsbDeviceFS;
+
+/* USER CODE BEGIN EXPORTED_VARIABLES */
+
+/* USER CODE END EXPORTED_VARIABLES */
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_CDC_IF_Private_FunctionPrototypes USBD_CDC_IF_Private_FunctionPrototypes
+  * @brief Private functions declaration.
+  * @{
+  */
+
+static int8_t CDC_Init_FS(void);
+static int8_t CDC_DeInit_FS(void);
+static int8_t CDC_Control_FS(uint8_t cmd, uint8_t* pbuf, uint16_t length);
+static int8_t CDC_Receive_FS(uint8_t* pbuf, uint32_t *Len);
+static int8_t CDC_TransmitCplt_FS(uint8_t *pbuf, uint32_t *Len, uint8_t epnum);
+
+/* USER CODE BEGIN PRIVATE_FUNCTIONS_DECLARATION */
+
+/* USER CODE END PRIVATE_FUNCTIONS_DECLARATION */
+
+/**
+  * @}
+  */
+
+USBD_CDC_ItfTypeDef USBD_Interface_fops_FS =
+{
+  CDC_Init_FS,
+  CDC_DeInit_FS,
+  CDC_Control_FS,
+  CDC_Receive_FS,
+  CDC_TransmitCplt_FS
+};
+
+/* Private functions ---------------------------------------------------------*/
+/**
+  * @brief  Initializes the CDC media low layer over the FS USB IP
+  * @retval USBD_OK if all operations are OK else USBD_FAIL
+  */
+static int8_t CDC_Init_FS(void)
+{
+  /* USER CODE BEGIN 3 */
+  /* Set Application Buffers */
+  USBD_CDC_SetTxBuffer(&hUsbDeviceFS, UserTxBufferFS, 0);
+  USBD_CDC_SetRxBuffer(&hUsbDeviceFS, UserRxBufferFS);
+  return (USBD_OK);
+  /* USER CODE END 3 */
+}
+
+/**
+  * @brief  DeInitializes the CDC media low layer
+  * @retval USBD_OK if all operations are OK else USBD_FAIL
+  */
+static int8_t CDC_DeInit_FS(void)
+{
+  /* USER CODE BEGIN 4 */
+  return (USBD_OK);
+  /* USER CODE END 4 */
+}
+
+/**
+  * @brief  Manage the CDC class requests
+  * @param  cmd: Command code
+  * @param  pbuf: Buffer containing command data (request parameters)
+  * @param  length: Number of data to be sent (in bytes)
+  * @retval Result of the operation: USBD_OK if all operations are OK else USBD_FAIL
+  */
+static int8_t CDC_Control_FS(uint8_t cmd, uint8_t* pbuf, uint16_t length)
+{
+  /* USER CODE BEGIN 5 */
+  switch(cmd)
+  {
+    case CDC_SEND_ENCAPSULATED_COMMAND:
+
+    break;
+
+    case CDC_GET_ENCAPSULATED_RESPONSE:
+
+    break;
+
+    case CDC_SET_COMM_FEATURE:
+
+    break;
+
+    case CDC_GET_COMM_FEATURE:
+
+    break;
+
+    case CDC_CLEAR_COMM_FEATURE:
+
+    break;
+
+  /*******************************************************************************/
+  /* Line Coding Structure                                                       */
+  /*-----------------------------------------------------------------------------*/
+  /* Offset | Field       | Size | Value  | Description                          */
+  /* 0      | dwDTERate   |   4  | Number |Data terminal rate, in bits per second*/
+  /* 4      | bCharFormat |   1  | Number | Stop bits                            */
+  /*                                        0 - 1 Stop bit                       */
+  /*                                        1 - 1.5 Stop bits                    */
+  /*                                        2 - 2 Stop bits                      */
+  /* 5      | bParityType |  1   | Number | Parity                               */
+  /*                                        0 - None                             */
+  /*                                        1 - Odd                              */
+  /*                                        2 - Even                             */
+  /*                                        3 - Mark                             */
+  /*                                        4 - Space                            */
+  /* 6      | bDataBits  |   1   | Number Data bits (5, 6, 7, 8 or 16).          */
+  /*******************************************************************************/
+    case CDC_SET_LINE_CODING:
+
+    break;
+
+    case CDC_GET_LINE_CODING:
+
+    break;
+
+    case CDC_SET_CONTROL_LINE_STATE:
+
+    break;
+
+    case CDC_SEND_BREAK:
+
+    break;
+
+  default:
+    break;
+  }
+
+  return (USBD_OK);
+  /* USER CODE END 5 */
+}
+
+/**
+  * @brief  Data received over USB OUT endpoint are sent over CDC interface
+  *         through this function.
+  *
+  *         @note
+  *         This function will issue a NAK packet on any OUT packet received on
+  *         USB endpoint until exiting this function. If you exit this function
+  *         before transfer is complete on CDC interface (ie. using DMA controller)
+  *         it will result in receiving more data while previous ones are still
+  *         not sent.
+  *
+  * @param  Buf: Buffer of data to be received
+  * @param  Len: Number of data received (in bytes)
+  * @retval Result of the operation: USBD_OK if all operations are OK else USBD_FAIL
+  */
+static int8_t CDC_Receive_FS(uint8_t* Buf, uint32_t *Len)
+{
+  /* USER CODE BEGIN 6 */
+  for (uint32_t i = 0; i < *Len; i++) {
+	  char c = Buf[i];
+
+	  // If we see a newline or carriage return (User hit Enter)
+	  if (c == '\n' || c == '\r') {
+		  if (rx_index > 0) { // Only parse if we actually caught numbers
+			  rx_buffer[rx_index] = '\0'; // Safely terminate string
+			  int parsed_val = atoi(rx_buffer);
+
+			  // Constrain the target
+			  if(parsed_val > 255) usb_throttle_target = 255;
+			  else if(parsed_val < 0) usb_throttle_target = 0;
+			  else usb_throttle_target = (uint8_t)parsed_val;
+
+			  rx_index = 0; // Reset for the next command
+		  }
+	  }
+	  // If it's a number, add it to our buffer (preventing overflow)
+	  else if (c >= '0' && c <= '9' && rx_index < 30) {
+		  rx_buffer[rx_index++] = c;
+	  }
+  }
+
+  // Ready the USB to receive the next packet
+  USBD_CDC_SetRxBuffer(&hUsbDeviceFS, &Buf[0]);
+  USBD_CDC_ReceivePacket(&hUsbDeviceFS);
+
+  return (USBD_OK);
+  /* USER CODE END 6 */
+}
+
+/**
+  * @brief  CDC_Transmit_FS
+  *         Data to send over USB IN endpoint are sent over CDC interface
+  *         through this function.
+  *         @note
+  *
+  *
+  * @param  Buf: Buffer of data to be sent
+  * @param  Len: Number of data to be sent (in bytes)
+  * @retval USBD_OK if all operations are OK else USBD_FAIL or USBD_BUSY
+  */
+uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len)
+{
+  uint8_t result = USBD_OK;
+  /* USER CODE BEGIN 7 */
+  USBD_CDC_HandleTypeDef *hcdc = (USBD_CDC_HandleTypeDef*)hUsbDeviceFS.pClassData;
+  if (hcdc->TxState != 0){
+    return USBD_BUSY;
+  }
+  USBD_CDC_SetTxBuffer(&hUsbDeviceFS, Buf, Len);
+  result = USBD_CDC_TransmitPacket(&hUsbDeviceFS);
+  /* USER CODE END 7 */
+  return result;
+}
+
+/**
+  * @brief  CDC_TransmitCplt_FS
+  *         Data transmitted callback
+  *
+  *         @note
+  *         This function is IN transfer complete callback used to inform user that
+  *         the submitted Data is successfully sent over USB.
+  *
+  * @param  Buf: Buffer of data to be received
+  * @param  Len: Number of data received (in bytes)
+  * @retval Result of the operation: USBD_OK if all operations are OK else USBD_FAIL
+  */
+static int8_t CDC_TransmitCplt_FS(uint8_t *Buf, uint32_t *Len, uint8_t epnum)
+{
+  uint8_t result = USBD_OK;
+  /* USER CODE BEGIN 13 */
+  UNUSED(Buf);
+  UNUSED(Len);
+  UNUSED(epnum);
+  /* USER CODE END 13 */
+  return result;
+}
+
+/* USER CODE BEGIN PRIVATE_FUNCTIONS_IMPLEMENTATION */
+
+/* USER CODE END PRIVATE_FUNCTIONS_IMPLEMENTATION */
+
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
+</file>
+
+<file path="USB_DEVICE/App/usbd_cdc_if.h">
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           : usbd_cdc_if.h
+  * @version        : v1.0_Cube
+  * @brief          : Header for usbd_cdc_if.c file.
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2026 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+
+/* Define to prevent recursive inclusion -------------------------------------*/
+
+#ifndef __USBD_CDC_IF_H__
+#define __USBD_CDC_IF_H__
+
+#ifdef __cplusplus
+ extern "C" {
+#endif
+
+/* Includes ------------------------------------------------------------------*/
+#include "usbd_cdc.h"
+
+/* USER CODE BEGIN INCLUDE */
+
+/* USER CODE END INCLUDE */
+
+/** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY
+  * @brief For Usb device.
+  * @{
+  */
+
+/** @defgroup USBD_CDC_IF USBD_CDC_IF
+  * @brief Usb VCP device module
+  * @{
+  */
+
+/** @defgroup USBD_CDC_IF_Exported_Defines USBD_CDC_IF_Exported_Defines
+  * @brief Defines.
+  * @{
+  */
+/* Define size for the receive and transmit buffer over CDC */
+#define APP_RX_DATA_SIZE  2048
+#define APP_TX_DATA_SIZE  2048
+/* USER CODE BEGIN EXPORTED_DEFINES */
+
+/* USER CODE END EXPORTED_DEFINES */
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_CDC_IF_Exported_Types USBD_CDC_IF_Exported_Types
+  * @brief Types.
+  * @{
+  */
+
+/* USER CODE BEGIN EXPORTED_TYPES */
+
+/* USER CODE END EXPORTED_TYPES */
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_CDC_IF_Exported_Macros USBD_CDC_IF_Exported_Macros
+  * @brief Aliases.
+  * @{
+  */
+
+/* USER CODE BEGIN EXPORTED_MACRO */
+
+/* USER CODE END EXPORTED_MACRO */
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_CDC_IF_Exported_Variables USBD_CDC_IF_Exported_Variables
+  * @brief Public variables.
+  * @{
+  */
+
+/** CDC Interface callback. */
+extern USBD_CDC_ItfTypeDef USBD_Interface_fops_FS;
+
+/* USER CODE BEGIN EXPORTED_VARIABLES */
+
+/* USER CODE END EXPORTED_VARIABLES */
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_CDC_IF_Exported_FunctionsPrototype USBD_CDC_IF_Exported_FunctionsPrototype
+  * @brief Public functions declaration.
+  * @{
+  */
+
+uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len);
+
+/* USER CODE BEGIN EXPORTED_FUNCTIONS */
+
+/* USER CODE END EXPORTED_FUNCTIONS */
+
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __USBD_CDC_IF_H__ */
+</file>
+
+<file path="USB_DEVICE/App/usbd_desc.c">
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           : App/usbd_desc.c
+  * @version        : v1.0_Cube
+  * @brief          : This file implements the USB device descriptors.
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2026 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+
+/* Includes ------------------------------------------------------------------*/
+#include "usbd_core.h"
+#include "usbd_desc.h"
+#include "usbd_conf.h"
+
+/* USER CODE BEGIN INCLUDE */
+
+/* USER CODE END INCLUDE */
+
+/* Private typedef -----------------------------------------------------------*/
+/* Private define ------------------------------------------------------------*/
+/* Private macro -------------------------------------------------------------*/
+
+/* USER CODE BEGIN PV */
+/* Private variables ---------------------------------------------------------*/
+
+/* USER CODE END PV */
+
+/** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY
+  * @{
+  */
+
+/** @addtogroup USBD_DESC
+  * @{
+  */
+
+/** @defgroup USBD_DESC_Private_TypesDefinitions USBD_DESC_Private_TypesDefinitions
+  * @brief Private types.
+  * @{
+  */
+
+/* USER CODE BEGIN PRIVATE_TYPES */
+
+/* USER CODE END PRIVATE_TYPES */
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_DESC_Private_Defines USBD_DESC_Private_Defines
+  * @brief Private defines.
+  * @{
+  */
+
+#define USBD_VID     1155
+#define USBD_LANGID_STRING     1033
+#define USBD_MANUFACTURER_STRING     "STMicroelectronics"
+#define USBD_PID_FS     22336
+#define USBD_PRODUCT_STRING_FS     "STM32 Virtual ComPort"
+#define USBD_CONFIGURATION_STRING_FS     "CDC Config"
+#define USBD_INTERFACE_STRING_FS     "CDC Interface"
+
+#define USB_SIZ_BOS_DESC            0x0C
+
+/* USER CODE BEGIN PRIVATE_DEFINES */
+
+/* USER CODE END PRIVATE_DEFINES */
+
+/**
+  * @}
+  */
+
+/* USER CODE BEGIN 0 */
+
+/* USER CODE END 0 */
+
+/** @defgroup USBD_DESC_Private_Macros USBD_DESC_Private_Macros
+  * @brief Private macros.
+  * @{
+  */
+
+/* USER CODE BEGIN PRIVATE_MACRO */
+
+/* USER CODE END PRIVATE_MACRO */
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_DESC_Private_FunctionPrototypes USBD_DESC_Private_FunctionPrototypes
+  * @brief Private functions declaration.
+  * @{
+  */
+
+static void Get_SerialNum(void);
+static void IntToUnicode(uint32_t value, uint8_t * pbuf, uint8_t len);
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_DESC_Private_FunctionPrototypes USBD_DESC_Private_FunctionPrototypes
+  * @brief Private functions declaration for FS.
+  * @{
+  */
+
+uint8_t * USBD_FS_DeviceDescriptor(USBD_SpeedTypeDef speed, uint16_t *length);
+uint8_t * USBD_FS_LangIDStrDescriptor(USBD_SpeedTypeDef speed, uint16_t *length);
+uint8_t * USBD_FS_ManufacturerStrDescriptor(USBD_SpeedTypeDef speed, uint16_t *length);
+uint8_t * USBD_FS_ProductStrDescriptor(USBD_SpeedTypeDef speed, uint16_t *length);
+uint8_t * USBD_FS_SerialStrDescriptor(USBD_SpeedTypeDef speed, uint16_t *length);
+uint8_t * USBD_FS_ConfigStrDescriptor(USBD_SpeedTypeDef speed, uint16_t *length);
+uint8_t * USBD_FS_InterfaceStrDescriptor(USBD_SpeedTypeDef speed, uint16_t *length);
+#if (USBD_LPM_ENABLED == 1)
+uint8_t * USBD_FS_USR_BOSDescriptor(USBD_SpeedTypeDef speed, uint16_t *length);
+#endif /* (USBD_LPM_ENABLED == 1) */
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_DESC_Private_Variables USBD_DESC_Private_Variables
+  * @brief Private variables.
+  * @{
+  */
+
+USBD_DescriptorsTypeDef FS_Desc =
+{
+  USBD_FS_DeviceDescriptor
+, USBD_FS_LangIDStrDescriptor
+, USBD_FS_ManufacturerStrDescriptor
+, USBD_FS_ProductStrDescriptor
+, USBD_FS_SerialStrDescriptor
+, USBD_FS_ConfigStrDescriptor
+, USBD_FS_InterfaceStrDescriptor
+#if (USBD_LPM_ENABLED == 1)
+, USBD_FS_USR_BOSDescriptor
+#endif /* (USBD_LPM_ENABLED == 1) */
+};
+
+#if defined ( __ICCARM__ ) /* IAR Compiler */
+  #pragma data_alignment=4
+#endif /* defined ( __ICCARM__ ) */
+/** USB standard device descriptor. */
+__ALIGN_BEGIN uint8_t USBD_FS_DeviceDesc[USB_LEN_DEV_DESC] __ALIGN_END =
+{
+  0x12,                       /*bLength */
+  USB_DESC_TYPE_DEVICE,       /*bDescriptorType*/
+#if (USBD_LPM_ENABLED == 1)
+  0x01,                       /*bcdUSB */ /* changed to USB version 2.01
+                                             in order to support LPM L1 suspend
+                                             resume test of USBCV3.0*/
+#else
+  0x00,                       /*bcdUSB */
+#endif /* (USBD_LPM_ENABLED == 1) */
+  0x02,
+  0x02,                       /*bDeviceClass*/
+  0x02,                       /*bDeviceSubClass*/
+  0x00,                       /*bDeviceProtocol*/
+  USB_MAX_EP0_SIZE,           /*bMaxPacketSize*/
+  LOBYTE(USBD_VID),           /*idVendor*/
+  HIBYTE(USBD_VID),           /*idVendor*/
+  LOBYTE(USBD_PID_FS),        /*idProduct*/
+  HIBYTE(USBD_PID_FS),        /*idProduct*/
+  0x00,                       /*bcdDevice rel. 2.00*/
+  0x02,
+  USBD_IDX_MFC_STR,           /*Index of manufacturer  string*/
+  USBD_IDX_PRODUCT_STR,       /*Index of product string*/
+  USBD_IDX_SERIAL_STR,        /*Index of serial number string*/
+  USBD_MAX_NUM_CONFIGURATION  /*bNumConfigurations*/
+};
+
+/* USB_DeviceDescriptor */
+/** BOS descriptor. */
+#if (USBD_LPM_ENABLED == 1)
+#if defined ( __ICCARM__ ) /* IAR Compiler */
+  #pragma data_alignment=4
+#endif /* defined ( __ICCARM__ ) */
+__ALIGN_BEGIN uint8_t USBD_FS_BOSDesc[USB_SIZ_BOS_DESC] __ALIGN_END =
+{
+  0x5,
+  USB_DESC_TYPE_BOS,
+  0xC,
+  0x0,
+  0x1,  /* 1 device capability*/
+        /* device capability*/
+  0x7,
+  USB_DEVICE_CAPABITY_TYPE,
+  0x2,
+  0x2,  /* LPM capability bit set*/
+  0x0,
+  0x0,
+  0x0
+};
+#endif /* (USBD_LPM_ENABLED == 1) */
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_DESC_Private_Variables USBD_DESC_Private_Variables
+  * @brief Private variables.
+  * @{
+  */
+
+#if defined ( __ICCARM__ ) /* IAR Compiler */
+  #pragma data_alignment=4
+#endif /* defined ( __ICCARM__ ) */
+
+/** USB lang identifier descriptor. */
+__ALIGN_BEGIN uint8_t USBD_LangIDDesc[USB_LEN_LANGID_STR_DESC] __ALIGN_END =
+{
+     USB_LEN_LANGID_STR_DESC,
+     USB_DESC_TYPE_STRING,
+     LOBYTE(USBD_LANGID_STRING),
+     HIBYTE(USBD_LANGID_STRING)
+};
+
+#if defined ( __ICCARM__ ) /* IAR Compiler */
+  #pragma data_alignment=4
+#endif /* defined ( __ICCARM__ ) */
+/* Internal string descriptor. */
+__ALIGN_BEGIN uint8_t USBD_StrDesc[USBD_MAX_STR_DESC_SIZ] __ALIGN_END;
+
+#if defined ( __ICCARM__ ) /*!< IAR Compiler */
+  #pragma data_alignment=4
+#endif
+__ALIGN_BEGIN uint8_t USBD_StringSerial[USB_SIZ_STRING_SERIAL] __ALIGN_END = {
+  USB_SIZ_STRING_SERIAL,
+  USB_DESC_TYPE_STRING,
+};
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_DESC_Private_Functions USBD_DESC_Private_Functions
+  * @brief Private functions.
+  * @{
+  */
+
+/**
+  * @brief  Return the device descriptor
+  * @param  speed : Current device speed
+  * @param  length : Pointer to data length variable
+  * @retval Pointer to descriptor buffer
+  */
+uint8_t * USBD_FS_DeviceDescriptor(USBD_SpeedTypeDef speed, uint16_t *length)
+{
+  UNUSED(speed);
+  *length = sizeof(USBD_FS_DeviceDesc);
+  return USBD_FS_DeviceDesc;
+}
+
+/**
+  * @brief  Return the LangID string descriptor
+  * @param  speed : Current device speed
+  * @param  length : Pointer to data length variable
+  * @retval Pointer to descriptor buffer
+  */
+uint8_t * USBD_FS_LangIDStrDescriptor(USBD_SpeedTypeDef speed, uint16_t *length)
+{
+  UNUSED(speed);
+  *length = sizeof(USBD_LangIDDesc);
+  return USBD_LangIDDesc;
+}
+
+/**
+  * @brief  Return the product string descriptor
+  * @param  speed : Current device speed
+  * @param  length : Pointer to data length variable
+  * @retval Pointer to descriptor buffer
+  */
+uint8_t * USBD_FS_ProductStrDescriptor(USBD_SpeedTypeDef speed, uint16_t *length)
+{
+  if(speed == 0)
+  {
+    USBD_GetString((uint8_t *)USBD_PRODUCT_STRING_FS, USBD_StrDesc, length);
+  }
+  else
+  {
+    USBD_GetString((uint8_t *)USBD_PRODUCT_STRING_FS, USBD_StrDesc, length);
+  }
+  return USBD_StrDesc;
+}
+
+/**
+  * @brief  Return the manufacturer string descriptor
+  * @param  speed : Current device speed
+  * @param  length : Pointer to data length variable
+  * @retval Pointer to descriptor buffer
+  */
+uint8_t * USBD_FS_ManufacturerStrDescriptor(USBD_SpeedTypeDef speed, uint16_t *length)
+{
+  UNUSED(speed);
+  USBD_GetString((uint8_t *)USBD_MANUFACTURER_STRING, USBD_StrDesc, length);
+  return USBD_StrDesc;
+}
+
+/**
+  * @brief  Return the serial number string descriptor
+  * @param  speed : Current device speed
+  * @param  length : Pointer to data length variable
+  * @retval Pointer to descriptor buffer
+  */
+uint8_t * USBD_FS_SerialStrDescriptor(USBD_SpeedTypeDef speed, uint16_t *length)
+{
+  UNUSED(speed);
+  *length = USB_SIZ_STRING_SERIAL;
+
+  /* Update the serial number string descriptor with the data from the unique
+   * ID */
+  Get_SerialNum();
+  /* USER CODE BEGIN USBD_FS_SerialStrDescriptor */
+
+  /* USER CODE END USBD_FS_SerialStrDescriptor */
+  return (uint8_t *) USBD_StringSerial;
+}
+
+/**
+  * @brief  Return the configuration string descriptor
+  * @param  speed : Current device speed
+  * @param  length : Pointer to data length variable
+  * @retval Pointer to descriptor buffer
+  */
+uint8_t * USBD_FS_ConfigStrDescriptor(USBD_SpeedTypeDef speed, uint16_t *length)
+{
+  if(speed == USBD_SPEED_HIGH)
+  {
+    USBD_GetString((uint8_t *)USBD_CONFIGURATION_STRING_FS, USBD_StrDesc, length);
+  }
+  else
+  {
+    USBD_GetString((uint8_t *)USBD_CONFIGURATION_STRING_FS, USBD_StrDesc, length);
+  }
+  return USBD_StrDesc;
+}
+
+/**
+  * @brief  Return the interface string descriptor
+  * @param  speed : Current device speed
+  * @param  length : Pointer to data length variable
+  * @retval Pointer to descriptor buffer
+  */
+uint8_t * USBD_FS_InterfaceStrDescriptor(USBD_SpeedTypeDef speed, uint16_t *length)
+{
+  if(speed == 0)
+  {
+    USBD_GetString((uint8_t *)USBD_INTERFACE_STRING_FS, USBD_StrDesc, length);
+  }
+  else
+  {
+    USBD_GetString((uint8_t *)USBD_INTERFACE_STRING_FS, USBD_StrDesc, length);
+  }
+  return USBD_StrDesc;
+}
+
+#if (USBD_LPM_ENABLED == 1)
+/**
+  * @brief  Return the BOS descriptor
+  * @param  speed : Current device speed
+  * @param  length : Pointer to data length variable
+  * @retval Pointer to descriptor buffer
+  */
+uint8_t * USBD_FS_USR_BOSDescriptor(USBD_SpeedTypeDef speed, uint16_t *length)
+{
+  UNUSED(speed);
+  *length = sizeof(USBD_FS_BOSDesc);
+  return (uint8_t*)USBD_FS_BOSDesc;
+}
+#endif /* (USBD_LPM_ENABLED == 1) */
+
+/**
+  * @brief  Create the serial number string descriptor
+  * @param  None
+  * @retval None
+  */
+static void Get_SerialNum(void)
+{
+  uint32_t deviceserial0;
+  uint32_t deviceserial1;
+  uint32_t deviceserial2;
+
+  deviceserial0 = *(uint32_t *) DEVICE_ID1;
+  deviceserial1 = *(uint32_t *) DEVICE_ID2;
+  deviceserial2 = *(uint32_t *) DEVICE_ID3;
+
+  deviceserial0 += deviceserial2;
+
+  if (deviceserial0 != 0)
+  {
+    IntToUnicode(deviceserial0, &USBD_StringSerial[2], 8);
+    IntToUnicode(deviceserial1, &USBD_StringSerial[18], 4);
+  }
+}
+
+/**
+  * @brief  Convert Hex 32Bits value into char
+  * @param  value: value to convert
+  * @param  pbuf: pointer to the buffer
+  * @param  len: buffer length
+  * @retval None
+  */
+static void IntToUnicode(uint32_t value, uint8_t * pbuf, uint8_t len)
+{
+  uint8_t idx = 0;
+
+  for (idx = 0; idx < len; idx++)
+  {
+    if (((value >> 28)) < 0xA)
+    {
+      pbuf[2 * idx] = (value >> 28) + '0';
+    }
+    else
+    {
+      pbuf[2 * idx] = (value >> 28) + 'A' - 10;
+    }
+
+    value = value << 4;
+
+    pbuf[2 * idx + 1] = 0;
+  }
+}
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
+</file>
+
+<file path="USB_DEVICE/App/usbd_desc.h">
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           : usbd_desc.c
+  * @version        : v1.0_Cube
+  * @brief          : Header for usbd_conf.c file.
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2026 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+/* Define to prevent recursive inclusion -------------------------------------*/
+#ifndef __USBD_DESC__C__
+#define __USBD_DESC__C__
+
+#ifdef __cplusplus
+ extern "C" {
+#endif
+
+/* Includes ------------------------------------------------------------------*/
+#include "usbd_def.h"
+
+/* USER CODE BEGIN INCLUDE */
+
+/* USER CODE END INCLUDE */
+
+/** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY
+  * @{
+  */
+
+/** @defgroup USBD_DESC USBD_DESC
+  * @brief Usb device descriptors module.
+  * @{
+  */
+
+/*
+ * User to provide a unique ID to define the USB device serial number
+ * The use of UID_BASE register can be considered as an example
+ */
+#define         DEVICE_ID1          (UID_BASE)
+#define         DEVICE_ID2          (UID_BASE + 0x4)
+#define         DEVICE_ID3          (UID_BASE + 0x8)
+
+#define  USB_SIZ_STRING_SERIAL       0x1A
+
+/* USER CODE BEGIN EXPORTED_CONSTANTS */
+
+/* USER CODE END EXPORTED_CONSTANTS */
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_DESC_Exported_Defines USBD_DESC_Exported_Defines
+  * @brief Defines.
+  * @{
+  */
+
+/* USER CODE BEGIN EXPORTED_DEFINES */
+
+/* USER CODE END EXPORTED_DEFINES */
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_DESC_Exported_TypesDefinitions USBD_DESC_Exported_TypesDefinitions
+  * @brief Types.
+  * @{
+  */
+
+/* USER CODE BEGIN EXPORTED_TYPES */
+
+/* USER CODE END EXPORTED_TYPES */
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_DESC_Exported_Macros USBD_DESC_Exported_Macros
+  * @brief Aliases.
+  * @{
+  */
+
+/* USER CODE BEGIN EXPORTED_MACRO */
+
+/* USER CODE END EXPORTED_MACRO */
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_DESC_Exported_Variables USBD_DESC_Exported_Variables
+  * @brief Public variables.
+  * @{
+  */
+
+/** Descriptor for the Usb device. */
+extern USBD_DescriptorsTypeDef FS_Desc;
+
+/* USER CODE BEGIN EXPORTED_VARIABLES */
+
+/* USER CODE END EXPORTED_VARIABLES */
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_DESC_Exported_FunctionsPrototype USBD_DESC_Exported_FunctionsPrototype
+  * @brief Public functions declaration.
+  * @{
+  */
+
+/* USER CODE BEGIN EXPORTED_FUNCTIONS */
+
+/* USER CODE END EXPORTED_FUNCTIONS */
+
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __USBD_DESC__C__ */
+</file>
+
+<file path="USB_DEVICE/Target/usbd_conf.c">
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           : Target/usbd_conf.c
+  * @version        : v1.0_Cube
+  * @brief          : This file implements the board support package for the USB device library
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2026 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+
+/* Includes ------------------------------------------------------------------*/
+#include "stm32f4xx.h"
+#include "stm32f4xx_hal.h"
+#include "usbd_def.h"
+#include "usbd_core.h"
+
+#include "usbd_cdc.h"
+
+/* USER CODE BEGIN Includes */
+
+/* USER CODE END Includes */
+
+/* Private typedef -----------------------------------------------------------*/
+/* Private define ------------------------------------------------------------*/
+/* Private macro -------------------------------------------------------------*/
+
+/* USER CODE BEGIN PV */
+/* Private variables ---------------------------------------------------------*/
+
+/* USER CODE END PV */
+
+PCD_HandleTypeDef hpcd_USB_OTG_FS;
+void Error_Handler(void);
+
+/* External functions --------------------------------------------------------*/
+void SystemClock_Config(void);
+
+/* USER CODE BEGIN 0 */
+
+/* USER CODE END 0 */
+
+/* USER CODE BEGIN PFP */
+/* Private function prototypes -----------------------------------------------*/
+USBD_StatusTypeDef USBD_Get_USB_Status(HAL_StatusTypeDef hal_status);
+
+/* USER CODE END PFP */
+
+/* Private functions ---------------------------------------------------------*/
+
+/* USER CODE BEGIN 1 */
+
+/* USER CODE END 1 */
+
+/*******************************************************************************
+                       LL Driver Callbacks (PCD -> USB Device Library)
+*******************************************************************************/
+/* MSP Init */
+
+void HAL_PCD_MspInit(PCD_HandleTypeDef* pcdHandle)
+{
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+  if(pcdHandle->Instance==USB_OTG_FS)
+  {
+  /* USER CODE BEGIN USB_OTG_FS_MspInit 0 */
+
+  /* USER CODE END USB_OTG_FS_MspInit 0 */
+
+    __HAL_RCC_GPIOA_CLK_ENABLE();
+    /**USB_OTG_FS GPIO Configuration
+    PA11     ------> USB_OTG_FS_DM
+    PA12     ------> USB_OTG_FS_DP
+    */
+    GPIO_InitStruct.Pin = GPIO_PIN_11|GPIO_PIN_12;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF10_OTG_FS;
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+    /* Peripheral clock enable */
+    __HAL_RCC_USB_OTG_FS_CLK_ENABLE();
+
+    /* Peripheral interrupt init */
+    HAL_NVIC_SetPriority(OTG_FS_IRQn, 0, 0);
+    HAL_NVIC_EnableIRQ(OTG_FS_IRQn);
+  /* USER CODE BEGIN USB_OTG_FS_MspInit 1 */
+
+  /* USER CODE END USB_OTG_FS_MspInit 1 */
+  }
+}
+
+void HAL_PCD_MspDeInit(PCD_HandleTypeDef* pcdHandle)
+{
+  if(pcdHandle->Instance==USB_OTG_FS)
+  {
+  /* USER CODE BEGIN USB_OTG_FS_MspDeInit 0 */
+
+  /* USER CODE END USB_OTG_FS_MspDeInit 0 */
+    /* Peripheral clock disable */
+    __HAL_RCC_USB_OTG_FS_CLK_DISABLE();
+
+    /**USB_OTG_FS GPIO Configuration
+    PA11     ------> USB_OTG_FS_DM
+    PA12     ------> USB_OTG_FS_DP
+    */
+    HAL_GPIO_DeInit(GPIOA, GPIO_PIN_11|GPIO_PIN_12);
+
+    /* Peripheral interrupt Deinit*/
+    HAL_NVIC_DisableIRQ(OTG_FS_IRQn);
+
+  /* USER CODE BEGIN USB_OTG_FS_MspDeInit 1 */
+
+  /* USER CODE END USB_OTG_FS_MspDeInit 1 */
+  }
+}
+
+/**
+  * @brief  Setup stage callback
+  * @param  hpcd: PCD handle
+  * @retval None
+  */
+#if (USE_HAL_PCD_REGISTER_CALLBACKS == 1U)
+static void PCD_SetupStageCallback(PCD_HandleTypeDef *hpcd)
+#else
+void HAL_PCD_SetupStageCallback(PCD_HandleTypeDef *hpcd)
+#endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
+{
+  USBD_LL_SetupStage((USBD_HandleTypeDef*)hpcd->pData, (uint8_t *)hpcd->Setup);
+}
+
+/**
+  * @brief  Data Out stage callback.
+  * @param  hpcd: PCD handle
+  * @param  epnum: Endpoint number
+  * @retval None
+  */
+#if (USE_HAL_PCD_REGISTER_CALLBACKS == 1U)
+static void PCD_DataOutStageCallback(PCD_HandleTypeDef *hpcd, uint8_t epnum)
+#else
+void HAL_PCD_DataOutStageCallback(PCD_HandleTypeDef *hpcd, uint8_t epnum)
+#endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
+{
+  USBD_LL_DataOutStage((USBD_HandleTypeDef*)hpcd->pData, epnum, hpcd->OUT_ep[epnum].xfer_buff);
+}
+
+/**
+  * @brief  Data In stage callback.
+  * @param  hpcd: PCD handle
+  * @param  epnum: Endpoint number
+  * @retval None
+  */
+#if (USE_HAL_PCD_REGISTER_CALLBACKS == 1U)
+static void PCD_DataInStageCallback(PCD_HandleTypeDef *hpcd, uint8_t epnum)
+#else
+void HAL_PCD_DataInStageCallback(PCD_HandleTypeDef *hpcd, uint8_t epnum)
+#endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
+{
+  USBD_LL_DataInStage((USBD_HandleTypeDef*)hpcd->pData, epnum, hpcd->IN_ep[epnum].xfer_buff);
+}
+
+/**
+  * @brief  SOF callback.
+  * @param  hpcd: PCD handle
+  * @retval None
+  */
+#if (USE_HAL_PCD_REGISTER_CALLBACKS == 1U)
+static void PCD_SOFCallback(PCD_HandleTypeDef *hpcd)
+#else
+void HAL_PCD_SOFCallback(PCD_HandleTypeDef *hpcd)
+#endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
+{
+  USBD_LL_SOF((USBD_HandleTypeDef*)hpcd->pData);
+}
+
+/**
+  * @brief  Reset callback.
+  * @param  hpcd: PCD handle
+  * @retval None
+  */
+#if (USE_HAL_PCD_REGISTER_CALLBACKS == 1U)
+static void PCD_ResetCallback(PCD_HandleTypeDef *hpcd)
+#else
+void HAL_PCD_ResetCallback(PCD_HandleTypeDef *hpcd)
+#endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
+{
+  USBD_SpeedTypeDef speed = USBD_SPEED_FULL;
+
+  if ( hpcd->Init.speed == PCD_SPEED_HIGH)
+  {
+    speed = USBD_SPEED_HIGH;
+  }
+  else if ( hpcd->Init.speed == PCD_SPEED_FULL)
+  {
+    speed = USBD_SPEED_FULL;
+  }
+  else
+  {
+    Error_Handler();
+  }
+    /* Set Speed. */
+  USBD_LL_SetSpeed((USBD_HandleTypeDef*)hpcd->pData, speed);
+
+  /* Reset Device. */
+  USBD_LL_Reset((USBD_HandleTypeDef*)hpcd->pData);
+}
+
+/**
+  * @brief  Suspend callback.
+  * When Low power mode is enabled the debug cannot be used (IAR, Keil doesn't support it)
+  * @param  hpcd: PCD handle
+  * @retval None
+  */
+#if (USE_HAL_PCD_REGISTER_CALLBACKS == 1U)
+static void PCD_SuspendCallback(PCD_HandleTypeDef *hpcd)
+#else
+void HAL_PCD_SuspendCallback(PCD_HandleTypeDef *hpcd)
+#endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
+{
+  /* Inform USB library that core enters in suspend Mode. */
+  USBD_LL_Suspend((USBD_HandleTypeDef*)hpcd->pData);
+  __HAL_PCD_GATE_PHYCLOCK(hpcd);
+  /* Enter in STOP mode. */
+  /* USER CODE BEGIN 2 */
+  if (hpcd->Init.low_power_enable)
+  {
+    /* Set SLEEPDEEP bit and SleepOnExit of Cortex System Control Register. */
+    SCB->SCR |= (uint32_t)((uint32_t)(SCB_SCR_SLEEPDEEP_Msk | SCB_SCR_SLEEPONEXIT_Msk));
+  }
+  /* USER CODE END 2 */
+}
+
+/**
+  * @brief  Resume callback.
+  * When Low power mode is enabled the debug cannot be used (IAR, Keil doesn't support it)
+  * @param  hpcd: PCD handle
+  * @retval None
+  */
+#if (USE_HAL_PCD_REGISTER_CALLBACKS == 1U)
+static void PCD_ResumeCallback(PCD_HandleTypeDef *hpcd)
+#else
+void HAL_PCD_ResumeCallback(PCD_HandleTypeDef *hpcd)
+#endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
+{
+  /* USER CODE BEGIN 3 */
+
+  /* USER CODE END 3 */
+  USBD_LL_Resume((USBD_HandleTypeDef*)hpcd->pData);
+}
+
+/**
+  * @brief  ISOOUTIncomplete callback.
+  * @param  hpcd: PCD handle
+  * @param  epnum: Endpoint number
+  * @retval None
+  */
+#if (USE_HAL_PCD_REGISTER_CALLBACKS == 1U)
+static void PCD_ISOOUTIncompleteCallback(PCD_HandleTypeDef *hpcd, uint8_t epnum)
+#else
+void HAL_PCD_ISOOUTIncompleteCallback(PCD_HandleTypeDef *hpcd, uint8_t epnum)
+#endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
+{
+  USBD_LL_IsoOUTIncomplete((USBD_HandleTypeDef*)hpcd->pData, epnum);
+}
+
+/**
+  * @brief  ISOINIncomplete callback.
+  * @param  hpcd: PCD handle
+  * @param  epnum: Endpoint number
+  * @retval None
+  */
+#if (USE_HAL_PCD_REGISTER_CALLBACKS == 1U)
+static void PCD_ISOINIncompleteCallback(PCD_HandleTypeDef *hpcd, uint8_t epnum)
+#else
+void HAL_PCD_ISOINIncompleteCallback(PCD_HandleTypeDef *hpcd, uint8_t epnum)
+#endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
+{
+  USBD_LL_IsoINIncomplete((USBD_HandleTypeDef*)hpcd->pData, epnum);
+}
+
+/**
+  * @brief  Connect callback.
+  * @param  hpcd: PCD handle
+  * @retval None
+  */
+#if (USE_HAL_PCD_REGISTER_CALLBACKS == 1U)
+static void PCD_ConnectCallback(PCD_HandleTypeDef *hpcd)
+#else
+void HAL_PCD_ConnectCallback(PCD_HandleTypeDef *hpcd)
+#endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
+{
+  USBD_LL_DevConnected((USBD_HandleTypeDef*)hpcd->pData);
+}
+
+/**
+  * @brief  Disconnect callback.
+  * @param  hpcd: PCD handle
+  * @retval None
+  */
+#if (USE_HAL_PCD_REGISTER_CALLBACKS == 1U)
+static void PCD_DisconnectCallback(PCD_HandleTypeDef *hpcd)
+#else
+void HAL_PCD_DisconnectCallback(PCD_HandleTypeDef *hpcd)
+#endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
+{
+  USBD_LL_DevDisconnected((USBD_HandleTypeDef*)hpcd->pData);
+}
+
+/*******************************************************************************
+                       LL Driver Interface (USB Device Library --> PCD)
+*******************************************************************************/
+
+/**
+  * @brief  Initializes the low level portion of the device driver.
+  * @param  pdev: Device handle
+  * @retval USBD status
+  */
+USBD_StatusTypeDef USBD_LL_Init(USBD_HandleTypeDef *pdev)
+{
+  /* Init USB Ip. */
+  if (pdev->id == DEVICE_FS) {
+  /* Link the driver to the stack. */
+  hpcd_USB_OTG_FS.pData = pdev;
+  pdev->pData = &hpcd_USB_OTG_FS;
+
+  hpcd_USB_OTG_FS.Instance = USB_OTG_FS;
+  hpcd_USB_OTG_FS.Init.dev_endpoints = 4;
+  hpcd_USB_OTG_FS.Init.speed = PCD_SPEED_FULL;
+  hpcd_USB_OTG_FS.Init.dma_enable = DISABLE;
+  hpcd_USB_OTG_FS.Init.phy_itface = PCD_PHY_EMBEDDED;
+  hpcd_USB_OTG_FS.Init.Sof_enable = DISABLE;
+  hpcd_USB_OTG_FS.Init.low_power_enable = DISABLE;
+  hpcd_USB_OTG_FS.Init.lpm_enable = DISABLE;
+  hpcd_USB_OTG_FS.Init.vbus_sensing_enable = DISABLE;
+  hpcd_USB_OTG_FS.Init.use_dedicated_ep1 = DISABLE;
+  if (HAL_PCD_Init(&hpcd_USB_OTG_FS) != HAL_OK)
+  {
+    Error_Handler( );
+  }
+
+#if (USE_HAL_PCD_REGISTER_CALLBACKS == 1U)
+  /* Register USB PCD CallBacks */
+  HAL_PCD_RegisterCallback(&hpcd_USB_OTG_FS, HAL_PCD_SOF_CB_ID, PCD_SOFCallback);
+  HAL_PCD_RegisterCallback(&hpcd_USB_OTG_FS, HAL_PCD_SETUPSTAGE_CB_ID, PCD_SetupStageCallback);
+  HAL_PCD_RegisterCallback(&hpcd_USB_OTG_FS, HAL_PCD_RESET_CB_ID, PCD_ResetCallback);
+  HAL_PCD_RegisterCallback(&hpcd_USB_OTG_FS, HAL_PCD_SUSPEND_CB_ID, PCD_SuspendCallback);
+  HAL_PCD_RegisterCallback(&hpcd_USB_OTG_FS, HAL_PCD_RESUME_CB_ID, PCD_ResumeCallback);
+  HAL_PCD_RegisterCallback(&hpcd_USB_OTG_FS, HAL_PCD_CONNECT_CB_ID, PCD_ConnectCallback);
+  HAL_PCD_RegisterCallback(&hpcd_USB_OTG_FS, HAL_PCD_DISCONNECT_CB_ID, PCD_DisconnectCallback);
+
+  HAL_PCD_RegisterDataOutStageCallback(&hpcd_USB_OTG_FS, PCD_DataOutStageCallback);
+  HAL_PCD_RegisterDataInStageCallback(&hpcd_USB_OTG_FS, PCD_DataInStageCallback);
+  HAL_PCD_RegisterIsoOutIncpltCallback(&hpcd_USB_OTG_FS, PCD_ISOOUTIncompleteCallback);
+  HAL_PCD_RegisterIsoInIncpltCallback(&hpcd_USB_OTG_FS, PCD_ISOINIncompleteCallback);
+#endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
+  HAL_PCDEx_SetRxFiFo(&hpcd_USB_OTG_FS, 0x80);
+  HAL_PCDEx_SetTxFiFo(&hpcd_USB_OTG_FS, 0, 0x40);
+  HAL_PCDEx_SetTxFiFo(&hpcd_USB_OTG_FS, 1, 0x80);
+  }
+  return USBD_OK;
+}
+
+/**
+  * @brief  De-Initializes the low level portion of the device driver.
+  * @param  pdev: Device handle
+  * @retval USBD status
+  */
+USBD_StatusTypeDef USBD_LL_DeInit(USBD_HandleTypeDef *pdev)
+{
+  HAL_StatusTypeDef hal_status = HAL_OK;
+  USBD_StatusTypeDef usb_status = USBD_OK;
+
+  hal_status = HAL_PCD_DeInit(pdev->pData);
+
+  usb_status =  USBD_Get_USB_Status(hal_status);
+
+  return usb_status;
+}
+
+/**
+  * @brief  Starts the low level portion of the device driver.
+  * @param  pdev: Device handle
+  * @retval USBD status
+  */
+USBD_StatusTypeDef USBD_LL_Start(USBD_HandleTypeDef *pdev)
+{
+  HAL_StatusTypeDef hal_status = HAL_OK;
+  USBD_StatusTypeDef usb_status = USBD_OK;
+
+  hal_status = HAL_PCD_Start(pdev->pData);
+
+  usb_status =  USBD_Get_USB_Status(hal_status);
+
+  return usb_status;
+}
+
+/**
+  * @brief  Stops the low level portion of the device driver.
+  * @param  pdev: Device handle
+  * @retval USBD status
+  */
+USBD_StatusTypeDef USBD_LL_Stop(USBD_HandleTypeDef *pdev)
+{
+  HAL_StatusTypeDef hal_status = HAL_OK;
+  USBD_StatusTypeDef usb_status = USBD_OK;
+
+  hal_status = HAL_PCD_Stop(pdev->pData);
+
+  usb_status =  USBD_Get_USB_Status(hal_status);
+
+  return usb_status;
+}
+
+/**
+  * @brief  Opens an endpoint of the low level driver.
+  * @param  pdev: Device handle
+  * @param  ep_addr: Endpoint number
+  * @param  ep_type: Endpoint type
+  * @param  ep_mps: Endpoint max packet size
+  * @retval USBD status
+  */
+USBD_StatusTypeDef USBD_LL_OpenEP(USBD_HandleTypeDef *pdev, uint8_t ep_addr, uint8_t ep_type, uint16_t ep_mps)
+{
+  HAL_StatusTypeDef hal_status = HAL_OK;
+  USBD_StatusTypeDef usb_status = USBD_OK;
+
+  hal_status = HAL_PCD_EP_Open(pdev->pData, ep_addr, ep_mps, ep_type);
+
+  usb_status =  USBD_Get_USB_Status(hal_status);
+
+  return usb_status;
+}
+
+/**
+  * @brief  Closes an endpoint of the low level driver.
+  * @param  pdev: Device handle
+  * @param  ep_addr: Endpoint number
+  * @retval USBD status
+  */
+USBD_StatusTypeDef USBD_LL_CloseEP(USBD_HandleTypeDef *pdev, uint8_t ep_addr)
+{
+  HAL_StatusTypeDef hal_status = HAL_OK;
+  USBD_StatusTypeDef usb_status = USBD_OK;
+
+  hal_status = HAL_PCD_EP_Close(pdev->pData, ep_addr);
+
+  usb_status =  USBD_Get_USB_Status(hal_status);
+
+  return usb_status;
+}
+
+/**
+  * @brief  Flushes an endpoint of the Low Level Driver.
+  * @param  pdev: Device handle
+  * @param  ep_addr: Endpoint number
+  * @retval USBD status
+  */
+USBD_StatusTypeDef USBD_LL_FlushEP(USBD_HandleTypeDef *pdev, uint8_t ep_addr)
+{
+  HAL_StatusTypeDef hal_status = HAL_OK;
+  USBD_StatusTypeDef usb_status = USBD_OK;
+
+  hal_status = HAL_PCD_EP_Flush(pdev->pData, ep_addr);
+
+  usb_status =  USBD_Get_USB_Status(hal_status);
+
+  return usb_status;
+}
+
+/**
+  * @brief  Sets a Stall condition on an endpoint of the Low Level Driver.
+  * @param  pdev: Device handle
+  * @param  ep_addr: Endpoint number
+  * @retval USBD status
+  */
+USBD_StatusTypeDef USBD_LL_StallEP(USBD_HandleTypeDef *pdev, uint8_t ep_addr)
+{
+  HAL_StatusTypeDef hal_status = HAL_OK;
+  USBD_StatusTypeDef usb_status = USBD_OK;
+
+  hal_status = HAL_PCD_EP_SetStall(pdev->pData, ep_addr);
+
+  usb_status =  USBD_Get_USB_Status(hal_status);
+
+  return usb_status;
+}
+
+/**
+  * @brief  Clears a Stall condition on an endpoint of the Low Level Driver.
+  * @param  pdev: Device handle
+  * @param  ep_addr: Endpoint number
+  * @retval USBD status
+  */
+USBD_StatusTypeDef USBD_LL_ClearStallEP(USBD_HandleTypeDef *pdev, uint8_t ep_addr)
+{
+  HAL_StatusTypeDef hal_status = HAL_OK;
+  USBD_StatusTypeDef usb_status = USBD_OK;
+
+  hal_status = HAL_PCD_EP_ClrStall(pdev->pData, ep_addr);
+
+  usb_status =  USBD_Get_USB_Status(hal_status);
+
+  return usb_status;
+}
+
+/**
+  * @brief  Returns Stall condition.
+  * @param  pdev: Device handle
+  * @param  ep_addr: Endpoint number
+  * @retval Stall (1: Yes, 0: No)
+  */
+uint8_t USBD_LL_IsStallEP(USBD_HandleTypeDef *pdev, uint8_t ep_addr)
+{
+  PCD_HandleTypeDef *hpcd = (PCD_HandleTypeDef*) pdev->pData;
+
+  if((ep_addr & 0x80) == 0x80)
+  {
+    return hpcd->IN_ep[ep_addr & 0x7F].is_stall;
+  }
+  else
+  {
+    return hpcd->OUT_ep[ep_addr & 0x7F].is_stall;
+  }
+}
+
+/**
+  * @brief  Assigns a USB address to the device.
+  * @param  pdev: Device handle
+  * @param  dev_addr: Device address
+  * @retval USBD status
+  */
+USBD_StatusTypeDef USBD_LL_SetUSBAddress(USBD_HandleTypeDef *pdev, uint8_t dev_addr)
+{
+  HAL_StatusTypeDef hal_status = HAL_OK;
+  USBD_StatusTypeDef usb_status = USBD_OK;
+
+  hal_status = HAL_PCD_SetAddress(pdev->pData, dev_addr);
+
+  usb_status =  USBD_Get_USB_Status(hal_status);
+
+  return usb_status;
+}
+
+/**
+  * @brief  Transmits data over an endpoint.
+  * @param  pdev: Device handle
+  * @param  ep_addr: Endpoint number
+  * @param  pbuf: Pointer to data to be sent
+  * @param  size: Data size
+  * @retval USBD status
+  */
+USBD_StatusTypeDef USBD_LL_Transmit(USBD_HandleTypeDef *pdev, uint8_t ep_addr, uint8_t *pbuf, uint32_t size)
+{
+  HAL_StatusTypeDef hal_status = HAL_OK;
+  USBD_StatusTypeDef usb_status = USBD_OK;
+
+  hal_status = HAL_PCD_EP_Transmit(pdev->pData, ep_addr, pbuf, size);
+
+  usb_status =  USBD_Get_USB_Status(hal_status);
+
+  return usb_status;
+}
+
+/**
+  * @brief  Prepares an endpoint for reception.
+  * @param  pdev: Device handle
+  * @param  ep_addr: Endpoint number
+  * @param  pbuf: Pointer to data to be received
+  * @param  size: Data size
+  * @retval USBD status
+  */
+USBD_StatusTypeDef USBD_LL_PrepareReceive(USBD_HandleTypeDef *pdev, uint8_t ep_addr, uint8_t *pbuf, uint32_t size)
+{
+  HAL_StatusTypeDef hal_status = HAL_OK;
+  USBD_StatusTypeDef usb_status = USBD_OK;
+
+  hal_status = HAL_PCD_EP_Receive(pdev->pData, ep_addr, pbuf, size);
+
+  usb_status =  USBD_Get_USB_Status(hal_status);
+
+  return usb_status;
+}
+
+/**
+  * @brief  Returns the last transferred packet size.
+  * @param  pdev: Device handle
+  * @param  ep_addr: Endpoint number
+  * @retval Received Data Size
+  */
+uint32_t USBD_LL_GetRxDataSize(USBD_HandleTypeDef *pdev, uint8_t ep_addr)
+{
+  return HAL_PCD_EP_GetRxCount((PCD_HandleTypeDef*) pdev->pData, ep_addr);
+}
+
+#ifdef USBD_HS_TESTMODE_ENABLE
+/**
+  * @brief  Set High speed Test mode.
+  * @param  pdev: Device handle
+  * @param  testmode: test mode
+  * @retval USBD Status
+  */
+USBD_StatusTypeDef USBD_LL_SetTestMode(USBD_HandleTypeDef *pdev, uint8_t testmode)
+{
+  UNUSED(pdev);
+  UNUSED(testmode);
+
+  return USBD_OK;
+}
+#endif /* USBD_HS_TESTMODE_ENABLE */
+
+/**
+  * @brief  Static single allocation.
+  * @param  size: Size of allocated memory
+  * @retval None
+  */
+void *USBD_static_malloc(uint32_t size)
+{
+  static uint32_t mem[(sizeof(USBD_CDC_HandleTypeDef)/4)+1];/* On 32-bit boundary */
+  return mem;
+}
+
+/**
+  * @brief  Dummy memory free
+  * @param  p: Pointer to allocated  memory address
+  * @retval None
+  */
+void USBD_static_free(void *p)
+{
+
+}
+
+/**
+  * @brief  Delays routine for the USB Device Library.
+  * @param  Delay: Delay in ms
+  * @retval None
+  */
+void USBD_LL_Delay(uint32_t Delay)
+{
+  HAL_Delay(Delay);
+}
+
+/**
+  * @brief  Returns the USB status depending on the HAL status:
+  * @param  hal_status: HAL status
+  * @retval USB status
+  */
+USBD_StatusTypeDef USBD_Get_USB_Status(HAL_StatusTypeDef hal_status)
+{
+  USBD_StatusTypeDef usb_status = USBD_OK;
+
+  switch (hal_status)
+  {
+    case HAL_OK :
+      usb_status = USBD_OK;
+    break;
+    case HAL_ERROR :
+      usb_status = USBD_FAIL;
+    break;
+    case HAL_BUSY :
+      usb_status = USBD_BUSY;
+    break;
+    case HAL_TIMEOUT :
+      usb_status = USBD_FAIL;
+    break;
+    default :
+      usb_status = USBD_FAIL;
+    break;
+  }
+  return usb_status;
+}
+</file>
+
+<file path="USB_DEVICE/Target/usbd_conf.h">
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           : usbd_conf.h
+  * @version        : v1.0_Cube
+  * @brief          : Header for usbd_conf.c file.
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2026 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+
+/* Define to prevent recursive inclusion -------------------------------------*/
+#ifndef __USBD_CONF__H__
+#define __USBD_CONF__H__
+
+#ifdef __cplusplus
+ extern "C" {
+#endif
+
+/* Includes ------------------------------------------------------------------*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "main.h"
+#include "stm32f4xx.h"
+#include "stm32f4xx_hal.h"
+
+/* USER CODE BEGIN INCLUDE */
+
+/* USER CODE END INCLUDE */
+
+/** @addtogroup USBD_OTG_DRIVER
+  * @brief Driver for Usb device.
+  * @{
+  */
+
+/** @defgroup USBD_CONF USBD_CONF
+  * @brief Configuration file for Usb otg low level driver.
+  * @{
+  */
+
+/** @defgroup USBD_CONF_Exported_Variables USBD_CONF_Exported_Variables
+  * @brief Public variables.
+  * @{
+  */
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_CONF_Exported_Defines USBD_CONF_Exported_Defines
+  * @brief Defines for configuration of the Usb device.
+  * @{
+  */
+
+/*---------- -----------*/
+#define USBD_MAX_NUM_INTERFACES     1U
+/*---------- -----------*/
+#define USBD_MAX_NUM_CONFIGURATION     1U
+/*---------- -----------*/
+#define USBD_MAX_STR_DESC_SIZ     512U
+/*---------- -----------*/
+#define USBD_DEBUG_LEVEL     0U
+/*---------- -----------*/
+#define USBD_LPM_ENABLED     0U
+/*---------- -----------*/
+#define USBD_SELF_POWERED     1U
+
+/****************************************/
+/* #define for FS and HS identification */
+#define DEVICE_FS 		0
+#define DEVICE_HS 		1
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_CONF_Exported_Macros USBD_CONF_Exported_Macros
+  * @brief Aliases.
+  * @{
+  */
+/* Memory management macros make sure to use static memory allocation */
+/** Alias for memory allocation. */
+
+#define USBD_malloc         (void *)USBD_static_malloc
+
+/** Alias for memory release. */
+#define USBD_free           USBD_static_free
+
+/** Alias for memory set. */
+#define USBD_memset         memset
+
+/** Alias for memory copy. */
+#define USBD_memcpy         memcpy
+
+/** Alias for delay. */
+#define USBD_Delay          HAL_Delay
+
+/* DEBUG macros */
+
+#if (USBD_DEBUG_LEVEL > 0)
+#define USBD_UsrLog(...)    printf(__VA_ARGS__);\
+                            printf("\n");
+#else
+#define USBD_UsrLog(...)
+#endif /* (USBD_DEBUG_LEVEL > 0U) */
+
+#if (USBD_DEBUG_LEVEL > 1)
+
+#define USBD_ErrLog(...)    printf("ERROR: ");\
+                            printf(__VA_ARGS__);\
+                            printf("\n");
+#else
+#define USBD_ErrLog(...)
+#endif /* (USBD_DEBUG_LEVEL > 1U) */
+
+#if (USBD_DEBUG_LEVEL > 2)
+#define USBD_DbgLog(...)    printf("DEBUG : ");\
+                            printf(__VA_ARGS__);\
+                            printf("\n");
+#else
+#define USBD_DbgLog(...)
+#endif /* (USBD_DEBUG_LEVEL > 2U) */
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_CONF_Exported_Types USBD_CONF_Exported_Types
+  * @brief Types.
+  * @{
+  */
+
+/**
+  * @}
+  */
+
+/** @defgroup USBD_CONF_Exported_FunctionsPrototype USBD_CONF_Exported_FunctionsPrototype
+  * @brief Declaration of public functions for Usb device.
+  * @{
+  */
+
+/* Exported functions -------------------------------------------------------*/
+void *USBD_static_malloc(uint32_t size);
+void USBD_static_free(void *p);
+
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __USBD_CONF__H__ */
+</file>
+
+</files>

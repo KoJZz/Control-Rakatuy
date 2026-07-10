@@ -1,0 +1,11 @@
+{
+  "include": [
+    "Core/Src/**/*",
+    "Core/Inc/**/*",
+    "USB_DEVICE/**/*",
+    "*.ioc"
+  ],
+  "output": {
+    "filePath": "foc-core.txt"
+  }
+}

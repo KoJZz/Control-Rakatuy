@@ -1,0 +1,33 @@
+# ==========================================
+# STM32 FOC .repomixignore
+# ==========================================
+
+# 1. Vendor Drivers & Libraries (Massive, unchanged files)
+Drivers/
+Middlewares/
+CMSIS_DSP/
+
+# 2. Build Output & Binaries
+Debug/
+Release/
+*.o
+*.d
+*.elf
+*.map
+*.bin
+*.hex
+*.a
+*.lst
+*.su
+
+# 3. IDE Metadata & Hidden Files
+.settings/
+.mxproject
+.cproject
+.project
+*.launch
+.vscode/
+
+# 4. OS Specific
+.DS_Store
+Thumbs.db
